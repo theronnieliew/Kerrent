@@ -12,16 +12,22 @@
 		162772B31DEC307E00539E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162772B11DEC307E00539E7C /* Main.storyboard */; };
 		162772B51DEC307E00539E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162772B41DEC307E00539E7C /* Assets.xcassets */; };
 		162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162772B61DEC307E00539E7C /* LaunchScreen.storyboard */; };
+		162772C01DEC34BA00539E7C /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 162772BF1DEC34BA00539E7C /* GoogleService-Info (2).plist */; };
+		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		162772AA1DEC307E00539E7C /* Kerrent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kerrent.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		162772AD1DEC307E00539E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		162772AF1DEC307E00539E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		162772AD1DEC307E00539E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Helper/AppDelegate.swift; sourceTree = "<group>"; };
+		162772AF1DEC307E00539E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		162772B21DEC307E00539E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		162772B41DEC307E00539E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		162772B71DEC307E00539E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		162772B91DEC307E00539E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		162772BF1DEC34BA00539E7C /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (2).plist"; path = "../../../../Downloads/GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
+		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				162772AC1DEC307E00539E7C /* Kerrent */,
 				162772AB1DEC307E00539E7C /* Products */,
+				65544D58A44E7100BE4AE810 /* Pods */,
+				8FA7B39933260A810BC3A811 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +63,64 @@
 		162772AC1DEC307E00539E7C /* Kerrent */ = {
 			isa = PBXGroup;
 			children = (
-				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
-				162772AF1DEC307E00539E7C /* ViewController.swift */,
+				162772C51DEC362A00539E7C /* Models */,
+				162772C41DEC362400539E7C /* Helper */,
+				162772C31DEC362000539E7C /* Views */,
+				162772C11DEC35C700539E7C /* Controllers */,
 				162772B11DEC307E00539E7C /* Main.storyboard */,
 				162772B41DEC307E00539E7C /* Assets.xcassets */,
 				162772B61DEC307E00539E7C /* LaunchScreen.storyboard */,
 				162772B91DEC307E00539E7C /* Info.plist */,
+				162772BF1DEC34BA00539E7C /* GoogleService-Info (2).plist */,
 			);
 			path = Kerrent;
+			sourceTree = "<group>";
+		};
+		162772C11DEC35C700539E7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				162772AF1DEC307E00539E7C /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		162772C31DEC362000539E7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		162772C41DEC362400539E7C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		162772C51DEC362A00539E7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65544D58A44E7100BE4AE810 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */,
+				8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FA7B39933260A810BC3A811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 162772BC1DEC307E00539E7C /* Build configuration list for PBXNativeTarget "Kerrent" */;
 			buildPhases = (
+				4A7C8B0E3990F515491139FA /* [CP] Check Pods Manifest.lock */,
 				162772A61DEC307E00539E7C /* Sources */,
 				162772A71DEC307E00539E7C /* Frameworks */,
 				162772A81DEC307E00539E7C /* Resources */,
+				2DF9FF49700FD3DFB696796D /* [CP] Embed Pods Frameworks */,
+				771D0BFAE96F37338FEA37E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162772C01DEC34BA00539E7C /* GoogleService-Info (2).plist in Resources */,
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
 				162772B51DEC307E00539E7C /* Assets.xcassets in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
@@ -130,6 +193,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DF9FF49700FD3DFB696796D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A7C8B0E3990F515491139FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		771D0BFAE96F37338FEA37E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		162772A61DEC307E00539E7C /* Sources */ = {
@@ -258,6 +369,7 @@
 		};
 		162772BD1DEC307E00539E7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kerrent/Info.plist;
@@ -270,6 +382,7 @@
 		};
 		162772BE1DEC307E00539E7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kerrent/Info.plist;
@@ -299,6 +412,7 @@
 				162772BE1DEC307E00539E7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
