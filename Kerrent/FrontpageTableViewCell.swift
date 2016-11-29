@@ -17,7 +17,7 @@ class FrontpageTableViewCell: UITableViewCell {
         
     }
     
-    func collectionViewDidLoad < D: protocol<UICollectionViewDelegate, UICollectionViewDataSource>> (dataSourceDelegate: D, forRow row: Int) {
+    func collectionViewDidLoad < D: UICollectionViewDelegate & UICollectionViewDataSource> (dataSourceDelegate: D, forRow row: Int) {
         
         collectionView.delegate = dataSourceDelegate
         collectionView.dataSource = dataSourceDelegate

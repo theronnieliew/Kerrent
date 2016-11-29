@@ -57,7 +57,7 @@ extension FrontPageViewController : UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-        cell.backgroundColor = model.[collectionView.tag].[indexPath.item]
+        cell.backgroundColor = model[collectionView.tag][indexPath.item]
         
         return cell
     }
