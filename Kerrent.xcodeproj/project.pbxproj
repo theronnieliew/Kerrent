@@ -17,6 +17,9 @@
 		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
 		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
+		ABD784981DED0A6300433C71 /* Clinton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Clinton.storyboard */; };
+		ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */; };
+		ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD784971DED0A6300433C71 /* Clinton.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Clinton.storyboard; sourceTree = "<group>"; };
+		ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
+		ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,10 +80,11 @@
 				162772C31DEC362000539E7C /* Views */,
 				162772C11DEC35C700539E7C /* Controllers */,
 				162772B11DEC307E00539E7C /* Main.storyboard */,
+				ABD784971DED0A6300433C71 /* Clinton.storyboard */,
 				162772B41DEC307E00539E7C /* Assets.xcassets */,
 				162772B61DEC307E00539E7C /* LaunchScreen.storyboard */,
 				162772B91DEC307E00539E7C /* Info.plist */,
-				162772BF1DEC34BA00539E7C /* GoogleService-Info.plist */,
+				ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */,
 			);
 			path = Kerrent;
 			sourceTree = "<group>";
@@ -85,6 +92,7 @@
 		162772C11DEC35C700539E7C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */,
 				162772AF1DEC307E00539E7C /* ViewController.swift */,
 				162772C81DED1ED600539E7C /* LoginViewController.swift */,
 				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
@@ -194,9 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				162772C01DEC34BA00539E7C /* GoogleService-Info.plist in Resources */,
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
+				ABD784981DED0A6300433C71 /* Clinton.storyboard in Resources */,
 				162772B51DEC307E00539E7C /* Assets.xcassets in Resources */,
+				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
+				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
