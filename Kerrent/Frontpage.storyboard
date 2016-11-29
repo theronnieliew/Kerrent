@@ -50,7 +50,6 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="302" height="193"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </view>
-                                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -62,7 +61,6 @@
                                                 <constraint firstItem="cX5-Ks-Fry" firstAttribute="top" secondItem="jCD-vX-JYz" secondAttribute="topMargin" id="zPS-ow-UGQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.97989851240000003" green="0.84128147360000005" blue="0.26148819919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
