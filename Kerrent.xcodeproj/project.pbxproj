@@ -15,6 +15,7 @@
 		162772C71DED1DA700539E7C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C61DED1DA700539E7C /* AlertController.swift */; };
 		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
 		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
+		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
 		ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */; };
@@ -32,6 +33,7 @@
 		162772C61DED1DA700539E7C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Helper/AlertController.swift; sourceTree = "<group>"; };
 		162772C81DED1ED600539E7C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
+		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -73,12 +75,11 @@
 		162772AC1DEC307E00539E7C /* Kerrent */ = {
 			isa = PBXGroup;
 			children = (
+				16F3B9A11DED34E30073C7D1 /* Storyboard */,
 				162772C51DEC362A00539E7C /* Models */,
 				162772C41DEC362400539E7C /* Helper */,
 				162772C31DEC362000539E7C /* Views */,
 				162772C11DEC35C700539E7C /* Controllers */,
-				162772B11DEC307E00539E7C /* Main.storyboard */,
-				ABD784971DED0A6300433C71 /* Frontpage.storyboard */,
 				162772B41DEC307E00539E7C /* Assets.xcassets */,
 				162772B61DEC307E00539E7C /* LaunchScreen.storyboard */,
 				162772B91DEC307E00539E7C /* Info.plist */,
@@ -119,6 +120,16 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		16F3B9A11DED34E30073C7D1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				162772B11DEC307E00539E7C /* Main.storyboard */,
+				ABD784971DED0A6300433C71 /* Frontpage.storyboard */,
+				16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		65544D58A44E7100BE4AE810 /* Pods */ = {
@@ -204,6 +215,7 @@
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				162772B51DEC307E00539E7C /* Assets.xcassets in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
+				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

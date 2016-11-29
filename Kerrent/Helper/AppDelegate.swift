@@ -42,7 +42,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate{
+    func observeAuthNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAuthNotification(_ :)), name: Notification.Name(rawValue:"AuthSuccessNotification"), object: nil)
+    }
+    
+    func handleAuthNotification(_ notification : Notification){
+        //this part will only be called if user successfuly logged in
+        self.checkLoadPage(controllername: "TweetTabBarController")
+    }
+    
+    func checkLoadPage(controllername : String){
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: controllername)
+        self.window?.rootViewController = controller
+    }
 }
 

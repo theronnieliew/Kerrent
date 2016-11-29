@@ -39,6 +39,8 @@ class SignUpViewController: UIViewController {
             guard let firUser = user else { return }
             
             self.notifySuccessfulSignUp()
+            
+            print("Successfully registered you nigga!!")
         })
     }
     
