@@ -13,6 +13,9 @@
 		162772B51DEC307E00539E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162772B41DEC307E00539E7C /* Assets.xcassets */; };
 		162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162772B61DEC307E00539E7C /* LaunchScreen.storyboard */; };
 		162772C01DEC34BA00539E7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 162772BF1DEC34BA00539E7C /* GoogleService-Info.plist */; };
+		162772C71DED1DA700539E7C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C61DED1DA700539E7C /* AlertController.swift */; };
+		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
+		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		162772B71DEC307E00539E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		162772B91DEC307E00539E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		162772BF1DEC34BA00539E7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		162772C61DED1DA700539E7C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Helper/AlertController.swift; sourceTree = "<group>"; };
+		162772C81DED1ED600539E7C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				162772AF1DEC307E00539E7C /* ViewController.swift */,
+				162772C81DED1ED600539E7C /* LoginViewController.swift */,
+				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
+				162772C61DED1DA700539E7C /* AlertController.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -247,8 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
+				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
+				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
