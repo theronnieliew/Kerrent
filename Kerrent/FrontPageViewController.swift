@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FrontPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FrontPageViewController: UIViewController {
 
     
 //Variables
@@ -27,8 +27,8 @@ class FrontPageViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-    
+}
+extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return model.count
