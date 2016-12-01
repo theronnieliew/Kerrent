@@ -44,7 +44,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="SsF-ZO-cYW">
-                                                            <rect key="frame" x="0.0" y="1" width="66" height="63"/>
+                                                            <rect key="frame" x="0.0" y="0.5" width="66" height="63"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="63"/>
@@ -64,6 +64,29 @@
                                         <connections>
                                             <outlet property="collectionView" destination="cX5-Ks-Fry" id="7He-c9-lg1"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="first" rowHeight="80" id="FYQ-iz-cUo" customClass="FrontpageTableViewCell" customModule="Kerrent" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FYQ-iz-cUo" id="7TE-WH-jnA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-Hz-up1">
+                                                    <rect key="frame" x="9" y="4" width="356" height="72"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="72" id="u5g-RM-eur"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eeo-Hz-up1" firstAttribute="leading" secondItem="7TE-WH-jnA" secondAttribute="leading" constant="9" id="6YM-uK-I9a"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eeo-Hz-up1" secondAttribute="trailing" constant="10" id="F4f-Yb-GbH"/>
+                                                <constraint firstItem="Eeo-Hz-up1" firstAttribute="top" secondItem="7TE-WH-jnA" secondAttribute="top" constant="4" id="dz7-I6-C90"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eeo-Hz-up1" secondAttribute="bottom" constant="4" id="v6A-b0-o9E"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
