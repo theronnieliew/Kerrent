@@ -18,6 +18,8 @@
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
 		16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */; };
+		16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E71DF123160073C7D1 /* TabBar.storyboard */; };
+		16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
 		ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */; };
@@ -39,6 +41,8 @@
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
 		16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		16F3B9E61DEFC5470073C7D1 /* Kerrent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kerrent.entitlements; sourceTree = "<group>"; };
+		16F3B9E71DF123160073C7D1 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = Storyboard/TabBar.storyboard; sourceTree = "<group>"; };
+		16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Controllers/TabBarController.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				162772C81DED1ED600539E7C /* LoginViewController.swift */,
 				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
 				16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */,
+				16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				ABD784971DED0A6300433C71 /* Frontpage.storyboard */,
 				16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */,
 				16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */,
+				16F3B9E71DF123160073C7D1 /* TabBar.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				162772B51DEC307E00539E7C /* Assets.xcassets in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
+				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
 				16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
@@ -291,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
+				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
