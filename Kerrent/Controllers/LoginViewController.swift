@@ -1,6 +1,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
@@ -13,9 +14,11 @@ class LoginViewController: UIViewController {
             loginButton.addTarget(self, action: #selector(loginButtonTapped(button:)), for: .touchUpInside)
         }
     }
+    @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        facebookLoginButton.delegate = self
     }
     
     @IBAction func createAccountButtonTapped(_ sender: AnyObject) {
@@ -58,5 +61,34 @@ class LoginViewController: UIViewController {
         
         // post notification
         NotificationCenter.default.post(authSuccessNoification)
+    }
+}
+
+extension LoginViewController : FBSDKLoginButtonDelegate{
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil{
+            print(error!.localizedDescription)
+            return
+        }
+        
+        let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        FIRAuth.auth()?.signIn(with: credential, completion: {(user,error) in
+            if error != nil{
+                print(error!.localizedDescription)
+                return
+            }
+            print("User logged in with FB")
+            
+            self.notifySuccessLogin()
+        })
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        return true
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        try! FIRAuth.auth()!.signOut()
+        print("User has logged out of Facebook")
     }
 }

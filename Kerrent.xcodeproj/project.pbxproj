@@ -38,6 +38,7 @@
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
 		16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		16F3B9E61DEFC5470073C7D1 /* Kerrent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kerrent.entitlements; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		162772AC1DEC307E00539E7C /* Kerrent */ = {
 			isa = PBXGroup;
 			children = (
+				16F3B9E61DEFC5470073C7D1 /* Kerrent.entitlements */,
 				16F3B9A11DED34E30073C7D1 /* Storyboard */,
 				162772C51DEC362A00539E7C /* Models */,
 				162772C41DEC362400539E7C /* Helper */,
@@ -190,7 +192,13 @@
 				TargetAttributes = {
 					162772A91DEC307E00539E7C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9TG37Y45LM;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -412,6 +420,8 @@
 			baseConfigurationReference = C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;
@@ -425,6 +435,8 @@
 			baseConfigurationReference = 8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;

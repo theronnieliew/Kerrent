@@ -163,6 +163,11 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-RQ-dfK" customClass="FBSDKLoginButton">
+                                <frame key="frameInset" minX="67" minY="369" width="240" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -177,6 +182,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="myH-fh-fnE" id="osk-XP-PXP"/>
+                        <outlet property="facebookLoginButton" destination="0pg-RQ-dfK" id="IGi-aN-2cg"/>
                         <outlet property="loginButton" destination="C1j-cI-y7d" id="jet-x2-RsH"/>
                         <outlet property="passwordTextField" destination="2qD-a6-and" id="VoB-uc-q0w"/>
                         <outlet property="signupButton" destination="g1h-tI-K8l" id="FRQ-dR-Cxm"/>
@@ -185,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1Q-0f-1Nr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1015" y="126"/>
+            <point key="canvasLocation" x="-1015.2" y="125.4872563718141"/>
         </scene>
     </scenes>
 </document>

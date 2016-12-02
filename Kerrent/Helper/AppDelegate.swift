@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,19 +20,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         
-        // Checking point for whether user default is made
-        let userDefaults = UserDefaults.standard
-        if !userDefaults.bool(forKey: "hasLoggedIn"){
-            checkLoadPage(storyboard: "RegisterStoryboard", controllername: "LoginViewController")
-            userDefaults.set(true, forKey: "hasLoggedIn")
-        }
-        else {
-            checkLoadPage(storyboard: "Frontpage", controllername: "FrontPageViewController")
-        }
-        
         observeAuthNotification()
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        return true
+//        // Checking point for whether user default is made
+//        let userDefaults = UserDefaults.standard
+//        if !userDefaults.bool(forKey: "hasLoggedIn"){
+//            checkLoadPage(storyboard: "RegisterStoryboard", controllername: "LoginViewController")
+//            userDefaults.set(true, forKey: "hasLoggedIn")
+//        }
+//        else {
+//            checkLoadPage(storyboard: "Frontpage", controllername: "FrontPageViewController")
+//        }
+//
+//
+//        return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
