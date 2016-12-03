@@ -20,6 +20,7 @@
 		16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */; };
 		16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E71DF123160073C7D1 /* TabBar.storyboard */; };
 		16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */; };
+		16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9EB1DF18ABD0073C7D1 /* User.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
 		ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */; };
@@ -43,6 +44,7 @@
 		16F3B9E61DEFC5470073C7D1 /* Kerrent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kerrent.entitlements; sourceTree = "<group>"; };
 		16F3B9E71DF123160073C7D1 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = Storyboard/TabBar.storyboard; sourceTree = "<group>"; };
 		16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Controllers/TabBarController.swift; sourceTree = "<group>"; };
+		16F3B9EB1DF18ABD0073C7D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		162772C51DEC362A00539E7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
+				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
