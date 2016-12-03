@@ -40,7 +40,6 @@ class ProfileViewController: UIViewController {
                 let data = try? Data(contentsOf: url!)
                 self.profilePicImgView.image = UIImage(data: data!)
             }
-            
         })
     }
     
