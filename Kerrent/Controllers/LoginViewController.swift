@@ -109,7 +109,7 @@ extension LoginViewController : FBSDKLoginButtonDelegate{
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        try! FIRAuth.auth()!.signOut()
-        print("User has logged out of Facebook")
+//        try! FIRAuth.auth()!.signOut()
+//        print("User has logged out of Facebook")
     }
 }

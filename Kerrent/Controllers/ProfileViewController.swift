@@ -44,4 +44,17 @@ class ProfileViewController: UIViewController {
             }
         })
     }
+    @IBAction func logOutButton(_ sender: AnyObject) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        }
+        catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        let storyboard = UIStoryboard(name: "RegisterStoryboard", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "StartingViewController")
+        self.view.window?.rootViewController = controller
+    }
 }

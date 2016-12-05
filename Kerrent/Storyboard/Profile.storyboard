@@ -72,6 +72,9 @@
                                 <frame key="frameInset" minX="139" minY="533" width="96" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="awd-Ds-hmZ" eventType="touchUpInside" id="PWb-C2-1Jw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
