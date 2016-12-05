@@ -71,7 +71,7 @@ extension AppDelegate{
     
     func handleAuthNotification(_ notification : Notification){
         //this part will only be called if user successfuly logged in
-        self.checkLoadPage(storyboard: "Frontpage", controllername: "FrontPageViewController")
+        self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
     }
     
     func checkLoadPage(storyboard : String, controllername : String){

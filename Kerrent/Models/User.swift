@@ -6,4 +6,8 @@ class User{
     var number = ""
     var ic = ""
     var profilePic = ""
+    
+    var ID = ""
+    
+    var facebookID = ""
 }
