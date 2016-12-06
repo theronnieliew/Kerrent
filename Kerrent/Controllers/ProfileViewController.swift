@@ -31,16 +31,16 @@ class ProfileViewController: UIViewController {
 //                self.user.email = (dictionary["email"] as! String?)!
 //                self.user.number = (dictionary["number"] as! String?)!
 //                self.user.ic = (dictionary["IC"] as! String?)!
-//                self.user.profilePic = (dictionary["profile-pic"] as? String)!
+                self.user.profilePic = (dictionary["profile-pic"] as? String)!
 //                self.user.facebookID = (dictionary["facebookID"] as! String?)!
                 
                 self.nameLabel.text = self.user.name
                 self.emailLabel.text = self.user.email
 //                self.phoneNumberLabel.text = self.user.number
                 
-//                let url = URL(string: self.user.profilePic)
-//                let data = try? Data(contentsOf: url!)
-//                self.profilePicImgView.image = UIImage(data: data!)
+                let url = URL(string: self.user.profilePic)
+                let data = try? Data(contentsOf: url!)
+                self.profilePicImgView.image = UIImage(data: data!)
             }
         })
     }
