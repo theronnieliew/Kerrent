@@ -8,55 +8,76 @@
 
 import UIKit
 
-class FrontPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FrontPageViewController: UIViewController {
 
     
 //Variables
 
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var collectionView: UICollectionView!
+  
+  let cell1height : CGFloat = 430 //CGFloat
+  let cell2height : CGFloat = 430 //CGFloat
+  
+    let model : [[UIColor]] = generateRandomData()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
 
     }
     
     func tableDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "InstaPageTableViewCell", bundle: nil), forCellReuseIdentifier: "frontpage")
     }
-    
-    
+}
+extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+      
+        let cell = tableView.dequeueReusableCell(withIdentifier: "frontpage", for: indexPath) as! InstaPageTableViewCell
+        
+        return cell
+
+        
+      
+}
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if indexPath.row >= 1 {
+     return cell1height
+    } else {
+      return cell2height    }
+  }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+      
+      if indexPath.row == 0 {
+        guard let tableViewCell = cell as? FrontpageTableViewCell else {return}
+        
+        tableViewCell.collectionViewDidLoad(dataSourceDelegate: self, forRow: indexPath.row)
+    }
+  }
+}
+
+extension FrontPageViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return model[collectionView.tag].count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        cell.backgroundColor = model[collectionView.tag][indexPath.item]
         
         return cell
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+

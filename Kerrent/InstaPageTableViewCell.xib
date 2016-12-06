@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="InstaPageTableViewCell" customModule="Kerrent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="429"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edH-lx-9en">
+                        <rect key="frame" x="8" y="35" width="359" height="359"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="edH-lx-9en" secondAttribute="height" multiplier="1:1" id="Eur-zN-a2X"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSl-sx-IeH">
+                        <rect key="frame" x="37" y="8" width="79" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Mrd-Nx-mBS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-oA-8wn">
+                        <rect key="frame" x="8" y="8" width="21" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Au3-oA-8wn" secondAttribute="height" multiplier="1:1" id="1NP-QE-ic7"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIt-sr-NSc">
+                        <rect key="frame" x="328" y="8" width="39" height="22"/>
+                        <state key="normal" title="Menu"/>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-eA-j9t">
+                        <rect key="frame" x="8" y="399" width="147" height="15"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxM-si-6mi">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="15"/>
+                                <state key="normal" title="Like"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVM-1m-1MC">
+                                <rect key="frame" x="35" y="0.0" width="67" height="15"/>
+                                <state key="normal" title="Comment"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-aB-8OA">
+                                <rect key="frame" x="107" y="0.0" width="40" height="15"/>
+                                <state key="normal" title="Share"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-RJ-t8r">
+                        <rect key="frame" x="335" y="399" width="32" height="14.5"/>
+                        <state key="normal" title="Rent"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Au3-oA-8wn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="0Px-Fs-cSE"/>
+                    <constraint firstItem="Au3-oA-8wn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="25T-y2-njQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dTk-eA-j9t" secondAttribute="bottom" constant="8" id="27B-mA-Oak"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UIt-sr-NSc" secondAttribute="trailing" id="3z5-AH-Ore"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="edH-lx-9en" secondAttribute="bottom" constant="27" id="4Ck-uY-BeR"/>
+                    <constraint firstItem="IG0-RJ-t8r" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="5QZ-DC-uf9"/>
+                    <constraint firstItem="UIt-sr-NSc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AXf-j2-X76"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Fn8-w1-nfS"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GqT-YY-tkR"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="KZ6-Ol-fs6"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="top" secondItem="UIt-sr-NSc" secondAttribute="bottom" constant="5" id="PMN-9k-Wta"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="top" secondItem="OSl-sx-IeH" secondAttribute="bottom" constant="6" id="V4r-yO-3x7"/>
+                    <constraint firstItem="OSl-sx-IeH" firstAttribute="leading" secondItem="Au3-oA-8wn" secondAttribute="trailing" constant="8" id="W3o-vV-QLg"/>
+                    <constraint firstItem="dTk-eA-j9t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Y5p-JE-Eoo"/>
+                    <constraint firstItem="OSl-sx-IeH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hEY-Ar-ZMd"/>
+                    <constraint firstItem="UIt-sr-NSc" firstAttribute="leading" secondItem="OSl-sx-IeH" secondAttribute="trailing" constant="212" id="huz-dN-mLd"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="klh-nH-yfd"/>
+                    <constraint firstItem="edH-lx-9en" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="27" id="lFG-3O-GUm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="IG0-RJ-t8r" secondAttribute="bottom" constant="8" id="nb1-LA-7XQ"/>
+                    <constraint firstItem="IG0-RJ-t8r" firstAttribute="top" secondItem="edH-lx-9en" secondAttribute="bottom" constant="5" id="v3C-aS-Cvx"/>
+                    <constraint firstItem="dTk-eA-j9t" firstAttribute="top" secondItem="edH-lx-9en" secondAttribute="bottom" constant="5" id="xeq-1O-BR7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="carImage" destination="edH-lx-9en" id="HRr-Kp-Ain"/>
+                <outlet property="commentButton" destination="iVM-1m-1MC" id="Dkx-xF-8GK"/>
+                <outlet property="likeButton" destination="sxM-si-6mi" id="SMg-oZ-dIG"/>
+                <outlet property="menuButton" destination="UIt-sr-NSc" id="R3i-yS-svh"/>
+                <outlet property="rentButton" destination="IG0-RJ-t8r" id="QfJ-mH-Rgk"/>
+                <outlet property="shareButton" destination="X2P-aB-8OA" id="At1-ji-c1x"/>
+                <outlet property="userImage" destination="Au3-oA-8wn" id="Xq8-TJ-oMp"/>
+                <outlet property="userName" destination="OSl-sx-IeH" id="ajs-x0-meD"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="135"/>
+        </tableViewCell>
+    </objects>
+</document>

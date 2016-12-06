@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Fakery (2.0.0)
   - FBSDKCoreKit (4.17.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.17.0):
@@ -56,6 +57,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.7)
 
 DEPENDENCIES:
+  - Fakery
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -64,6 +66,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
   FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
   Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
@@ -78,6 +81,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
 
-PODFILE CHECKSUM: 537a390252593561796fb0c699bcebd512a810fa
+PODFILE CHECKSUM: effb6984ed1fc4bfd64f7a42fff2f7db06e3014b
 
 COCOAPODS: 1.1.1
