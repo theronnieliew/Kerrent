@@ -47,7 +47,10 @@ class SignUpViewController: UIViewController {
             
             self.notifySuccessfulSignUp()
             
-            self.ref.child("users").child((user?.uid)!).setValue(["email" : email, "full_name" : (firstname + " " +  lastname)])
+            //!Give default icon
+            let pic = "https://firebasestorage.googleapis.com/v0/b/kerrent-67d3a.appspot.com/o/defaultIcon.png?alt=media&token=aa630123-95dd-4a46-8902-315289ede35d"
+            
+            self.ref.child("users").child((user?.uid)!).setValue(["email" : email, "full_name" : (firstname + " " +  lastname), "profile-pic" : pic])
             
             print("Successfully registered you nigga!!")
         })
