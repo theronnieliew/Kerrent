@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
-        return true
+        
+        observeAuthNotification()
+        
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if user != nil {
+                self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
+            } else {
+                self.checkLoadPage(storyboard: "RegisterStoryboard", controllername: "StartingViewController")
+            }
+        }
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -42,7 +57,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate{
+    func observeAuthNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAuthNotification(_ :)), name: Notification.Name(rawValue:"AuthSuccessNotification"), object: nil)
+    }
+    
+    func handleAuthNotification(_ notification : Notification){
+        //this part will only be called if user successfuly logged in
+        self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
+    }
+    
+    func checkLoadPage(storyboard : String, controllername : String){
+        let storyboard = UIStoryboard(name: storyboard, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: controllername)
+        self.window?.rootViewController = controller
+    }
 }
 

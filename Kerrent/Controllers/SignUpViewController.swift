@@ -1,9 +1,11 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!{
@@ -11,20 +13,25 @@ class SignUpViewController: UIViewController {
             createAccountButton.addTarget(self, action: #selector(createAccountButtonTapped(button:)), for: .touchUpInside)
         }
     }
+    
+    var ref: FIRDatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = FIRDatabase.database().reference()
+        self.navigationItem.title = "SIGN UP"
     }
     
     @IBAction func cancelButtonTapped(_ sender : AnyObject){
-        usernameTextField.text = ""
+        firstNameTextField.text = ""
         passwordTextField.text = ""
         emailTextField.text = ""
     }
     
     @objc func createAccountButtonTapped(button : UIButton){
         
-        guard let username = usernameTextField.text,
+        guard let firstname = firstNameTextField.text,
+        let lastname = lastNameTextField.text,
         let email = emailTextField.text,
         let password = passwordTextField.text
             else { return }
@@ -39,6 +46,10 @@ class SignUpViewController: UIViewController {
             guard let firUser = user else { return }
             
             self.notifySuccessfulSignUp()
+            
+            self.ref.child("users").child((user?.uid)!).setValue(["email" : email, "full_name" : (firstname + " " +  lastname)])
+            
+            print("Successfully registered you nigga!!")
         })
     }
     

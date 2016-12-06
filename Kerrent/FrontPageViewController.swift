@@ -24,6 +24,7 @@ class FrontPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDidLoad()
+
     }
     
     func tableDidLoad() {
