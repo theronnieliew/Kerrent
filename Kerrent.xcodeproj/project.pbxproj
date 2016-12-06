@@ -20,6 +20,7 @@
 		16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E71DF123160073C7D1 /* TabBar.storyboard */; };
 		16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */; };
 		16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9EB1DF18ABD0073C7D1 /* User.swift */; };
+		16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9ED1DF69BFE0073C7D1 /* Assets.xcassets */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 		AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* InstaCarPost.swift */; };
 		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 		16F3B9E71DF123160073C7D1 /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = Storyboard/TabBar.storyboard; sourceTree = "<group>"; };
 		16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Controllers/TabBarController.swift; sourceTree = "<group>"; };
 		16F3B9EB1DF18ABD0073C7D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		16F3B9ED1DF69BFE0073C7D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2E93C51DF67F5100967524 /* InstaCarPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCarPost.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				162772C31DEC362000539E7C /* Views */,
 				162772C11DEC35C700539E7C /* Controllers */,
 				162772B61DEC307E00539E7C /* LaunchScreen.storyboard */,
+				16F3B9ED1DF69BFE0073C7D1 /* Assets.xcassets */,
 				162772B91DEC307E00539E7C /* Info.plist */,
 				ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */,
 			);
@@ -253,6 +256,7 @@
 				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
 				16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */,
+				16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
