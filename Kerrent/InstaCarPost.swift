@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class Rent{
+    var car = ""
+    var dateEnd = ""
+    var dateStart = ""
+    var location = ""
+    var owner = ""
+    var ownerID = ""
+    var price = ""
+}
