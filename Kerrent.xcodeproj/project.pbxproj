@@ -22,6 +22,9 @@
 		16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */; };
 		16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9EB1DF18ABD0073C7D1 /* User.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
+		AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* InstaCarPost.swift */; };
+		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
+		AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
 		ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B941DED37AB00932EBC /* GenerateColors.swift */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
@@ -49,6 +52,9 @@
 		16F3B9EB1DF18ABD0073C7D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB2E93C51DF67F5100967524 /* InstaCarPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCarPost.swift; sourceTree = "<group>"; };
+		AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPageTableViewCell.swift; sourceTree = "<group>"; };
+		AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstaPageTableViewCell.xib; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B941DED37AB00932EBC /* GenerateColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateColors.swift; sourceTree = "<group>"; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -127,6 +133,9 @@
 		162772C41DEC362400539E7C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				AB2E93C51DF67F5100967524 /* InstaCarPost.swift */,
+				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
+				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
 				ABD09B941DED37AB00932EBC /* GenerateColors.swift */,
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
 				162772C61DED1DA700539E7C /* AlertController.swift */,
@@ -243,6 +252,7 @@
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				162772B51DEC307E00539E7C /* Assets.xcassets in Resources */,
+				AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
 				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
@@ -306,10 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */,
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
 				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
+				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
 				ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
