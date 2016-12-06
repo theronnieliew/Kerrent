@@ -19,7 +19,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="j7m-Zy-pRR">
             <objects>
-                <tabBarController id="1EG-ac-EQC" customClass="TabBarController" customModule="Kerrent" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="1EG-ac-EQC" customClass="TabBarController" customModule="Kerrent" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="WgY-f9-xJD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
