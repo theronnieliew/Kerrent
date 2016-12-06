@@ -126,6 +126,8 @@
 		162772C31DEC362000539E7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
+				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -133,9 +135,6 @@
 		162772C41DEC362400539E7C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				AB2E93C51DF67F5100967524 /* InstaCarPost.swift */,
-				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
-				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
 				ABD09B941DED37AB00932EBC /* GenerateColors.swift */,
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
 				162772C61DED1DA700539E7C /* AlertController.swift */,
@@ -148,6 +147,7 @@
 			children = (
 				ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */,
 				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
+				AB2E93C51DF67F5100967524 /* InstaCarPost.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
