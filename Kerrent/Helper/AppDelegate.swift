@@ -21,20 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         
         observeAuthNotification()
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-//        // Checking point for whether user default is made
-//        let userDefaults = UserDefaults.standard
-//        if !userDefaults.bool(forKey: "hasLoggedIn"){
-//            checkLoadPage(storyboard: "RegisterStoryboard", controllername: "LoginViewController")
-//            userDefaults.set(true, forKey: "hasLoggedIn")
-//        }
-//        else {
-//            checkLoadPage(storyboard: "Frontpage", controllername: "FrontPageViewController")
-//        }
-//
-//
-//        return true
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if user != nil {
+                self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
+            } else {
+                self.checkLoadPage(storyboard: "RegisterStoryboard", controllername: "StartingViewController")
+            }
+        }
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
