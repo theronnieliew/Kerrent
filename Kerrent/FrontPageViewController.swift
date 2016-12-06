@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+//import FirebaseDatabase
 
 class FrontPageViewController: UIViewController {
 
@@ -20,11 +22,17 @@ class FrontPageViewController: UIViewController {
   
     let model : [[UIColor]] = generateRandomData()
     
+    var user = Rent()
+    
+    let userUID = FIRAuth.auth()?.currentUser
+    
+    var ref: FIRDatabaseReference!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableDidLoad()
-
+        ref = FIRDatabase.database().reference()
     }
     
     func tableDidLoad() {
@@ -61,6 +69,9 @@ extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
         guard let tableViewCell = cell as? FrontpageTableViewCell else {return}
         
         tableViewCell.collectionViewDidLoad(dataSourceDelegate: self, forRow: indexPath.row)
+        
+        fetchPosts()
+    
     }
   }
 }
@@ -76,8 +87,45 @@ extension FrontPageViewController : UICollectionViewDelegate, UICollectionViewDa
         
         cell.backgroundColor = model[collectionView.tag][indexPath.item]
         
+        
         return cell
     }
+    
+    
+    
+    func fetchPosts() {
+        
+        ref.child("users").child((userUID?.uid)!).observeSingleEvent(of: .value, with: {(snapshot) in
+        
+            if let dictionary = snapshot.value as? [String:AnyObjec] {
+                
+                userName.text = (dictionary["owner"] as! String?)!
+                
+                self.
+            
+            
+        userName.text = user.owner
+        
+        @IBOutlet weak var carImage: UIImageView!
+        @IBOutlet weak var userName: UILabel!
+        @IBOutlet weak var userImage: UIImageView!
+        
+        @IBOutlet weak var menuButton: UIButton!
+        @IBOutlet weak var likeButton: UIButton!
+        @IBOutlet weak var commentButton: UIButton!
+        @IBOutlet weak var shareButton: UIButton!
+        
+        @IBOutlet weak var rentButton: UIButton!
+        
+        var car = ""
+        var dateEnd = ""
+        var dateStart = ""
+        var location = ""
+        var owner = ""
+        var ownerID = ""
+        var price = ""
+    }
 }
+
 
 
