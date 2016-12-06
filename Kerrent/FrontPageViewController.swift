@@ -15,8 +15,8 @@ class FrontPageViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
   
-  let cell1height : CGFloat = 80 //CGFloat
-  let cell2height : CGFloat = 100 //CGFloat
+  let cell1height : CGFloat = 430 //CGFloat
+  let cell2height : CGFloat = 430 //CGFloat
   
     let model : [[UIColor]] = generateRandomData()
     
@@ -29,28 +29,24 @@ class FrontPageViewController: UIViewController {
     func tableDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "InstaPageTableViewCell", bundle: nil), forCellReuseIdentifier: "frontpage")
     }
 }
 extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return model.count
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-      if indexPath.row == 0 {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "frontpage", for: indexPath) as! InstaPageTableViewCell
         
         return cell
 
-      } else {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "first", for: indexPath)
-        
-        return cell
-        
-      }
+      
 }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.row >= 1 {
