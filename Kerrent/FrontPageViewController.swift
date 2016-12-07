@@ -97,8 +97,12 @@ extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "frontpage", for: indexPath) as! InstaPageTableViewCell
         
         cell.userName.text = user.owner
-        cell.rentButton.titleLabel?.text = user.price
+        cell.rentButton.setTitle("\(user.price)", for: UIControlState.normal)
+        cell.rentButton.titleLabel?.numberOfLines = 0
+        cell.rentButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.carImage.image = user.image
+        
+        
 
 //        @IBOutlet weak var carImage: UIImageView!
 //        @IBOutlet weak var userName: UILabel!
