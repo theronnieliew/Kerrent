@@ -67,6 +67,17 @@ class FrontPageViewController: UIViewController {
                 
                 self.user.price = (dictionary["price"] as! String?)!
                 
+                let pic = (dictionary["pics"])!
+                print("\(pic)")
+                
+                self.user.pic = (pic["pic1"] as! String?)!
+                print("\(self.user.pic)")
+                
+                let url = URL(string: self.user.pic)
+                let data = try? Data(contentsOf: url!)
+
+                self.user.image = UIImage(data: data!)!
+                
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -87,8 +98,8 @@ extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
         
         cell.userName.text = user.owner
         cell.rentButton.titleLabel?.text = user.price
-        
-        
+        cell.carImage.image = user.image
+
 //        @IBOutlet weak var carImage: UIImageView!
 //        @IBOutlet weak var userName: UILabel!
 //        @IBOutlet weak var userImage: UIImageView!
@@ -101,8 +112,6 @@ extension FrontPageViewController : UITableViewDataSource, UITableViewDelegate {
 //        @IBOutlet weak var rentButton: UIButton!
         
         return cell
-
-        
       
 }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
