@@ -30,6 +30,8 @@
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
 		ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */; };
 		ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */; };
+		ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC2D611DF699660099721E /* DetailPageViewController.swift */; };
+		ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFC2D621DF699660099721E /* DetailPageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
 		ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABFC2D611DF699660099721E /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPageViewController.swift; path = Controllers/DetailPageViewController.swift; sourceTree = "<group>"; };
+		ABFC2D621DF699660099721E /* DetailPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailPageViewController.xib; path = Controllers/DetailPageViewController.xib; sourceTree = "<group>"; };
 		C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */,
+				ABFC2D611DF699660099721E /* DetailPageViewController.swift */,
 				162772AF1DEC307E00539E7C /* ViewController.swift */,
 				162772C81DED1ED600539E7C /* LoginViewController.swift */,
 				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
+				ABFC2D621DF699660099721E /* DetailPageViewController.xib */,
 				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
 			);
 			name = Views;
@@ -252,6 +258,7 @@
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */,
+				ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
 				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
@@ -320,6 +327,7 @@
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
 				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
+				ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
