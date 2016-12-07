@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Rent{
     var car = ""
@@ -16,4 +17,7 @@ class Rent{
     var owner = ""
     var ownerID = ""
     var price = ""
+    var pic = ""
+    var image = UIImage()
+
 }
