@@ -25,6 +25,7 @@
 		AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* InstaCarPost.swift */; };
 		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
 		AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */; };
+		ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
 		ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B941DED37AB00932EBC /* GenerateColors.swift */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
@@ -32,6 +33,7 @@
 		ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */; };
 		ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFC2D611DF699660099721E /* DetailPageViewController.swift */; };
 		ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFC2D621DF699660099721E /* DetailPageViewController.xib */; };
+		ABFC2D681DF8F3770099721E /* DetailedCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,7 @@
 		AB2E93C51DF67F5100967524 /* InstaCarPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCarPost.swift; sourceTree = "<group>"; };
 		AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPageTableViewCell.swift; sourceTree = "<group>"; };
 		AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstaPageTableViewCell.xib; sourceTree = "<group>"; };
+		ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedCarViewController.swift; path = Controllers/DetailedCarViewController.swift; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B941DED37AB00932EBC /* GenerateColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateColors.swift; sourceTree = "<group>"; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		ABD7849B1DED157A00433C71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABFC2D611DF699660099721E /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailPageViewController.swift; path = Controllers/DetailPageViewController.swift; sourceTree = "<group>"; };
 		ABFC2D621DF699660099721E /* DetailPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailPageViewController.xib; path = Controllers/DetailPageViewController.xib; sourceTree = "<group>"; };
+		ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailedCar.storyboard; sourceTree = "<group>"; };
 		C716E98580BCD21AC6C5ECF6 /* Pods-Kerrent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 			children = (
 				ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */,
 				ABFC2D611DF699660099721E /* DetailPageViewController.swift */,
+				ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */,
 				162772AF1DEC307E00539E7C /* ViewController.swift */,
 				162772C81DED1ED600539E7C /* LoginViewController.swift */,
 				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
@@ -166,6 +171,7 @@
 				16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */,
 				16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */,
 				16F3B9E71DF123160073C7D1 /* TabBar.storyboard */,
+				ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABFC2D681DF8F3770099721E /* DetailedCar.storyboard in Resources */,
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */,
@@ -329,6 +336,7 @@
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
+				ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
 				ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */,
