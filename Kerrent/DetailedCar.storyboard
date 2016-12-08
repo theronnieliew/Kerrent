@@ -141,11 +141,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="hiu-hY-2Zz">
                                         <rect key="frame" x="0.0" y="778" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="hiu-hY-2Zz" id="fal-WW-gG1">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hiu-hY-2Zz" id="fal-WW-gG1">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Specifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-VI-uO4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-VI-uO4">
                                                     <rect key="frame" x="8" y="8" width="359" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="s55-gx-iBF"/>
@@ -154,9 +154,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-Y7-GmY">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-Y7-GmY">
                                                     <rect key="frame" x="8" y="38" width="359" height="120"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="ZPA-L3-WpU"/>
+                                                    </constraints>
                                                     <string key="text">Charging
 Free long distance travel using Tesla's Supercharger network
 Mobile connector with 110 volt, 240 volt, and J1772 adapters</string>
@@ -166,10 +169,10 @@ Mobile connector with 110 volt, 240 volt, and J1772 adapters</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="E4J-VI-uO4" secondAttribute="trailing" id="0PE-JZ-nbA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LHy-Y7-GmY" secondAttribute="bottom" constant="8" id="7af-Ay-5dP"/>
                                                 <constraint firstItem="LHy-Y7-GmY" firstAttribute="top" secondItem="E4J-VI-uO4" secondAttribute="bottom" id="OaE-7g-Lvu"/>
                                                 <constraint firstItem="LHy-Y7-GmY" firstAttribute="leading" secondItem="fal-WW-gG1" secondAttribute="leadingMargin" id="cVG-gU-JuJ"/>
                                                 <constraint firstItem="E4J-VI-uO4" firstAttribute="leading" secondItem="fal-WW-gG1" secondAttribute="leadingMargin" id="hbK-D9-5CD"/>
-                                                <constraint firstItem="LHy-Y7-GmY" firstAttribute="bottom" secondItem="fal-WW-gG1" secondAttribute="bottomMargin" constant="-208" id="xTS-Co-Jxh"/>
                                                 <constraint firstItem="LHy-Y7-GmY" firstAttribute="trailing" secondItem="fal-WW-gG1" secondAttribute="trailingMargin" id="y9p-te-bUi"/>
                                                 <constraint firstItem="E4J-VI-uO4" firstAttribute="top" secondItem="fal-WW-gG1" secondAttribute="topMargin" id="zYW-U7-UVf"/>
                                             </constraints>
@@ -189,6 +192,12 @@ Mobile connector with 110 volt, 240 volt, and J1772 adapters</string>
                             <constraint firstAttribute="trailing" secondItem="0SI-de-CXj" secondAttribute="trailing" id="tSn-MG-x5D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carDescription" destination="FUh-y5-unx" id="AyM-oT-JLQ"/>
+                        <outlet property="carImage" destination="p3u-bJ-bYd" id="MvL-GV-87S"/>
+                        <outlet property="carLogo" destination="Jlx-qX-AGG" id="e2H-D3-Qog"/>
+                        <outlet property="carName" destination="aWp-Iz-kRW" id="jIT-cp-z9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRp-DO-5vG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
