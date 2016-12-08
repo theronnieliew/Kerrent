@@ -28,6 +28,9 @@
 		AB9527551DF909EA005273C6 /* DetailedCar1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */; };
 		AB9527571DF90A05005273C6 /* DetailedCar2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527561DF90A05005273C6 /* DetailedCar2TableViewCell.swift */; };
 		AB9527591DF90A12005273C6 /* DetailedCar3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527581DF90A12005273C6 /* DetailedCar3TableViewCell.swift */; };
+		AB95275C1DF91814005273C6 /* RentFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB95275B1DF91814005273C6 /* RentFeed.storyboard */; };
+		AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */; };
+		AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */; };
 		ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
 		ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B941DED37AB00932EBC /* GenerateColors.swift */; };
@@ -65,6 +68,9 @@
 		AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar1TableViewCell.swift; sourceTree = "<group>"; };
 		AB9527561DF90A05005273C6 /* DetailedCar2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar2TableViewCell.swift; sourceTree = "<group>"; };
 		AB9527581DF90A12005273C6 /* DetailedCar3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar3TableViewCell.swift; sourceTree = "<group>"; };
+		AB95275B1DF91814005273C6 /* RentFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RentFeed.storyboard; sourceTree = "<group>"; };
+		AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedViewController.swift; sourceTree = "<group>"; };
+		AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedTableViewCell.swift; sourceTree = "<group>"; };
 		ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedCarViewController.swift; path = Controllers/DetailedCarViewController.swift; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B941DED37AB00932EBC /* GenerateColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateColors.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */,
+				AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */,
 				ABFC2D611DF699660099721E /* DetailPageViewController.swift */,
 				ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */,
 				162772AF1DEC307E00539E7C /* ViewController.swift */,
@@ -144,6 +151,7 @@
 			children = (
 				AB95275A1DF90A1B005273C6 /* DetailedCarTableViewCell */,
 				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
+				AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */,
 				ABFC2D621DF699660099721E /* DetailPageViewController.xib */,
 				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
 			);
@@ -179,6 +187,7 @@
 				16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */,
 				16F3B9E71DF123160073C7D1 /* TabBar.storyboard */,
 				ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */,
+				AB95275B1DF91814005273C6 /* RentFeed.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
 				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
+				AB95275C1DF91814005273C6 /* RentFeed.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
 				16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */,
 				16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */,
@@ -357,9 +367,11 @@
 				ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */,
+				AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
 				ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */,
+				AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
 				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
