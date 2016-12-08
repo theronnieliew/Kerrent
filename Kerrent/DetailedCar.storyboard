@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="375" id="4gX-lu-XxP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="375" id="4gX-lu-XxP" customClass="DetailedCar1TableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4gX-lu-XxP" id="kfl-Kb-ICV">
@@ -59,8 +59,11 @@
                                                 <constraint firstItem="p3u-bJ-bYd" firstAttribute="leading" secondItem="kfl-Kb-ICV" secondAttribute="leading" id="zk6-0n-CIK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carImage" destination="p3u-bJ-bYd" id="YRE-t2-b8A"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="375" id="dO3-MR-RpD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="375" id="dO3-MR-RpD" customClass="DetailedCar2TableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="403" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dO3-MR-RpD" id="fzc-Hl-BVL">
@@ -137,8 +140,13 @@
                                                 <constraint firstItem="QQp-5X-axD" firstAttribute="leading" secondItem="UGo-mo-YyK" secondAttribute="trailing" constant="8" id="wkE-1T-dst"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carDescription" destination="FUh-y5-unx" id="9g1-k5-eCe"/>
+                                            <outlet property="carLogo" destination="Jlx-qX-AGG" id="S0w-fg-JAz"/>
+                                            <outlet property="carName" destination="aWp-Iz-kRW" id="Syu-R3-rbG"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="hiu-hY-2Zz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="175" id="hiu-hY-2Zz" customClass="DetailedCar3TableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="778" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hiu-hY-2Zz" id="fal-WW-gG1">
@@ -177,6 +185,10 @@ Mobile connector with 110 volt, 240 volt, and J1772 adapters</string>
                                                 <constraint firstItem="E4J-VI-uO4" firstAttribute="top" secondItem="fal-WW-gG1" secondAttribute="topMargin" id="zYW-U7-UVf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="extraTextView" destination="LHy-Y7-GmY" id="rdv-qD-2gK"/>
+                                            <outlet property="extraTitle" destination="E4J-VI-uO4" id="6KU-8T-Hvt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -192,12 +204,6 @@ Mobile connector with 110 volt, 240 volt, and J1772 adapters</string>
                             <constraint firstAttribute="trailing" secondItem="0SI-de-CXj" secondAttribute="trailing" id="tSn-MG-x5D"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="carDescription" destination="FUh-y5-unx" id="AyM-oT-JLQ"/>
-                        <outlet property="carImage" destination="p3u-bJ-bYd" id="MvL-GV-87S"/>
-                        <outlet property="carLogo" destination="Jlx-qX-AGG" id="e2H-D3-Qog"/>
-                        <outlet property="carName" destination="aWp-Iz-kRW" id="jIT-cp-z9j"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRp-DO-5vG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
