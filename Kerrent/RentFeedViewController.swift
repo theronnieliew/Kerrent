@@ -17,7 +17,7 @@ class RentFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableDidLoad()
         // Do any additional setup after loading the view.
     }
 
