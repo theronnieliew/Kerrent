@@ -10,6 +10,11 @@ import UIKit
 
 class DetailedCarViewController: UIViewController {
 
+    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carName: UILabel!
+    @IBOutlet weak var carLogo: UIImageView!
+    @IBOutlet weak var carDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
