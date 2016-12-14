@@ -31,6 +31,7 @@
 		AB95275C1DF91814005273C6 /* RentFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB95275B1DF91814005273C6 /* RentFeed.storyboard */; };
 		AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */; };
 		AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */; };
+		AB9527621E00DD56005273C6 /* LoginAndSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */; };
 		ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
 		ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B941DED37AB00932EBC /* GenerateColors.swift */; };
@@ -71,6 +72,7 @@
 		AB95275B1DF91814005273C6 /* RentFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RentFeed.storyboard; sourceTree = "<group>"; };
 		AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedViewController.swift; sourceTree = "<group>"; };
 		AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedTableViewCell.swift; sourceTree = "<group>"; };
+		AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndSignUp.storyboard; sourceTree = "<group>"; };
 		ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedCarViewController.swift; path = Controllers/DetailedCarViewController.swift; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B941DED37AB00932EBC /* GenerateColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateColors.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				16F3B9E71DF123160073C7D1 /* TabBar.storyboard */,
 				ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */,
 				AB95275B1DF91814005273C6 /* RentFeed.storyboard */,
+				AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
 				16F3B9E81DF123160073C7D1 /* TabBar.storyboard in Resources */,
 				AB95275C1DF91814005273C6 /* RentFeed.storyboard in Resources */,
+				AB9527621E00DD56005273C6 /* LoginAndSignUp.storyboard in Resources */,
 				16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */,
 				16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */,
 				16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */,

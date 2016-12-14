@@ -26,29 +26,31 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="375" id="z53-dI-1eh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="375" id="z53-dI-1eh" customClass="RentFeedTableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="375" id="ADV-Jh-zIz"/>
-                                                        <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="1:1" id="Gfp-Ou-Fgu"/>
+                                                        <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="1:1" id="hn4-1O-5Eg"/>
+                                                        <constraint firstAttribute="height" constant="375" id="njV-Q3-USa"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="centerY" secondItem="Wqk-Ce-IJO" secondAttribute="centerY" id="G5l-xv-2QF"/>
-                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="top" secondItem="Wqk-Ce-IJO" secondAttribute="top" id="Xbv-lS-sVj"/>
-                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="leading" secondItem="Wqk-Ce-IJO" secondAttribute="leading" id="Xj4-kx-hWb"/>
-                                                <constraint firstAttribute="bottom" secondItem="d5Z-0X-ga7" secondAttribute="bottom" id="kd2-iI-1cz"/>
-                                                <constraint firstAttribute="trailing" secondItem="d5Z-0X-ga7" secondAttribute="trailing" id="yJL-Ry-oMI"/>
+                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="leading" secondItem="Wqk-Ce-IJO" secondAttribute="leading" id="9Z7-PR-V5b"/>
+                                                <constraint firstAttribute="bottom" secondItem="d5Z-0X-ga7" secondAttribute="bottom" id="Fe0-Qh-YhQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="d5Z-0X-ga7" secondAttribute="trailing" id="JHH-gf-G9P"/>
+                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="top" secondItem="Wqk-Ce-IJO" secondAttribute="top" id="jDI-8B-7bA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="carImage" destination="d5Z-0X-ga7" id="2xV-0t-iQ6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

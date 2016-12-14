@@ -10,6 +10,8 @@ import UIKit
 
 class RentFeedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var carImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
