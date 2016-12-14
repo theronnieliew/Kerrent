@@ -20,5 +20,7 @@ class Rent{
     var pic = ""
     var image = UIImage()
     
-    var pictureURL : [String: String] = [:]
+    var imageURLArray : [String] = []
+    
+//    var pictureURL : [String: String] = [:]
 }

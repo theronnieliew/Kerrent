@@ -61,12 +61,16 @@ extension DetailedCarViewController : UITableViewDataSource {
         cell.colorLabel.text = rent.car.color
         cell.makeLabel.text = rent.car.manufacturer
         
+        if(rent.imageURLArray[indexPath.row] != ""){
+            cell.carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[indexPath.row])
+        }
+        
         return cell
     }
         
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 770
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 770
+//    }
     
 }
 

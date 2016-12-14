@@ -42,9 +42,19 @@ class RentFeedViewController: UIViewController {
             
             let rent = Rent()
             rent.price = rentDictionary["price"] as! String
+            rent.dateStart = rentDictionary["AVDateStart"] as! String
+            rent.dateEnd = rentDictionary["AVDateEnd"] as! String
+            rent.location = rentDictionary["location"] as! String
+            rent.ownerID = rentDictionary["ownerID"] as! String
+            
+            let tempArray = rentDictionary["pics"] as! [String : String]
+            
+            for key in tempArray.values{
+                self.stringURL.append(key)
+                rent.imageURLArray.append(key)
+            }
             
             let carID = rentDictionary["car"] as! String //! THIS RETURNS CAR ID
-            
             self.ref.child("cars").child(carID).observe(.value, with: {(snapshot) in
                 guard let carDict = snapshot.value as? [String: AnyObject] else{
                     return
@@ -59,12 +69,6 @@ class RentFeedViewController: UIViewController {
                 rent.car.type = carDict["type"] as! String
                 rent.car.year = carDict["year"] as! Int
             })
-            
-            rent.pictureURL = rentDictionary["pics"] as! [String : String]
-            let tempArray = rent.pictureURL
-            for key in tempArray.values{
-                self.stringURL.append(key)
-            }
             
             self.rentArray.append(rent)
             self.tableView.reloadData()
