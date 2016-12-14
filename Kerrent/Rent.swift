@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class Rent{
-    var car = ""
+    var car = Car()
     var dateEnd = ""
     var dateStart = ""
     var location = ""

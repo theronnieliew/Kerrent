@@ -31,8 +31,7 @@ class RentFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
-        fetchFeedPosts()
-    }
+        fetchFeedPosts()    }
     
     func fetchFeedPosts() {
         ref.child("rent").observe(.childAdded, with: {(snapshot) in
@@ -44,6 +43,18 @@ class RentFeedViewController: UIViewController {
             let rent = Rent()
             rent.price = rentDictionary["price"] as! String
             
+            let carID = rentDictionary["car"] as! String //! THIS RETURNS CAR ID
+            
+            
+            self.ref.child("cars").child(carID).observe(.value, with: {(snapshot) in
+                guard let carDict = snapshot.value as? [String: AnyObject] else{
+                    return
+                }
+                print("CarDict values :\n \(carDict.values)\n\n")
+                
+                rent.car.name = carDict["name"] as! String
+            })
+            
             rent.pictureURL = rentDictionary["pics"] as! [String : String]
             let tempArray = rent.pictureURL
             for key in tempArray.values{
@@ -52,6 +63,18 @@ class RentFeedViewController: UIViewController {
             
             self.rentArray.append(rent)
             self.tableView.reloadData()
+        })
+    }
+    
+    func fetchCar(){
+        ref.child("cars").child("Car1").observeSingleEvent(of: .value, with: {(snapshot) in
+            guard let carDict = snapshot.value as? [String: AnyObject] else{
+                return
+            }
+            print("CarDict values :\n \(carDict.values)\n\n")
+            
+            let car = Car()
+            car.name = carDict["name"] as! String
         })
     }
 }
@@ -75,6 +98,7 @@ extension RentFeedViewController : UITableViewDataSource{
         let rent = rentArray[indexPath.row]
         
         cell.priceLabel.text = rent.price
+        cell.carNameLabel.text = rent.car.name
         if(stringURL[indexPath.row] != ""){
             cell.carImage.loadImageUsingCacheWithUrlString(stringURL[indexPath.row])
         }

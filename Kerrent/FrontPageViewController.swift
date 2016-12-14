@@ -53,7 +53,7 @@ class FrontPageViewController: UIViewController {
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 print("SNAPSHOT : \(snapshot)")
                 
-                self.user.car = (dictionary["car"] as! String?)!
+//                self.user.car = (dictionary["car"] as! String?)!
                 
                 self.user.dateEnd = (dictionary["dateEnd"] as! String?)!
                 
