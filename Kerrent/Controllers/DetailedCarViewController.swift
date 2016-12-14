@@ -8,10 +8,9 @@
 
 import UIKit
 
-class DetailedCarViewController: UIViewController {
+class DetailedCarViewController: UIViewController, UITableViewDelegate {
 
     var rent = Rent()
-    var car = Car()
     
     @IBOutlet weak var letsGoButton: UIBarButtonItem!
     
@@ -41,7 +40,8 @@ extension DetailedCarViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell
+        guard let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell else { return UITableViewCell() }
+        
         
         cell.carImage.image = rent.image
         cell.carName.text = rent.car.name
@@ -51,8 +51,8 @@ extension DetailedCarViewController : UITableViewDataSource {
         cell.dateEndLabel.text = rent.dateEnd
         cell.priceLabel.text = rent.price
         
-        cell.capacityLabel.text = ("\(rent.car.capacity) PAX")
-        cell.yearLabel.text = rent.car.year
+        cell.capacityLabel.text = "\(rent.car.capacity) PAX"
+        cell.yearLabel.text = "\(rent.car.year)"
         cell.transmissionLabel.text = rent.car.transmission
         cell.typeLabel.text = rent.car.type
         cell.colorLabel.text = rent.car.color
@@ -65,6 +65,4 @@ extension DetailedCarViewController : UITableViewDataSource {
     
 }
 
-extension DetailedCarViewContoller : UITableViewDelegate {
-    
-}
+
