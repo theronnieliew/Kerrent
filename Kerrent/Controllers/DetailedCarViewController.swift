@@ -11,6 +11,7 @@ import UIKit
 class DetailedCarViewController: UIViewController {
 
     var rent = Rent()
+    var car = Car()
     
     @IBOutlet weak var letsGoButton: UIBarButtonItem!
     
@@ -40,7 +41,24 @@ extension DetailedCarViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell
         
+        cell.carImage.image = rent.image
+        cell.carName.text = rent.car.name
+        cell.carLogo.image = rent.image
+        cell.locationLabel.text = rent.location
+        cell.dateStartLabel.text = rent.dateStart
+        cell.dateEndLabel.text = rent.dateEnd
+        cell.priceLabel.text = rent.price
+        
+        cell.capacityLabel.text = ("\(rent.car.capacity) PAX")
+        cell.yearLabel.text = rent.car.year
+        cell.transmissionLabel.text = rent.car.transmission
+        cell.typeLabel.text = rent.car.type
+        cell.colorLabel.text = rent.car.color
+        cell.makeLabel.text = rent.car.manufacturer
+        
+        return cell
     }
         
         
