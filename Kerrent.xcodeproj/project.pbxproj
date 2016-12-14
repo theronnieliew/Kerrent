@@ -30,10 +30,7 @@
 		AB2E93C81DF67F5100967524 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* Rent.swift */; };
 		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
 		AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */; };
-		AB613E411E01183B00C8B542 /* DetailedCar4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB613E401E01183B00C8B542 /* DetailedCar4TableViewCell.swift */; };
-		AB9527551DF909EA005273C6 /* DetailedCar1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */; };
-		AB9527571DF90A05005273C6 /* DetailedCar2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527561DF90A05005273C6 /* DetailedCar2TableViewCell.swift */; };
-		AB9527591DF90A12005273C6 /* DetailedCar3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527581DF90A12005273C6 /* DetailedCar3TableViewCell.swift */; };
+		AB9527551DF909EA005273C6 /* DetailedCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527541DF909EA005273C6 /* DetailedCarTableViewCell.swift */; };
 		AB95275C1DF91814005273C6 /* RentFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB95275B1DF91814005273C6 /* RentFeed.storyboard */; };
 		AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */; };
 		AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */; };
@@ -77,10 +74,7 @@
 		AB2E93C51DF67F5100967524 /* Rent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPageTableViewCell.swift; sourceTree = "<group>"; };
 		AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstaPageTableViewCell.xib; sourceTree = "<group>"; };
-		AB613E401E01183B00C8B542 /* DetailedCar4TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar4TableViewCell.swift; sourceTree = "<group>"; };
-		AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar1TableViewCell.swift; sourceTree = "<group>"; };
-		AB9527561DF90A05005273C6 /* DetailedCar2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar2TableViewCell.swift; sourceTree = "<group>"; };
-		AB9527581DF90A12005273C6 /* DetailedCar3TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar3TableViewCell.swift; sourceTree = "<group>"; };
+		AB9527541DF909EA005273C6 /* DetailedCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCarTableViewCell.swift; sourceTree = "<group>"; };
 		AB95275B1DF91814005273C6 /* RentFeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RentFeed.storyboard; sourceTree = "<group>"; };
 		AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedViewController.swift; sourceTree = "<group>"; };
 		AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,7 +158,7 @@
 		162772C31DEC362000539E7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AB95275A1DF90A1B005273C6 /* DetailedCarTableViewCell */,
+				AB9527541DF909EA005273C6 /* DetailedCarTableViewCell.swift */,
 				AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */,
 				AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */,
 				ABFC2D621DF699660099721E /* DetailPageViewController.xib */,
@@ -227,17 +221,6 @@
 				9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB95275A1DF90A1B005273C6 /* DetailedCarTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */,
-				AB9527561DF90A05005273C6 /* DetailedCar2TableViewCell.swift */,
-				AB613E401E01183B00C8B542 /* DetailedCar4TableViewCell.swift */,
-				AB9527581DF90A12005273C6 /* DetailedCar3TableViewCell.swift */,
-			);
-			name = DetailedCarTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,14 +363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9527551DF909EA005273C6 /* DetailedCar1TableViewCell.swift in Sources */,
+				AB9527551DF909EA005273C6 /* DetailedCarTableViewCell.swift in Sources */,
 				AB2E93C81DF67F5100967524 /* Rent.swift in Sources */,
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
 				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
-				AB613E411E01183B00C8B542 /* DetailedCar4TableViewCell.swift in Sources */,
-				AB9527571DF90A05005273C6 /* DetailedCar2TableViewCell.swift in Sources */,
-				AB9527591DF90A12005273C6 /* DetailedCar3TableViewCell.swift in Sources */,
 				ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */,

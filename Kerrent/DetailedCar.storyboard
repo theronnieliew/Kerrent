@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4gX-lu-XxP" id="kfl-Kb-ICV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tesla S" translatesAutoresizingMaskIntoConstraints="NO" id="p3u-bJ-bYd">
@@ -67,7 +67,7 @@
                                         <rect key="frame" x="0.0" y="403" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dO3-MR-RpD" id="fzc-Hl-BVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tesla Model S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-Iz-kRW">
@@ -134,7 +134,7 @@
                                         <rect key="frame" x="0.0" y="493" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hiu-hY-2Zz" id="fal-WW-gG1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-VI-uO4">
@@ -498,7 +498,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="770" id="bOj-TC-5Sc" customClass="DetailedCar1TableViewCell" customModule="Kerrent" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="770" id="bOj-TC-5Sc" customClass="DetailedCarTableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="770"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOj-TC-5Sc" id="Tzx-zq-w0m">
@@ -848,7 +848,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="carImage" destination="2dg-yW-E0K" id="8be-lI-qAU"/>
+                                            <outlet property="bookingTitle" destination="ywa-pd-aFZ" id="ULf-MC-HCA"/>
+                                            <outlet property="capacityLabel" destination="O6m-X6-e0D" id="tn2-3t-Vhw"/>
+                                            <outlet property="carImage" destination="2dg-yW-E0K" id="r0q-Uq-asE"/>
+                                            <outlet property="carLogo" destination="AIk-Zg-3IF" id="Q9Y-r2-6k1"/>
+                                            <outlet property="carName" destination="1A9-vj-v1a" id="c3Z-Qk-z2x"/>
+                                            <outlet property="colorLabel" destination="n9a-z3-khJ" id="ctY-OM-eg7"/>
+                                            <outlet property="dateEndLabel" destination="FFg-KZ-yip" id="3lL-yz-JUq"/>
+                                            <outlet property="dateStartLabel" destination="hWe-to-TN7" id="hKE-J5-gPs"/>
+                                            <outlet property="locationLabel" destination="1Kx-BU-HeQ" id="zzo-YL-nJr"/>
+                                            <outlet property="makeLabel" destination="rwe-E6-3PZ" id="njJ-Tc-L7z"/>
+                                            <outlet property="priceLabel" destination="TVI-bg-xej" id="7EA-ox-uJL"/>
+                                            <outlet property="specsLabel" destination="TjZ-ju-zU8" id="pkT-nk-ShV"/>
+                                            <outlet property="transmissionLabel" destination="XpF-rN-t5X" id="VVz-0n-4Wx"/>
+                                            <outlet property="typeLabel" destination="r80-0H-H2W" id="aWq-v8-ctv"/>
+                                            <outlet property="yearLabel" destination="tn1-PX-3el" id="6bP-LD-Fp9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
