@@ -10,6 +10,7 @@ class Car{
     var transmission = ""
     var color = ""
     var type = ""
+    var capacity = 0
     
     var images : [UIImage] = []
     

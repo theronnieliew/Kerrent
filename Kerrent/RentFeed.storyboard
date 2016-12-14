@@ -25,11 +25,12 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="375" id="z53-dI-1eh" customClass="RentFeedTableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
                                             <frame key="frameInset" width="375" height="374"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
+                                                    <frame key="frameInset" width="1000" height="1000"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="1:1" id="hn4-1O-5Eg"/>
                                                         <constraint firstAttribute="height" constant="375" id="njV-Q3-USa"/>
@@ -103,56 +104,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rvU-Am-v4y" id="2VU-SN-WAs"/>
+                        <segue destination="L7r-yB-ZzG" kind="show" identifier="detailViewSegue" id="lVd-Jt-d2B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KP5-Vg-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.20000000000005" y="-51.724137931034484"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="nc2-eU-iWd">
+        <!--DetailedCar-->
+        <scene sceneID="zDM-Tp-u36">
             <objects>
-                <viewController id="Ekf-P4-l2B" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kXH-Rl-aYu"/>
-                        <viewControllerLayoutGuide type="bottom" id="SNq-e4-E6b"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uG2-Dg-32v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XOU-xt-agk">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3ju-Hz-dEA">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kSA-gl-wmn">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="XOU-xt-agk" firstAttribute="leading" secondItem="uG2-Dg-32v" secondAttribute="leading" id="DhD-VW-G3n"/>
-                            <constraint firstAttribute="trailing" secondItem="XOU-xt-agk" secondAttribute="trailing" id="Hpi-vK-0Ll"/>
-                            <constraint firstItem="XOU-xt-agk" firstAttribute="top" secondItem="kXH-Rl-aYu" secondAttribute="bottom" id="U9O-Jk-wbS"/>
-                            <constraint firstItem="SNq-e4-E6b" firstAttribute="top" secondItem="XOU-xt-agk" secondAttribute="bottom" id="bmP-JL-fVh"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="se6-uq-kg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="DetailedCar" id="L7r-yB-ZzG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsy-qQ-ZRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1523" y="-50"/>
+            <point key="canvasLocation" x="1483" y="-156"/>
         </scene>
     </scenes>
 </document>

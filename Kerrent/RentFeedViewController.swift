@@ -45,7 +45,6 @@ class RentFeedViewController: UIViewController {
             
             let carID = rentDictionary["car"] as! String //! THIS RETURNS CAR ID
             
-            
             self.ref.child("cars").child(carID).observe(.value, with: {(snapshot) in
                 guard let carDict = snapshot.value as? [String: AnyObject] else{
                     return
@@ -53,6 +52,12 @@ class RentFeedViewController: UIViewController {
                 print("CarDict values :\n \(carDict.values)\n\n")
                 
                 rent.car.name = carDict["name"] as! String
+                rent.car.color = carDict["color"] as! String
+                rent.car.capacity = carDict["capacity"] as! Int
+                rent.car.manufacturer = carDict["manufacturer"] as! String
+                rent.car.transmission = carDict["transmission"] as! String
+                rent.car.type = carDict["type"] as! String
+                rent.car.year = carDict["year"] as! Int
             })
             
             rent.pictureURL = rentDictionary["pics"] as! [String : String]
@@ -82,6 +87,10 @@ class RentFeedViewController: UIViewController {
 extension RentFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //! GO TO DETAIL VIEW HERE
+        let storyboard: UIStoryboard = UIStoryboard(name: "DetailedCar", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailedCarViewController
+//        vc.rent = rentArray[indexPath]
+        self.show(vc, sender: self)
     }
 }
 
