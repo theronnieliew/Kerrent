@@ -19,5 +19,6 @@ class Rent{
     var price = ""
     var pic = ""
     var image = UIImage()
-
+    
+    var pictureURL : [String: String] = [:]
 }
