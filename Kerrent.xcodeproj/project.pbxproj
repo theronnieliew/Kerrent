@@ -14,6 +14,7 @@
 		162772C71DED1DA700539E7C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C61DED1DA700539E7C /* AlertController.swift */; };
 		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
 		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
+		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
 		16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */; };
@@ -21,6 +22,9 @@
 		16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */; };
 		16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9EB1DF18ABD0073C7D1 /* User.swift */; };
 		16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9ED1DF69BFE0073C7D1 /* Assets.xcassets */; };
+		16F3B9F21DF69D4B0073C7D1 /* ListCar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9F11DF69D4B0073C7D1 /* ListCar.storyboard */; };
+		16F3B9F41DF69FF30073C7D1 /* ListCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9F31DF69FF30073C7D1 /* ListCarViewController.swift */; };
+		16F3B9F61DF86D790073C7D1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9F51DF86D790073C7D1 /* Car.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
 		AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* InstaCarPost.swift */; };
 		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
@@ -53,6 +57,7 @@
 		162772C61DED1DA700539E7C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Helper/AlertController.swift; sourceTree = "<group>"; };
 		162772C81DED1ED600539E7C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
+		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
 		16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 		16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Controllers/TabBarController.swift; sourceTree = "<group>"; };
 		16F3B9EB1DF18ABD0073C7D1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		16F3B9ED1DF69BFE0073C7D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F3B9F11DF69D4B0073C7D1 /* ListCar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ListCar.storyboard; path = Storyboard/ListCar.storyboard; sourceTree = "<group>"; };
+		16F3B9F31DF69FF30073C7D1 /* ListCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCarViewController.swift; path = Controllers/ListCarViewController.swift; sourceTree = "<group>"; };
+		16F3B9F51DF86D790073C7D1 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Models/Car.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2E93C51DF67F5100967524 /* InstaCarPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCarPost.swift; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 				162772CA1DED1FA000539E7C /* SignUpViewController.swift */,
 				16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */,
 				16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */,
+				16F3B9F31DF69FF30073C7D1 /* ListCarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 				ABD09B941DED37AB00932EBC /* GenerateColors.swift */,
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
 				162772C61DED1DA700539E7C /* AlertController.swift */,
+				16578E001DFD62AD0031CFC8 /* Uploader.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -176,6 +186,7 @@
 				ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */,
 				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
 				AB2E93C51DF67F5100967524 /* InstaCarPost.swift */,
+				16F3B9F51DF86D790073C7D1 /* Car.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 				16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */,
 				16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */,
 				16F3B9E71DF123160073C7D1 /* TabBar.storyboard */,
+				16F3B9F11DF69D4B0073C7D1 /* ListCar.storyboard */,
 				ABFC2D671DF8F3770099721E /* DetailedCar.storyboard */,
 				AB95275B1DF91814005273C6 /* RentFeed.storyboard */,
 				AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */,
@@ -292,6 +304,7 @@
 			files = (
 				ABFC2D681DF8F3770099721E /* DetailedCar.storyboard in Resources */,
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
+				16F3B9F21DF69D4B0073C7D1 /* ListCar.storyboard in Resources */,
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
 				AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */,
 				ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */,
@@ -370,6 +383,8 @@
 				AB9527591DF90A12005273C6 /* DetailedCar3TableViewCell.swift in Sources */,
 				ABFC2D631DF699660099721E /* DetailPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
+				16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */,
+				16F3B9F41DF69FF30073C7D1 /* ListCarViewController.swift in Sources */,
 				ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */,
 				AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
@@ -377,6 +392,7 @@
 				ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */,
 				AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
+				16F3B9F61DF86D790073C7D1 /* Car.swift in Sources */,
 				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
@@ -505,10 +521,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -520,10 +537,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
