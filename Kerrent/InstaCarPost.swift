@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import UIKit
+
+class Rent{
+    var car = ""
+    var dateEnd = ""
+    var dateStart = ""
+    var location = ""
+    var owner = ""
+    var ownerID = ""
+    var price = ""
+    var pic = ""
+    var image = UIImage()
+
+}
