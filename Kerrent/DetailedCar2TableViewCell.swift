@@ -12,7 +12,7 @@ class DetailedCar2TableViewCell: UITableViewCell {
 
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carLogo: UIImageView!
-    @IBOutlet weak var carDescription: UITextView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

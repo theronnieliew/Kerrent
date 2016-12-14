@@ -11,7 +11,12 @@ import UIKit
 class DetailedCar3TableViewCell: UITableViewCell {
 
     @IBOutlet weak var extraTitle: UILabel!
-    @IBOutlet weak var extraTextView: UITextView!
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateStartLabel: UILabel!
+    @IBOutlet weak var dateEndLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
