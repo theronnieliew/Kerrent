@@ -14,6 +14,7 @@
 		162772C71DED1DA700539E7C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C61DED1DA700539E7C /* AlertController.swift */; };
 		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
 		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
+		163C8CD31E0101EA00A058B5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CD21E0101EA00A058B5 /* Extension.swift */; };
 		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
@@ -26,7 +27,7 @@
 		16F3B9F41DF69FF30073C7D1 /* ListCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9F31DF69FF30073C7D1 /* ListCarViewController.swift */; };
 		16F3B9F61DF86D790073C7D1 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9F51DF86D790073C7D1 /* Car.swift */; };
 		62ACE8D4DAE57CE639BC68F8 /* Pods_Kerrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */; };
-		AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* InstaCarPost.swift */; };
+		AB2E93C81DF67F5100967524 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C51DF67F5100967524 /* Rent.swift */; };
 		AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */; };
 		AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */; };
 		AB9527551DF909EA005273C6 /* DetailedCar1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		162772C61DED1DA700539E7C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Helper/AlertController.swift; sourceTree = "<group>"; };
 		162772C81DED1ED600539E7C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
+		163C8CD21E0101EA00A058B5 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Helper/Extension.swift; sourceTree = "<group>"; };
 		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 		16F3B9F51DF86D790073C7D1 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = Models/Car.swift; sourceTree = "<group>"; };
 		8D4EB7BCF3B3A3AD3D4AEBFF /* Pods-Kerrent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kerrent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kerrent/Pods-Kerrent.release.xcconfig"; sourceTree = "<group>"; };
 		9B87E52CF5A6788F20F3FE51 /* Pods_Kerrent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kerrent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB2E93C51DF67F5100967524 /* InstaCarPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaCarPost.swift; sourceTree = "<group>"; };
+		AB2E93C51DF67F5100967524 /* Rent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		AB2E93C61DF67F5100967524 /* InstaPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPageTableViewCell.swift; sourceTree = "<group>"; };
 		AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstaPageTableViewCell.xib; sourceTree = "<group>"; };
 		AB9527541DF909EA005273C6 /* DetailedCar1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedCar1TableViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
 				162772C61DED1DA700539E7C /* AlertController.swift */,
 				16578E001DFD62AD0031CFC8 /* Uploader.swift */,
+				163C8CD21E0101EA00A058B5 /* Extension.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			children = (
 				ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */,
 				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
-				AB2E93C51DF67F5100967524 /* InstaCarPost.swift */,
+				AB2E93C51DF67F5100967524 /* Rent.swift */,
 				16F3B9F51DF86D790073C7D1 /* Car.swift */,
 			);
 			name = Models;
@@ -375,7 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9527551DF909EA005273C6 /* DetailedCar1TableViewCell.swift in Sources */,
-				AB2E93C81DF67F5100967524 /* InstaCarPost.swift in Sources */,
+				AB2E93C81DF67F5100967524 /* Rent.swift in Sources */,
 				162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */,
 				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
@@ -389,6 +392,7 @@
 				AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
+				163C8CD31E0101EA00A058B5 /* Extension.swift in Sources */,
 				ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */,
 				AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,

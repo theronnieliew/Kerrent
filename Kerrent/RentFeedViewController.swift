@@ -9,63 +9,76 @@
 import UIKit
 import Firebase
 
-class RentFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RentFeedViewController: UIViewController {
     
     // FetchFeedPosts Variables
-    var rent = Rent()
+    var rentArray : [Rent] = []
+    var stringURL : [String] = []
 
     // Firebase Varibales
     let userUID = FIRAuth.auth()?.currentUser
     var ref: FIRDatabaseReference!
 
-    @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var tableView: UITableView!{
+        didSet{
+            tableView.dataSource = self
+            tableView.delegate = self
+            tableView.estimatedRowHeight = 375
+            tableView.rowHeight = UITableViewAutomaticDimension
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableDidLoad()
+        ref = FIRDatabase.database().reference()
         fetchFeedPosts()
-        // Do any additional setup after loading the view.
-    }
-
-    func tableDidLoad() {
-        
-        tableView.dataSource = self
-        tableView.delegate = self
     }
     
     func fetchFeedPosts() {
-        
-        ref = FIRDatabase.database().reference()
-        
-    self.ref.child("rent").observeSingleEvent(of: .value, with: {(snapshot) in
-            if let dictionary = snapshot.value as? [String:AnyObject]
-            {
-                print("DICTIONARY:\(snapshot.value)")
-                
-                
+        ref.child("rent").observe(.childAdded, with: {(snapshot) in
+            guard let rentDictionary = snapshot.value as? [String: AnyObject] else{
+                return
             }
-            })
+            print("Dictionary values :\n \(rentDictionary.values)\n\n")
+            
+            let rent = Rent()
+            rent.price = rentDictionary["price"] as! String
+            
+            rent.pictureURL = rentDictionary["pics"] as! [String : String]
+            let tempArray = rent.pictureURL
+            for key in tempArray.values{
+                self.stringURL.append(key)
+            }
+            
+            self.rentArray.append(rent)
+            self.tableView.reloadData()
+        })
     }
-    
+}
+
+extension RentFeedViewController : UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //! GO TO DETAIL VIEW HERE
+    }
+}
+
+extension RentFeedViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return rentArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RentFeedTableViewCell
+        guard let cell : RentFeedTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RentFeedTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let rent = rentArray[indexPath.row]
+        
+        cell.priceLabel.text = rent.price
+        if(stringURL[indexPath.row] != ""){
+            cell.carImage.loadImageUsingCacheWithUrlString(stringURL[indexPath.row])
+        }
         
         return cell
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

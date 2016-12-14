@@ -11,6 +11,8 @@ import UIKit
 class RentFeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var carNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

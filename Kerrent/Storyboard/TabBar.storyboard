@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Frontpage-->
+        <!--RentFeed-->
         <scene sceneID="XWg-RY-g5I">
             <objects>
-                <viewControllerPlaceholder storyboardName="Frontpage" id="lE3-mx-H6j" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="RentFeed" id="lE3-mx-H6j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rent" id="SI8-jh-hht"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWR-l1-E22" userLabel="First Responder" sceneMemberID="firstResponder"/>
