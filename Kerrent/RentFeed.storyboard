@@ -25,15 +25,13 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="375" id="z53-dI-1eh" customClass="RentFeedTableViewCell" customModule="Kerrent" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
                                             <frame key="frameInset" width="375" height="374"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
-                                                    <frame key="frameInset" width="1000" height="1000"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-0X-ga7">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="1:1" id="hn4-1O-5Eg"/>
-                                                        <constraint firstAttribute="height" constant="375" id="njV-Q3-USa"/>
+                                                        <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="1:1" id="rZf-oP-0G7"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZH-YI-zP3">
@@ -66,10 +64,10 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="leading" secondItem="Wqk-Ce-IJO" secondAttribute="leading" id="9Z7-PR-V5b"/>
-                                                <constraint firstAttribute="bottom" secondItem="d5Z-0X-ga7" secondAttribute="bottom" id="Fe0-Qh-YhQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="d5Z-0X-ga7" secondAttribute="trailing" id="JHH-gf-G9P"/>
-                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="top" secondItem="Wqk-Ce-IJO" secondAttribute="top" id="jDI-8B-7bA"/>
+                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="leading" secondItem="Wqk-Ce-IJO" secondAttribute="leading" id="27T-uv-pt6"/>
+                                                <constraint firstAttribute="bottom" secondItem="d5Z-0X-ga7" secondAttribute="bottom" priority="999" id="3YW-Jf-JD9"/>
+                                                <constraint firstAttribute="trailing" secondItem="d5Z-0X-ga7" secondAttribute="trailing" id="gf0-jt-gND"/>
+                                                <constraint firstItem="d5Z-0X-ga7" firstAttribute="top" secondItem="Wqk-Ce-IJO" secondAttribute="top" id="qbC-GK-0e1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -104,20 +102,11 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rvU-Am-v4y" id="2VU-SN-WAs"/>
-                        <segue destination="L7r-yB-ZzG" kind="show" identifier="detailViewSegue" id="lVd-Jt-d2B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KP5-Vg-OIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.20000000000005" y="-51.724137931034484"/>
-        </scene>
-        <!--DetailedCar-->
-        <scene sceneID="zDM-Tp-u36">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DetailedCar" id="L7r-yB-ZzG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsy-qQ-ZRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1483" y="-156"/>
         </scene>
     </scenes>
 </document>
