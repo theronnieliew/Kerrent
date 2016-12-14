@@ -12,7 +12,7 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate {
 
     var rent = Rent()
     
-    @IBOutlet weak var letsGoButton: UIBarButtonItem!
+    //@IBOutlet weak var letsGoButton: UIBarButtonItem!
     
     @IBOutlet weak var detailedTableView: UITableView!{
         didSet{
@@ -20,8 +20,9 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate {
             detailedTableView.delegate = self
             
             // these 2 required if using autolayout for tableviewcell
-//            detailedTableView.estimatedRowHeight = 320
-//            detailedTableView.rowHeight = UITableViewAutomaticDimension
+            detailedTableView.estimatedRowHeight = 770
+            detailedTableView.rowHeight = UITableViewAutomaticDimension
+            detailedTableView.tableFooterView = UIView()
         }
     }
     
@@ -41,13 +42,13 @@ extension DetailedCarViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell else {
+        guard let cell : DetailedCarTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell else {
             return UITableViewCell()
         }
         
         cell.carImage.image = rent.image
         cell.carName.text = rent.car.name
-        cell.carLogo.image = rent.image
+        //cell.carLogo.image = rent.image
         cell.locationLabel.text = rent.location
         cell.dateStartLabel.text = rent.dateStart
         cell.dateEndLabel.text = rent.dateEnd
@@ -63,7 +64,9 @@ extension DetailedCarViewController : UITableViewDataSource {
         return cell
     }
         
-        
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 770
+    }
     
 }
 
