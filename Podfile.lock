@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.0.1)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -55,16 +56,20 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Fakery
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - SwiftyJSON (= 3.0.0)
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
@@ -80,7 +85,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: effb6984ed1fc4bfd64f7a42fff2f7db06e3014b
+PODFILE CHECKSUM: 21748f34fd8fb25078d15e2385e38d339deb82ff
 
 COCOAPODS: 1.1.1

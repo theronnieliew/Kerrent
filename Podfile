@@ -12,5 +12,6 @@ target 'Kerrent' do
 	pod 'Firebase/Storage' 
     pod 'Fakery'
     pod 'FBSDKLoginKit'
-
+    pod ’SwiftyJSON’, ‘3.0.0’
+    pod ‘Alamofire’, ‘~> 4.0’
 end
