@@ -14,6 +14,7 @@
 		162772C71DED1DA700539E7C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C61DED1DA700539E7C /* AlertController.swift */; };
 		162772C91DED1ED600539E7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772C81DED1ED600539E7C /* LoginViewController.swift */; };
 		162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162772CA1DED1FA000539E7C /* SignUpViewController.swift */; };
+		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
 		16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */; };
@@ -45,6 +46,7 @@
 		162772C61DED1DA700539E7C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertController.swift; path = Helper/AlertController.swift; sourceTree = "<group>"; };
 		162772C81DED1ED600539E7C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		162772CA1DED1FA000539E7C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Controllers/SignUpViewController.swift; sourceTree = "<group>"; };
+		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
 		16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				ABD09B941DED37AB00932EBC /* GenerateColors.swift */,
 				162772AD1DEC307E00539E7C /* AppDelegate.swift */,
 				162772C61DED1DA700539E7C /* AlertController.swift */,
+				16578E001DFD62AD0031CFC8 /* Uploader.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				16F3B9EA1DF166AD0073C7D1 /* TabBarController.swift in Sources */,
 				ABD7849A1DED0A9F00433C71 /* FrontPageViewController.swift in Sources */,
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
+				16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */,
 				16F3B9F41DF69FF30073C7D1 /* ListCarViewController.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
@@ -465,10 +469,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -480,10 +485,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.panda4.Kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
