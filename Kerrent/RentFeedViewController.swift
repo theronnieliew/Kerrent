@@ -89,8 +89,8 @@ extension RentFeedViewController : UITableViewDelegate{
         //! GO TO DETAIL VIEW HERE
         let storyboard: UIStoryboard = UIStoryboard(name: "DetailedCar", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailedCarViewController
-//        vc.rent = rentArray[indexPath]
-        self.show(vc, sender: self)
+        vc.rent = rentArray[indexPath.row]
+        self.present(vc, animated: true, completion: nil)
     }
 }
 

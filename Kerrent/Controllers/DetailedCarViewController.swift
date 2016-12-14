@@ -18,9 +18,10 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate {
         didSet{
             detailedTableView.dataSource = self
             detailedTableView.delegate = self
-            detailedTableView.estimatedRowHeight = 770
             
-            detailedTableView.rowHeight = UITableViewAutomaticDimension
+            // these 2 required if using autolayout for tableviewcell
+//            detailedTableView.estimatedRowHeight = 320
+//            detailedTableView.rowHeight = UITableViewAutomaticDimension
         }
     }
     
@@ -40,8 +41,9 @@ extension DetailedCarViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell else { return UITableViewCell() }
-        
+        guard let cell : DetailedCarTableViewCell = detailedTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailedCarTableViewCell else {
+            return UITableViewCell()
+        }
         
         cell.carImage.image = rent.image
         cell.carName.text = rent.car.name
