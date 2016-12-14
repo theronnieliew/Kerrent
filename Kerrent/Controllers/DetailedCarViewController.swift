@@ -10,26 +10,43 @@ import UIKit
 
 class DetailedCarViewController: UIViewController {
 
+    var rent = Rent()
+    
+    @IBOutlet weak var letsGoButton: UIBarButtonItem!
+    
+    @IBOutlet weak var detailedTableView: UITableView!{
+        didSet{
+            detailedTableView.dataSource = self
+            detailedTableView.delegate = self
+            detailedTableView.estimatedRowHeight = 770
+            
+            detailedTableView.rowHeight = UITableViewAutomaticDimension
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension DetailedCarViewController : UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
     }
-    */
+        
+        
+    
+}
 
+extension DetailedCarViewContoller : UITableViewDelegate {
+    
 }
