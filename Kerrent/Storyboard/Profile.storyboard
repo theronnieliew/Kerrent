@@ -52,33 +52,64 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-UH-wpp">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-UH-wpp">
                                         <rect key="frame" x="0.0" y="414" width="375" height="233"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jPy-bt-Chq" detailTextLabel="xGE-cm-ukU" style="IBUITableViewCellStyleValue1" id="RTd-OW-jOA">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="90" id="RTd-OW-jOA" customClass="HistoryTableViewCell" customModule="Kerrent" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTd-OW-jOA" id="ya1-7t-Hxu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jPy-bt-Chq">
-                                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Dec 2012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-0m-3RK">
+                                                            <rect key="frame" x="64" y="34" width="98" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xGE-cm-ukU">
-                                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Dec 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j56-t7-cvL">
+                                                            <rect key="frame" x="214" y="34" width="98" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_directions_black_48dp" translatesAutoresizingMaskIntoConstraints="NO" id="oL8-BO-5wQ">
+                                                            <rect key="frame" x="170" y="26.5" width="36" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="oL8-BO-5wQ" secondAttribute="height" multiplier="1:1" id="pjS-b0-NX9"/>
+                                                                <constraint firstAttribute="height" constant="36" id="rCM-3K-PRd"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fE-Wb-zQh">
+                                                            <rect key="frame" x="150" y="4" width="77" height="20.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20.5" id="WNG-9D-3SV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="oL8-BO-5wQ" firstAttribute="top" secondItem="4fE-Wb-zQh" secondAttribute="bottom" constant="2" id="AMe-Ke-VD0"/>
+                                                        <constraint firstItem="4fE-Wb-zQh" firstAttribute="centerX" secondItem="oL8-BO-5wQ" secondAttribute="centerX" id="Cxb-t3-dnE"/>
+                                                        <constraint firstItem="oL8-BO-5wQ" firstAttribute="leading" secondItem="TeN-0m-3RK" secondAttribute="trailing" constant="8" id="PYV-XN-qGH"/>
+                                                        <constraint firstItem="oL8-BO-5wQ" firstAttribute="centerY" secondItem="ya1-7t-Hxu" secondAttribute="centerY" id="PbY-GM-bni"/>
+                                                        <constraint firstItem="j56-t7-cvL" firstAttribute="centerY" secondItem="oL8-BO-5wQ" secondAttribute="centerY" id="TzS-IA-7Tv"/>
+                                                        <constraint firstItem="TeN-0m-3RK" firstAttribute="centerY" secondItem="oL8-BO-5wQ" secondAttribute="centerY" id="Uow-J2-jS3"/>
+                                                        <constraint firstItem="j56-t7-cvL" firstAttribute="leading" secondItem="oL8-BO-5wQ" secondAttribute="trailing" constant="8" id="X4e-YM-h2n"/>
+                                                        <constraint firstItem="4fE-Wb-zQh" firstAttribute="top" secondItem="ya1-7t-Hxu" secondAttribute="top" constant="4" id="ebS-MF-Zla"/>
+                                                        <constraint firstItem="oL8-BO-5wQ" firstAttribute="centerX" secondItem="ya1-7t-Hxu" secondAttribute="centerX" id="xzD-lN-Jus"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="directionImage" destination="oL8-BO-5wQ" id="bJx-pe-h41"/>
+                                                    <outlet property="endDateLabel" destination="j56-t7-cvL" id="LlR-Uv-mZH"/>
+                                                    <outlet property="rentCarNameLabel" destination="4fE-Wb-zQh" id="5bp-cd-Idl"/>
+                                                    <outlet property="startDateLabel" destination="TeN-0m-3RK" id="TFw-T8-8bX"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -157,6 +188,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_directions_black_48dp" width="48" height="48"/>
         <image name="profile_landscape" width="1024" height="683"/>
     </resources>
 </document>
