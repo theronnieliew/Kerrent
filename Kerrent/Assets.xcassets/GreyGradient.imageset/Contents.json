@@ -1,6 +1,17 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 60
+        },
+        "cap-insets" : {
+          "right" : 563,
+          "left" : 392
+        }
+      },
       "idiom" : "universal",
       "filename" : "GreyGradient.png",
       "scale" : "1x"
