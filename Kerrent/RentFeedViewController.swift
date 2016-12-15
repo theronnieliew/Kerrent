@@ -86,20 +86,25 @@ class RentFeedViewController: UIViewController {
             car.name = carDict["name"] as! String
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "detailViewController"){
+            let selectedIndexPath = tableView.indexPathForSelectedRow
+            let controller : DetailedCarViewController = segue.destination as! DetailedCarViewController
+            controller.rent = rentArray[(selectedIndexPath?.row)!]
+        }
+    }
 }
 
 extension RentFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //! GO TO DETAIL VIEW HERE
-//        let storyboard: UIStoryboard = UIStoryboard(name: "DetailedCar", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailedCarViewController
+        
+        performSegue(withIdentifier: "detailViewController", sender: self)
+        
+//        let storyboard: UIStoryboard = UIStoryboard(name: "DatePicker", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
 //        vc.rent = rentArray[indexPath.row]
 //        self.present(vc, animated: true, completion: nil)
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "DatePicker", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
-        vc.rent = rentArray[indexPath.row]
-        self.present(vc, animated: true, completion: nil)
     }
 }
 
