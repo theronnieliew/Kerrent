@@ -50,8 +50,8 @@ extension DetailedCarViewController : UITableViewDataSource {
         cell.carName.text = rent.car.name
         //cell.carLogo.image = rent.image
         cell.locationLabel.text = rent.location
-        cell.dateStartLabel.text = rent.dateStart
-        cell.dateEndLabel.text = rent.dateEnd
+        //cell.dateStartLabel.text = rent.dateStart
+        //cell.dateEndLabel.text = rent.dateEnd
         cell.priceLabel.text = rent.price
         
         cell.capacityLabel.text = "\(rent.car.capacity) PAX"
@@ -59,7 +59,7 @@ extension DetailedCarViewController : UITableViewDataSource {
         cell.transmissionLabel.text = rent.car.transmission
         cell.typeLabel.text = rent.car.type
         cell.colorLabel.text = rent.car.color
-        cell.makeLabel.text = rent.car.manufacturer
+        //cell.makeLabel.text = rent.car.manufacturer
         
         if(rent.imageURLArray[indexPath.row] != ""){
             cell.carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[indexPath.row])
