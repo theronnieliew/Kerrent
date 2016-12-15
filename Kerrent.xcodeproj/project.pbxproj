@@ -37,6 +37,8 @@
 		AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */; };
 		AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */; };
 		AB9527621E00DD56005273C6 /* LoginAndSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */; };
+		ABA73AEE1E0294B6005326BD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA73AED1E0294B6005326BD /* FirstViewController.swift */; };
+		ABA73AF41E029540005326BD /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA73AF31E029540005326BD /* LoginButton.swift */; };
 		ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */; };
 		ABC120181E024F7000951FCF /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC120171E024F7000951FCF /* HistoryTableViewCell.swift */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
@@ -84,6 +86,8 @@
 		AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedViewController.swift; sourceTree = "<group>"; };
 		AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedTableViewCell.swift; sourceTree = "<group>"; };
 		AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndSignUp.storyboard; sourceTree = "<group>"; };
+		ABA73AED1E0294B6005326BD /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = Controllers/FirstViewController.swift; sourceTree = "<group>"; };
+		ABA73AF31E029540005326BD /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedCarViewController.swift; path = Controllers/DetailedCarViewController.swift; sourceTree = "<group>"; };
 		ABC120171E024F7000951FCF /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD784991DED0A9F00433C71 /* FrontPageViewController.swift */,
+				ABA73AED1E0294B6005326BD /* FirstViewController.swift */,
 				AB95275D1DF91C19005273C6 /* RentFeedViewController.swift */,
 				ABFC2D611DF699660099721E /* DetailPageViewController.swift */,
 				ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */,
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */,
+				ABA73AF31E029540005326BD /* LoginButton.swift */,
 				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
 				AB2E93C51DF67F5100967524 /* Rent.swift */,
 				16F3B9F51DF86D790073C7D1 /* Car.swift */,
@@ -393,10 +399,12 @@
 				16F3B9F61DF86D790073C7D1 /* Car.swift in Sources */,
 				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
+				ABA73AEE1E0294B6005326BD /* FirstViewController.swift in Sources */,
 				163C8CDB1E01739F00A058B5 /* DatePickerViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
 				ABC120181E024F7000951FCF /* HistoryTableViewCell.swift in Sources */,
+				ABA73AF41E029540005326BD /* LoginButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

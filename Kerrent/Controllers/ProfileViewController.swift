@@ -60,7 +60,7 @@ class ProfileViewController: UIViewController {
 //    func fetchHistory() {
 //        
 //        ref.child("history")
-    }
+//    }
     @IBAction func logOutButton(_ sender: AnyObject) {
         let firebaseAuth = FIRAuth.auth()
         do {
@@ -75,6 +75,7 @@ class ProfileViewController: UIViewController {
         self.view.window?.rootViewController = controller
     }
 }
+
 
 extension ProfileViewController : UITableViewDataSource {
     
