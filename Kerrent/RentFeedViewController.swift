@@ -31,7 +31,10 @@ class RentFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
-        fetchFeedPosts()    }
+        fetchFeedPosts()
+    
+        navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+    }
     
     func fetchFeedPosts() {
         ref.child("rent").observe(.childAdded, with: {(snapshot) in
