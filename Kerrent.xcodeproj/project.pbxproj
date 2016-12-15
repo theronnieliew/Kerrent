@@ -36,6 +36,7 @@
 		AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */; };
 		AB9527621E00DD56005273C6 /* LoginAndSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */; };
 		ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */; };
+		ABC120181E024F7000951FCF /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC120171E024F7000951FCF /* HistoryTableViewCell.swift */; };
 		ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */; };
 		ABD09B951DED37AB00932EBC /* GenerateColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD09B941DED37AB00932EBC /* GenerateColors.swift */; };
 		ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD784971DED0A6300433C71 /* Frontpage.storyboard */; };
@@ -80,6 +81,7 @@
 		AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentFeedTableViewCell.swift; sourceTree = "<group>"; };
 		AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndSignUp.storyboard; sourceTree = "<group>"; };
 		ABB0AFE71DF9001500C04B24 /* DetailedCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedCarViewController.swift; path = Controllers/DetailedCarViewController.swift; sourceTree = "<group>"; };
+		ABC120171E024F7000951FCF /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B921DED35BF00932EBC /* FrontpageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontpageTableViewCell.swift; sourceTree = "<group>"; };
 		ABD09B941DED37AB00932EBC /* GenerateColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateColors.swift; sourceTree = "<group>"; };
 		ABD784971DED0A6300433C71 /* Frontpage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Frontpage.storyboard; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				AB95275F1DF91C4D005273C6 /* RentFeedTableViewCell.swift */,
 				ABFC2D621DF699660099721E /* DetailPageViewController.xib */,
 				AB2E93C71DF67F5100967524 /* InstaPageTableViewCell.xib */,
+				ABC120171E024F7000951FCF /* HistoryTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
+				ABC120181E024F7000951FCF /* HistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
