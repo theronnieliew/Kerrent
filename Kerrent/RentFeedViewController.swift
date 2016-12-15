@@ -49,6 +49,7 @@ class RentFeedViewController: UIViewController {
             rent.dateEnd = rentDictionary["AVDateEnd"] as! String
             rent.location = rentDictionary["location"] as! String
             rent.ownerID = rentDictionary["ownerID"] as! String
+            rent.ID = snapshot.key
             
             let tempArray = rentDictionary["pics"] as! [String : String]
             
@@ -78,18 +79,6 @@ class RentFeedViewController: UIViewController {
         })
     }
     
-    func fetchCar(){
-        ref.child("cars").child("Car1").observeSingleEvent(of: .value, with: {(snapshot) in
-            guard let carDict = snapshot.value as? [String: AnyObject] else{
-                return
-            }
-            print("CarDict values :\n \(carDict.values)\n\n")
-            
-            let car = Car()
-            car.name = carDict["name"] as! String
-        })
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "detailViewController"){
             let selectedIndexPath = tableView.indexPathForSelectedRow
@@ -101,13 +90,7 @@ class RentFeedViewController: UIViewController {
 
 extension RentFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "detailViewController", sender: self)
-        
-//        let storyboard: UIStoryboard = UIStoryboard(name: "DatePicker", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
-//        vc.rent = rentArray[indexPath.row]
-//        self.present(vc, animated: true, completion: nil)
     }
 }
 
