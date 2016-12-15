@@ -84,7 +84,7 @@
                                     <action selector="cancelButton:" destination="sLm-Lu-ro9" eventType="touchUpInside" id="7Zv-4a-zsq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P2-hh-kug">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P2-hh-kug">
                                 <frame key="frameInset" minX="248" minY="198" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rent"/>
@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="daysRentingLabel" destination="Rg2-kF-Hfa" id="gRa-2B-CkA"/>
                         <outlet property="priceLabel" destination="c7q-q8-2Hu" id="1vU-le-xWh"/>
+                        <outlet property="rentButton" destination="8P2-hh-kug" id="5Hl-K3-ROj"/>
                         <outletCollection property="dateLabels" destination="RIU-od-81W" collectionClass="NSMutableArray" id="otM-Y9-FFJ"/>
                         <outletCollection property="dateLabels" destination="HKT-1W-OsB" collectionClass="NSMutableArray" id="EIC-hk-y4m"/>
                     </connections>

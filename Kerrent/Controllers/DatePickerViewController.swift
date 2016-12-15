@@ -1,4 +1,6 @@
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 protocol DatePickerViewControllerDelegate {
     func dismissDateView()
@@ -7,14 +9,19 @@ protocol DatePickerViewControllerDelegate {
 class DatePickerViewController: UIViewController {
     var rent = Rent()
     var delegate : DatePickerViewControllerDelegate?
+    var ref: FIRDatabaseReference!
 
     @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var daysRentingLabel: UILabel!
     
+    var date1 = Date()
+    var date2 = Date()
+    
+    @IBOutlet weak var rentButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = FIRDatabase.database().reference()
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -30,13 +37,13 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func rentButton(_ sender: AnyObject) {
-        
+        ref.child("history").childByAutoId().setValue(["rentStartDate" : String(describing: date1), "rentEndDate" : String(describing: date2), "carName" : rent.car.name, "userID" : FIRAuth.auth()!.currentUser!.uid, "price" : priceLabel.text!, "rentID" : rent.ID])
+        delegate?.dismissDateView()
+//        ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).child("histories").setValue(true, forKey: )
     }
+    
     func datePickerAlert(viewController : UIViewController, titleMsg : String, tagInt : Int){
         let alertController = UIAlertController(title: titleMsg, message: "\n\n\n\n\n\n\n\n", preferredStyle: UIAlertControllerStyle.actionSheet)
-        
-        var date1 = Date()
-        var date2 = Date()
         
         let datePickerFrame = CGRect(x: 15, y: 20, width: 325, height: 200)
         let picker : UIDatePicker = UIDatePicker(frame: datePickerFrame)
@@ -47,11 +54,11 @@ class DatePickerViewController: UIViewController {
             formatter.dateFormat = "dd-MM-YYYY ',' hh:mm"
             self.dateLabels[tagInt].text = formatter.string(from : picker.date)
             
-            if tagInt == 0 { date1 = picker.date }
-            if tagInt == 1 { date2 = picker.date }
+            if tagInt == 0 { self.date1 = picker.date }
+            if tagInt == 1 { self.date2 = picker.date }
             
             if(self.dateLabels[0].text != "Select" && self.dateLabels[1].text != "Select"){
-                self.daysRentingLabel.text = "\(self.daysBetween(date1: date1, date2: date2))"
+                self.daysRentingLabel.text = "\(self.daysBetween(date1: self.date1, date2: self.date2))"
                 
                 let str = self.rent.price
                 let component = str.components(separatedBy: NSCharacterSet.decimalDigits.inverted)
@@ -59,6 +66,8 @@ class DatePickerViewController: UIViewController {
                 
                 let rentPrice = Int(price[0])! * Int(self.daysRentingLabel.text!)!
                 self.priceLabel.text = "RM \(rentPrice)"
+                
+                self.rentButton.isEnabled = true
             }
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
