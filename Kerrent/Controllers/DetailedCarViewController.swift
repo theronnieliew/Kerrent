@@ -8,10 +8,11 @@
 
 import UIKit
 
-class DetailedCarViewController: UIViewController, UITableViewDelegate {
+class DetailedCarViewController: UIViewController, UITableViewDelegate, DatePickerViewControllerDelegate {
 
     var rent = Rent()
     
+    @IBOutlet weak var containerView: UIView!
     //@IBOutlet weak var letsGoButton: UIBarButtonItem!
     
     @IBOutlet weak var detailedTableView: UITableView!{
@@ -28,10 +29,23 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        containerView.isHidden = true
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func rentButton(_ sender: AnyObject) {
+        containerView.isHidden = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller : DatePickerViewController = segue.destination as! DatePickerViewController
+        controller.rent = rent
+        controller.delegate = self
+    }
+    
+    func dismissDateView() {
+        containerView.isHidden = true
+    }
 }
 
 extension DetailedCarViewController : UITableViewDataSource {

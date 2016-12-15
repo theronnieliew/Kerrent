@@ -1,7 +1,12 @@
 import UIKit
 
+protocol DatePickerViewControllerDelegate {
+    func dismissDateView()
+}
+
 class DatePickerViewController: UIViewController {
     var rent = Rent()
+    var delegate : DatePickerViewControllerDelegate?
 
     @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var priceLabel: UILabel!
@@ -9,8 +14,8 @@ class DatePickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
-    
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
         switch sender.tag{
@@ -20,6 +25,13 @@ class DatePickerViewController: UIViewController {
         }
     }
     
+    @IBAction func cancelButton(_ sender: AnyObject) {
+        delegate?.dismissDateView()
+    }
+    
+    @IBAction func rentButton(_ sender: AnyObject) {
+        
+    }
     func datePickerAlert(viewController : UIViewController, titleMsg : String, tagInt : Int){
         let alertController = UIAlertController(title: titleMsg, message: "\n\n\n\n\n\n\n\n", preferredStyle: UIAlertControllerStyle.actionSheet)
         
