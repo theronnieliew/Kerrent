@@ -91,8 +91,13 @@ class RentFeedViewController: UIViewController {
 extension RentFeedViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //! GO TO DETAIL VIEW HERE
-        let storyboard: UIStoryboard = UIStoryboard(name: "DetailedCar", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailedCarViewController
+//        let storyboard: UIStoryboard = UIStoryboard(name: "DetailedCar", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailedCarViewController
+//        vc.rent = rentArray[indexPath.row]
+//        self.present(vc, animated: true, completion: nil)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "DatePicker", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
         vc.rent = rentArray[indexPath.row]
         self.present(vc, animated: true, completion: nil)
     }
