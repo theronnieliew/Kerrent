@@ -24,8 +24,11 @@ class SignUpViewController: UIViewController {
     
     @IBAction func cancelButtonTapped(_ sender : AnyObject){
         firstNameTextField.text = ""
+        lastNameTextField.text = ""
         passwordTextField.text = ""
         emailTextField.text = ""
+        
+    navigationController?.popViewController(animated: true)
     }
     
     @objc func createAccountButtonTapped(button : UIButton){

@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped(_ sender: AnyObject) {
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
         navigationController?.popViewController(animated: true)
     }
     
