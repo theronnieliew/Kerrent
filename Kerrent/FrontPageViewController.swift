@@ -65,7 +65,7 @@ class FrontPageViewController: UIViewController {
                 
                 self.user.ownerID = (dictionary["ownerID"] as! String?)!
                 
-                self.user.price = (dictionary["price"] as! String?)!
+//                self.user.price = (dictionary["price"] as! String?)!
                 
                 let pic = (dictionary["pics"])!
                 print("\(pic)")

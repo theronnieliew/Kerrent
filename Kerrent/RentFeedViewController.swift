@@ -44,7 +44,7 @@ class RentFeedViewController: UIViewController {
             print("Dictionary values :\n \(rentDictionary.values)\n\n")
             
             let rent = Rent()
-            rent.price = rentDictionary["price"] as! String
+            rent.price = rentDictionary["price"] as! Int
             rent.dateStart = rentDictionary["AVDateStart"] as! String
             rent.dateEnd = rentDictionary["AVDateEnd"] as! String
             rent.location = rentDictionary["location"] as! String
@@ -106,7 +106,7 @@ extension RentFeedViewController : UITableViewDataSource{
         
         let rent = rentArray[indexPath.row]
         
-        cell.priceLabel.text = rent.price
+        cell.priceLabel.text = String(rent.price)
         cell.carNameLabel.text = rent.car.name
         if(stringURL[indexPath.row] != ""){
             cell.carImage.loadImageUsingCacheWithUrlString(stringURL[indexPath.row])

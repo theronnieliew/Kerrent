@@ -66,7 +66,7 @@ extension DetailedCarViewController : UITableViewDataSource {
         cell.locationLabel.text = rent.location
         //cell.dateStartLabel.text = rent.dateStart
         //cell.dateEndLabel.text = rent.dateEnd
-        cell.priceLabel.text = rent.price
+        cell.priceLabel.text = "\(rent.price)"
         
         cell.capacityLabel.text = "\(rent.car.capacity) PAX"
         cell.yearLabel.text = "\(rent.car.year)"
