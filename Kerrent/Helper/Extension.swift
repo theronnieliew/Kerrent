@@ -36,3 +36,11 @@ extension UIImageView {
         }).resume()
     }
 }
+
+extension UIButton {
+    
+    func roundcorners() {
+        
+        self.layer.cornerRadius = 10
+    }
+}
