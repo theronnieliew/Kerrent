@@ -37,9 +37,35 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction func rentButton(_ sender: AnyObject) {
-        ref.child("history").childByAutoId().setValue(["rentStartDate" : String(describing: date1), "rentEndDate" : String(describing: date2), "carName" : rent.car.name, "userID" : FIRAuth.auth()!.currentUser!.uid, "price" : priceLabel.text!, "rentID" : rent.ID])
-        delegate?.dismissDateView()
-//        ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).child("histories").setValue(true, forKey: )
+        ref.child("history").childByAutoId().setValue(["rentStartDate" : String(describing: date1), "rentEndDate" : String(describing: date2), "carName" : rent.car.name, "userID" : FIRAuth.auth()!.currentUser!.uid, "price" : priceLabel.text!, "rentID" : rent.ID], withCompletionBlock: {(error, result) -> Void in
+            
+//            self.ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).child("histories").setValue(result.key)
+            self.delegate?.dismissDateView()
+            
+            
+            //!CHECKIN
+            self.ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: {(snapshot) in
+                
+                if !snapshot.exists() { return }
+                
+                print("snapshot! : \(snapshot)")
+                
+                if let dict = snapshot.value as? Dictionary<String, AnyObject>{
+                    var histories: [String] = []
+                    if dict["histories"] != nil {
+                        histories = dict["histories"] as! [String]
+                    } else {
+                        histories = []
+                    }
+                    
+                    print("Histories! : \(histories)")
+                    histories.append(result.key)
+                    
+                    self.ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues(["histories": histories])
+                }
+            })
+        })
+        
     }
     
     func datePickerAlert(viewController : UIViewController, titleMsg : String, tagInt : Int){

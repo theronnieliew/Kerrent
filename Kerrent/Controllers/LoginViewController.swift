@@ -11,8 +11,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!{
         didSet{
             loginButton.addTarget(self, action: #selector(loginButtonTapped(button:)), for: .touchUpInside)
+            
+            loginButton.roundcorners()
         }
     }
+    
+    
+    @IBOutlet weak var cancelButton: UIButton! {
+        didSet{
+            cancelButton.roundcorners()
+        }
+    }
+    
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     
     var ref: FIRDatabaseReference!
@@ -25,6 +35,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped(_ sender: AnyObject) {
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
         navigationController?.popViewController(animated: true)
     }
     

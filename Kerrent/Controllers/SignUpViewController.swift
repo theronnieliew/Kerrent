@@ -11,6 +11,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var createAccountButton: UIButton!{
         didSet{
             createAccountButton.addTarget(self, action: #selector(createAccountButtonTapped(button:)), for: .touchUpInside)
+            
+            createAccountButton.roundcorners()
+        }
+    }
+    
+    @IBOutlet weak var cancelButton: UIButton!{
+        didSet{
+            cancelButton.roundcorners()
         }
     }
     
@@ -24,8 +32,11 @@ class SignUpViewController: UIViewController {
     
     @IBAction func cancelButtonTapped(_ sender : AnyObject){
         firstNameTextField.text = ""
+        lastNameTextField.text = ""
         passwordTextField.text = ""
         emailTextField.text = ""
+        
+    navigationController?.popViewController(animated: true)
     }
     
     @objc func createAccountButtonTapped(button : UIButton){
