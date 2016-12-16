@@ -10,6 +10,16 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!{
+        didSet{
+            loginButton.roundcorners()
+        }
+    }
+    @IBOutlet weak var signupButton: UIButton!{
+        didSet{
+            signupButton.roundcorners()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

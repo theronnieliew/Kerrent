@@ -11,6 +11,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var createAccountButton: UIButton!{
         didSet{
             createAccountButton.addTarget(self, action: #selector(createAccountButtonTapped(button:)), for: .touchUpInside)
+            
+            createAccountButton.roundcorners()
+        }
+    }
+    
+    @IBOutlet weak var cancelButton: UIButton!{
+        didSet{
+            cancelButton.roundcorners()
         }
     }
     

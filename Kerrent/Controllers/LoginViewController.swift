@@ -11,8 +11,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!{
         didSet{
             loginButton.addTarget(self, action: #selector(loginButtonTapped(button:)), for: .touchUpInside)
+            
+            loginButton.roundcorners()
         }
     }
+    
+    
+    @IBOutlet weak var cancelButton: UIButton! {
+        didSet{
+            cancelButton.roundcorners()
+        }
+    }
+    
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     
     var ref: FIRDatabaseReference!
