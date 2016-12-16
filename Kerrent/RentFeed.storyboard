@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,13 +104,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="roA-Ri-Zm4">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-E0-Ca3">
+                                        <state key="normal" title="Filter"/>
+                                        <connections>
+                                            <action selector="filterButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="dAC-fW-7Wa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt3-M1-61f">
+                                        <state key="normal" title="Sort"/>
+                                        <connections>
+                                            <action selector="sortButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="1Db-nH-6iF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YvW-9q-UIe" firstAttribute="top" secondItem="rvU-Am-v4y" secondAttribute="bottom" id="ZhR-Ao-Tp4"/>
-                            <constraint firstItem="rvU-Am-v4y" firstAttribute="leading" secondItem="AfN-qM-EGm" secondAttribute="leading" id="jVz-9c-aLS"/>
-                            <constraint firstAttribute="trailing" secondItem="rvU-Am-v4y" secondAttribute="trailing" id="u8B-XI-o0l"/>
-                            <constraint firstItem="rvU-Am-v4y" firstAttribute="top" secondItem="Y64-8y-IMV" secondAttribute="bottom" id="vRz-Pt-mGa"/>
+                            <constraint firstAttribute="bottom" secondItem="rvU-Am-v4y" secondAttribute="bottom" id="BVr-yA-nVJ"/>
+                            <constraint firstItem="rvU-Am-v4y" firstAttribute="leading" secondItem="AfN-qM-EGm" secondAttribute="leading" id="SWZ-wk-P8b"/>
+                            <constraint firstItem="roA-Ri-Zm4" firstAttribute="leading" secondItem="AfN-qM-EGm" secondAttribute="leadingMargin" id="aZJ-g2-u7s"/>
+                            <constraint firstItem="rvU-Am-v4y" firstAttribute="top" secondItem="roA-Ri-Zm4" secondAttribute="bottom" id="hHd-JZ-C13"/>
+                            <constraint firstItem="roA-Ri-Zm4" firstAttribute="top" secondItem="Y64-8y-IMV" secondAttribute="bottom" id="qhM-8g-xOL"/>
+                            <constraint firstAttribute="trailing" secondItem="rvU-Am-v4y" secondAttribute="trailing" id="rHR-rD-mC6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="roA-Ri-Zm4" secondAttribute="trailing" id="zow-LI-rRB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V16-b0-OxM">
