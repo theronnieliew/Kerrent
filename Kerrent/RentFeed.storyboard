@@ -19,6 +19,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLP-xW-69m">
+                                <frame key="frameInset" minY="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BALLLSSSS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGO-Fb-Hww">
+                                        <frame key="frameInset" minX="67" minY="291" width="271" height="151"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="233" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvU-Am-v4y">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -89,20 +103,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LzK-PK-Ccf">
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rvU-Am-v4y" firstAttribute="top" secondItem="LzK-PK-Ccf" secondAttribute="bottom" id="3Bz-iF-xXV"/>
                             <constraint firstItem="YvW-9q-UIe" firstAttribute="top" secondItem="rvU-Am-v4y" secondAttribute="bottom" id="ZhR-Ao-Tp4"/>
-                            <constraint firstItem="LzK-PK-Ccf" firstAttribute="leading" secondItem="AfN-qM-EGm" secondAttribute="leading" id="ez8-Z6-OkF"/>
-                            <constraint firstItem="LzK-PK-Ccf" firstAttribute="top" secondItem="Y64-8y-IMV" secondAttribute="bottom" id="gu1-KT-eqJ"/>
-                            <constraint firstAttribute="trailing" secondItem="LzK-PK-Ccf" secondAttribute="trailing" id="j4y-H0-aFO"/>
                             <constraint firstItem="rvU-Am-v4y" firstAttribute="leading" secondItem="AfN-qM-EGm" secondAttribute="leading" id="jVz-9c-aLS"/>
                             <constraint firstAttribute="trailing" secondItem="rvU-Am-v4y" secondAttribute="trailing" id="u8B-XI-o0l"/>
-                            <constraint firstItem="rvU-Am-v4y" firstAttribute="top" secondItem="Y64-8y-IMV" secondAttribute="bottom" constant="44" id="vRz-Pt-mGa"/>
+                            <constraint firstItem="rvU-Am-v4y" firstAttribute="top" secondItem="Y64-8y-IMV" secondAttribute="bottom" id="vRz-Pt-mGa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V16-b0-OxM">
@@ -111,6 +118,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="noResultsView" destination="lLP-xW-69m" id="X8O-j2-fUG"/>
                         <outlet property="searchDisplayController" destination="olQ-nC-SXJ" id="agM-rL-ERN"/>
                         <outlet property="tableView" destination="rvU-Am-v4y" id="2VU-SN-WAs"/>
                         <segue destination="fla-AF-vOy" kind="show" identifier="detailViewController" id="ZCI-or-ybV"/>

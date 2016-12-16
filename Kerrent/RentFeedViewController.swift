@@ -11,10 +11,13 @@ import Firebase
 
 class RentFeedViewController: UIViewController {
     
+    @IBOutlet weak var noResultsView: UIView!
     // FetchFeedPosts Variables
     var rentArray : [Rent] = []
-    var stringURL : [String] = []
 
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredResults = [Rent]()
+    
     // Firebase Varibales
     let userUID = FIRAuth.auth()?.currentUser
     var ref: FIRDatabaseReference!
@@ -34,6 +37,14 @@ class RentFeedViewController: UIViewController {
         fetchFeedPosts()
     
         navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV"]
+        searchController.searchBar.delegate = self
     }
     
     func fetchFeedPosts() {
@@ -54,7 +65,6 @@ class RentFeedViewController: UIViewController {
             let tempArray = rentDictionary["pics"] as! [String : String]
             
             for key in tempArray.values{
-                self.stringURL.append(key)
                 rent.imageURLArray.append(key)
             }
             
@@ -79,11 +89,25 @@ class RentFeedViewController: UIViewController {
         })
     }
     
+    func filterContentForSearchText(searchText : String, scope : String = "All"){
+        filteredResults = rentArray.filter{ rent in
+            let typeMatch = (scope == "All") || (rent.car.type == scope)
+            return typeMatch && rent.car.name.lowercased().contains(searchText.lowercased())
+        }
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "detailViewController"){
             let selectedIndexPath = tableView.indexPathForSelectedRow
             let controller : DetailedCarViewController = segue.destination as! DetailedCarViewController
-            controller.rent = rentArray[(selectedIndexPath?.row)!]
+            
+            if searchController.isActive && searchController.searchBar.text != "" {
+                controller.rent = filteredResults[(selectedIndexPath?.row)!]
+            }else {
+                controller.rent = rentArray[(selectedIndexPath?.row)!]
+            }
+            
         }
     }
 }
@@ -96,7 +120,23 @@ extension RentFeedViewController : UITableViewDelegate{
 
 extension RentFeedViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+//        if filteredResults.count <= 0 && rentArray.count != 0{
+//            print("NO RESULTS!!!")
+//            noResultsView.isHidden = false
+//            tableView.isHidden = true
+//        } else {
+//            print("THERES RESULTS!!!")
+//            noResultsView.isHidden = true
+//            tableView.isHidden = false
+//        }
+        
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredResults.count
+        }
         return rentArray.count
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,14 +144,33 @@ extension RentFeedViewController : UITableViewDataSource{
             return UITableViewCell()
         }
         
-        let rent = rentArray[indexPath.row]
+        let rent : Rent
+        if searchController.isActive && searchController.searchBar.text != "" {
+            rent = filteredResults[indexPath.row]
+        } else {
+            rent = rentArray[indexPath.row]
+        }
         
         cell.priceLabel.text = String(rent.price)
         cell.carNameLabel.text = rent.car.name
-        if(stringURL[indexPath.row] != ""){
-            cell.carImage.loadImageUsingCacheWithUrlString(stringURL[indexPath.row])
+        if(rent.imageURLArray[0] != ""){
+            cell.carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[0])
         }
         
         return cell
+    }
+}
+
+extension RentFeedViewController : UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchText: searchController.searchBar.text!, scope : scope)
+    }
+}
+
+extension RentFeedViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }
