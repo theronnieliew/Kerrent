@@ -41,6 +41,6 @@ extension UIButton {
     
     func roundcorners() {
         
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 4
     }
 }
