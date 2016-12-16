@@ -86,11 +86,12 @@ class DatePickerViewController: UIViewController {
             if(self.dateLabels[0].text != "Select" && self.dateLabels[1].text != "Select"){
                 self.daysRentingLabel.text = "\(self.daysBetween(date1: self.date1, date2: self.date2))"
                 
-                let str = self.rent.price
-                let component = str.components(separatedBy: NSCharacterSet.decimalDigits.inverted)
-                let price = component.filter({ $0 != "" }) // filter out all the empty strings in the component
+//                let str = self.rent.price
+//                let component = str.components(separatedBy: NSCharacterSet.decimalDigits.inverted)
+//                let price = component.filter({ $0 != "" }) // filter out all the empty strings in the component
                 
-                let rentPrice = Int(price[0])! * Int(self.daysRentingLabel.text!)!
+//                let rentPrice = Int(price[0])! * Int(self.daysRentingLabel.text!)!
+                let rentPrice =  self.rent.price * Int(self.daysRentingLabel.text!)!
                 self.priceLabel.text = "RM \(rentPrice)"
                 
                 self.rentButton.isEnabled = true

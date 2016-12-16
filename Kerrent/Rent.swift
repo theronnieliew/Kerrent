@@ -16,7 +16,7 @@ class Rent{
     var location = ""
     var owner = ""
     var ownerID = ""
-    var price = ""
+    var price = 0
     var pic = ""
     var image = UIImage()
     var ID = ""
