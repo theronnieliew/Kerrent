@@ -15,6 +15,9 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var daysRentingLabel: UILabel!
     @IBOutlet var dateButtons: [UIButton]!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
+    
     var date1 = Date()
     var date2 = Date()
     
@@ -22,6 +25,9 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
+        
+        locationLabel.text = self.rent.location
+        rateLabel.text = "RM\(self.rent.price) daily"
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
