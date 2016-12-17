@@ -11,9 +11,9 @@ class DatePickerViewController: UIViewController {
     var delegate : DatePickerViewControllerDelegate?
     var ref: FIRDatabaseReference!
 
-    @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var daysRentingLabel: UILabel!
+    @IBOutlet var dateButtons: [UIButton]!
     
     var date1 = Date()
     var date2 = Date()
@@ -78,12 +78,12 @@ class DatePickerViewController: UIViewController {
          let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) -> Void in
             let formatter = DateFormatter()
             formatter.dateFormat = "dd-MM-YYYY ',' hh:mm"
-            self.dateLabels[tagInt].text = formatter.string(from : picker.date)
+            self.dateButtons[tagInt].setTitle(formatter.string(from : picker.date),for : UIControlState.normal)
             
             if tagInt == 0 { self.date1 = picker.date }
             if tagInt == 1 { self.date2 = picker.date }
             
-            if(self.dateLabels[0].text != "Select" && self.dateLabels[1].text != "Select"){
+            if(self.dateButtons[0].titleLabel?.text != "Start Date :" && self.dateButtons[1].titleLabel?.text != "End Date :"){
                 self.daysRentingLabel.text = "\(self.daysBetween(date1: self.date1, date2: self.date2))"
                 
 //                let str = self.rent.price
