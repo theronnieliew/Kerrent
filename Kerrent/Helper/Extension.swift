@@ -44,3 +44,25 @@ extension UIButton {
         self.layer.cornerRadius = 4
     }
 }
+
+extension UIView {
+    
+    func addGradient (firstColor : UIColor, secondColor : UIColor) {
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = [firstColor.cgColor, secondColor.cgColor]
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

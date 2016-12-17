@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         facebookLoginButton.delegate = self
         self.navigationItem.title = "LOG IN"
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func cancelButtonTapped(_ sender: AnyObject) {

@@ -12,7 +12,6 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate, DatePick
 
     var rent = Rent()
     
-    @IBOutlet weak var containerView: UIView!
     //@IBOutlet weak var letsGoButton: UIBarButtonItem!
     
     @IBOutlet weak var detailedTableView: UITableView!{
@@ -29,22 +28,24 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate, DatePick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerView.isHidden = true
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func rentButton(_ sender: AnyObject) {
-        containerView.isHidden = false
+        let storyboard = UIStoryboard(name: "DatePicker", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as? DatePickerViewController
+        controller?.rent = rent
+        controller?.delegate = self
+        present(controller!, animated : true, completion : nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller : DatePickerViewController = segue.destination as! DatePickerViewController
-        controller.rent = rent
-        controller.delegate = self
+//        let controller : DatePickerViewController = segue.destination as! DatePickerViewController
+//        controller.rent = rent
+//        controller.delegate = self
     }
     
     func dismissDateView() {
-        containerView.isHidden = true
+        dismiss(animated: true, completion: nil)
     }
 }
 

@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
         self.navigationItem.title = "SIGN UP"
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func cancelButtonTapped(_ sender : AnyObject){
