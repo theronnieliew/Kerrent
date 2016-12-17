@@ -40,7 +40,7 @@ class ProfileViewController: UIViewController {
             
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 self.user.name = (dictionary["full_name"] as! String?)!
-//                self.user.email = (dictionary["email"] as! String?)!
+                self.user.email = (dictionary["email"] as! String?)!
 //                self.user.number = (dictionary["number"] as! String?)!
 //                self.user.ic = (dictionary["IC"] as! String?)!
                 self.user.profilePic = (dictionary["profile-pic"] as? String)!
