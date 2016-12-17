@@ -17,6 +17,9 @@
 		163C8CD31E0101EA00A058B5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CD21E0101EA00A058B5 /* Extension.swift */; };
 		163C8CD91E01738800A058B5 /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163C8CD81E01738800A058B5 /* DatePicker.storyboard */; };
 		163C8CDB1E01739F00A058B5 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CDA1E01739F00A058B5 /* DatePickerViewController.swift */; };
+		163C8CDD1E04111400A058B5 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163C8CDC1E04111400A058B5 /* Filter.storyboard */; };
+		163C8CDF1E04113B00A058B5 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CDE1E04113B00A058B5 /* FilterViewController.swift */; };
+		163C8CE11E0518A100A058B5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CE01E0518A100A058B5 /* Filter.swift */; };
 		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
@@ -64,6 +67,9 @@
 		163C8CD21E0101EA00A058B5 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Helper/Extension.swift; sourceTree = "<group>"; };
 		163C8CD81E01738800A058B5 /* DatePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DatePicker.storyboard; path = Storyboard/DatePicker.storyboard; sourceTree = "<group>"; };
 		163C8CDA1E01739F00A058B5 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerViewController.swift; path = Controllers/DatePickerViewController.swift; sourceTree = "<group>"; };
+		163C8CDC1E04111400A058B5 /* Filter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Filter.storyboard; path = Storyboard/Filter.storyboard; sourceTree = "<group>"; };
+		163C8CDE1E04113B00A058B5 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = Controllers/FilterViewController.swift; sourceTree = "<group>"; };
+		163C8CE01E0518A100A058B5 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Models/Filter.swift; sourceTree = "<group>"; };
 		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 				16F3B9E91DF166AD0073C7D1 /* TabBarController.swift */,
 				16F3B9F31DF69FF30073C7D1 /* ListCarViewController.swift */,
 				163C8CDA1E01739F00A058B5 /* DatePickerViewController.swift */,
+				163C8CDE1E04113B00A058B5 /* FilterViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 				16F3B9EB1DF18ABD0073C7D1 /* User.swift */,
 				AB2E93C51DF67F5100967524 /* Rent.swift */,
 				16F3B9F51DF86D790073C7D1 /* Car.swift */,
+				163C8CE01E0518A100A058B5 /* Filter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 				AB95275B1DF91814005273C6 /* RentFeed.storyboard */,
 				AB9527611E00DD56005273C6 /* LoginAndSignUp.storyboard */,
 				163C8CD81E01738800A058B5 /* DatePicker.storyboard */,
+				163C8CDC1E04111400A058B5 /* Filter.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 				16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */,
 				16F3B9EE1DF69BFE0073C7D1 /* Assets.xcassets in Resources */,
 				162772B31DEC307E00539E7C /* Main.storyboard in Resources */,
+				163C8CDD1E04111400A058B5 /* Filter.storyboard in Resources */,
 				163C8CD91E01738800A058B5 /* DatePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +410,8 @@
 				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
 				ABA73AEE1E0294B6005326BD /* FirstViewController.swift in Sources */,
+				163C8CE11E0518A100A058B5 /* Filter.swift in Sources */,
+				163C8CDF1E04113B00A058B5 /* FilterViewController.swift in Sources */,
 				163C8CDB1E01739F00A058B5 /* DatePickerViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,

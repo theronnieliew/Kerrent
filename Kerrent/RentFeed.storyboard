@@ -109,7 +109,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-E0-Ca3">
                                         <state key="normal" title="Filter"/>
                                         <connections>
-                                            <action selector="filterButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="dAC-fW-7Wa"/>
+                                            <action selector="filterButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="Ivk-sg-g9Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt3-M1-61f">
