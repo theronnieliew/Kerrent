@@ -15,6 +15,7 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var daysRentingLabel: UILabel!
     @IBOutlet var dateButtons: [UIButton]!
     
+    @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
     
@@ -28,6 +29,10 @@ class DatePickerViewController: UIViewController {
         
         locationLabel.text = self.rent.location
         rateLabel.text = "RM\(self.rent.price) daily"
+        carImage.image = self.rent.image
+        if(rent.imageURLArray[indexPath.row] != ""){
+            carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[indexPath.row])
+        }
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -83,7 +88,8 @@ class DatePickerViewController: UIViewController {
         
          let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) -> Void in
             let formatter = DateFormatter()
-            formatter.dateFormat = "dd-MM-YYYY ',' hh:mm"
+            formatter.dateFormat = "dd MMM YYYY 'at' HH:MM"
+//            formatter.dateStyle = .medium
             self.dateButtons[tagInt].setTitle(formatter.string(from : picker.date),for : UIControlState.normal)
             
             if tagInt == 0 { self.date1 = picker.date }
