@@ -30,9 +30,11 @@ class DatePickerViewController: UIViewController {
         locationLabel.text = self.rent.location
         rateLabel.text = "RM\(self.rent.price) daily"
         carImage.image = self.rent.image
-        if(rent.imageURLArray[indexPath.row] != ""){
-            carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[indexPath.row])
+        if(rent.imageURLArray[0] != ""){
+            carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[0])
         }
+        
+        self.view.addGradient(firstColor: UIColor.white, secondColor: UIColor.black)
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
