@@ -21,11 +21,12 @@ class RentFeedViewController: UIViewController {
     @IBOutlet weak var noResultsView: UIView!
     // FetchFeedPosts Variables
     var rentArray : [Rent] = []
-
-    
     
     let searchController = UISearchController(searchResultsController: nil)
     var filteredResults = [Rent]()
+    var filteredColorResults = [Rent]()
+    var gotFiltered : Bool = false
+    var filter = Filter()
     
     // Firebase Varibales
     let userUID = FIRAuth.auth()?.currentUser
@@ -54,11 +55,6 @@ class RentFeedViewController: UIViewController {
         
         searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
         searchController.searchBar.delegate = self
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        
     }
     
     func fetchFeedPosts() {
@@ -97,7 +93,6 @@ class RentFeedViewController: UIViewController {
                 rent.car.type = carDict["type"] as! String
                 rent.car.year = carDict["year"] as! Int
             })
-            
             self.rentArray.append(rent)
             self.tableView.reloadData()
         })
@@ -116,16 +111,21 @@ class RentFeedViewController: UIViewController {
             let selectedIndexPath = tableView.indexPathForSelectedRow
             let controller : DetailedCarViewController = segue.destination as! DetailedCarViewController
             
-            if searchController.isActive && searchController.searchBar.text != "" {
+            if (searchController.isActive && searchController.searchBar.text != "") || (gotFiltered) {
                 controller.rent = filteredResults[(selectedIndexPath?.row)!]
             }else {
                 controller.rent = rentArray[(selectedIndexPath?.row)!]
             }
-            
         }
+        
     }
     @IBAction func filterButtonPressed(_ sender: AnyObject) {
-        //!Call filter view here!
+        let storyboard = UIStoryboard(name: "Filter", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
+        controller.delegate = self
+        controller.filter = filter
+        filteredColorResults.removeAll()
+        present(controller, animated: true, completion: nil)
     }
     
     @IBAction func sortButtonPressed(_ sender: AnyObject) {
@@ -183,6 +183,8 @@ extension RentFeedViewController : UITableViewDataSource{
 //                tableView.isHidden = false
 //            }
             return filteredResults.count
+        } else if gotFiltered{
+            return filteredColorResults.count
         }
         return rentArray.count
     }
@@ -195,6 +197,8 @@ extension RentFeedViewController : UITableViewDataSource{
         let rent : Rent
         if searchController.isActive && searchController.searchBar.text != "" {
             rent = filteredResults[indexPath.row]
+        } else if gotFiltered{
+            rent = filteredColorResults[indexPath.row]
         } else {
             rent = rentArray[indexPath.row]
         }
@@ -220,5 +224,69 @@ extension RentFeedViewController : UISearchResultsUpdating{
 extension RentFeedViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
+}
+
+extension RentFeedViewController : FilterViewControllerDelegate{
+    func dismissFilterView() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func getFilters(colorArray: [String], typeArray : [String]) {
+//        var filteredRentArray: [Rent] = []
+//        
+//        if colorArray.count != 0 { gotFiltered = true }
+//        
+//        for color in colorArray {
+//            let cuntRentArray: [Rent] = rentArray.filter( {(rent: Rent) -> Bool in
+//                rent.car.color.contains(color)
+//            })
+//            
+//            filteredResults.append(contentsOf: cuntRentArray)
+//            tableView.reloadData()
+//        }
+        
+        var filteredArray : [Rent] = []
+        
+        if colorArray.count != 0 && typeArray.count == 0{
+            for color in colorArray {
+                filteredArray = rentArray.filter { rent in
+                    rent.car.color.contains(color)
+                }
+                filteredColorResults.append(contentsOf: filteredArray)
+                gotFiltered = true
+                tableView.reloadData()
+            }
+        }
+        
+       else if typeArray.count != 0 && colorArray.count == 0 {
+            for type in typeArray {
+                filteredArray = rentArray.filter { rent in
+                    rent.car.type.contains(type)
+                }
+                filteredColorResults.append(contentsOf: filteredArray)
+                gotFiltered = true
+                tableView.reloadData()
+            }
+        }
+            
+        else if colorArray.count != 0 && typeArray.count != 0 {
+            for color in colorArray {
+                for type in typeArray {
+                    filteredArray = rentArray.filter ( {(rent: Rent) -> Bool in
+                        return rent.car.color.contains(color) && rent.car.type.contains(type)
+                    })
+                    filteredColorResults.append(contentsOf: filteredArray)
+                    gotFiltered = true
+                    tableView.reloadData()
+                }
+            }
+
+        }
+        
+        else {
+            gotFiltered = false
+            tableView.reloadData()
+        }
     }
 }
