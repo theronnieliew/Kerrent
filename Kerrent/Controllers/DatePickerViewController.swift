@@ -11,9 +11,13 @@ class DatePickerViewController: UIViewController {
     var delegate : DatePickerViewControllerDelegate?
     var ref: FIRDatabaseReference!
 
-    @IBOutlet var dateLabels: [UILabel]!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var daysRentingLabel: UILabel!
+    @IBOutlet var dateButtons: [UIButton]!
+    
+    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
     
     var date1 = Date()
     var date2 = Date()
@@ -22,6 +26,15 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
+        
+        locationLabel.text = self.rent.location
+        rateLabel.text = "RM\(self.rent.price) daily"
+        carImage.image = self.rent.image
+        if(rent.imageURLArray[0] != ""){
+            carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[0])
+        }
+        
+        self.view.addGradient(firstColor: UIColor.white, secondColor: UIColor.black)
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -77,13 +90,14 @@ class DatePickerViewController: UIViewController {
         
          let okAction = UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) -> Void in
             let formatter = DateFormatter()
-            formatter.dateFormat = "dd-MM-YYYY ',' hh:mm"
-            self.dateLabels[tagInt].text = formatter.string(from : picker.date)
+            formatter.dateFormat = "dd MMM YYYY 'at' HH:MM"
+//            formatter.dateStyle = .medium
+            self.dateButtons[tagInt].setTitle(formatter.string(from : picker.date),for : UIControlState.normal)
             
             if tagInt == 0 { self.date1 = picker.date }
             if tagInt == 1 { self.date2 = picker.date }
             
-            if(self.dateLabels[0].text != "Select" && self.dateLabels[1].text != "Select"){
+            if(self.dateButtons[0].titleLabel?.text != "Start Date :" && self.dateButtons[1].titleLabel?.text != "End Date :"){
                 self.daysRentingLabel.text = "\(self.daysBetween(date1: self.date1, date2: self.date2))"
                 
 //                let str = self.rent.price
