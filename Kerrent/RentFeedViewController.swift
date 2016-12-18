@@ -57,7 +57,7 @@ class RentFeedViewController: UIViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
-        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
+//        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
         searchController.searchBar.delegate = self
     }
     
@@ -98,14 +98,16 @@ class RentFeedViewController: UIViewController {
                 rent.car.year = carDict["year"] as! Int
             })
             self.rentArray.append(rent)
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
     }
     
     func filterContentForSearchText(searchText : String, scope : String = "All"){
         filteredResults = rentArray.filter{ rent in
-            let typeMatch = (scope == "All") || (rent.car.type == scope)
-            return typeMatch && rent.car.name.lowercased().contains(searchText.lowercased())
+//            let typeMatch = (scope == "All") || (rent.car.type == scope)
+            return rent.car.name.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
     }
@@ -220,14 +222,16 @@ extension RentFeedViewController : UITableViewDataSource{
 extension RentFeedViewController : UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
-        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
-        filterContentForSearchText(searchText: searchController.searchBar.text!, scope : scope)
+//        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+//        filterContentForSearchText(searchText: searchController.searchBar.text!, scope : scope)
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
 }
 
 extension RentFeedViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+//        filterContentForSearchText(searchText: searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+         filterContentForSearchText(searchText: searchBar.text!)
     }
 }
 
