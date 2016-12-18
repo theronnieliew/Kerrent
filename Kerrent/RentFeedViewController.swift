@@ -46,9 +46,9 @@ class RentFeedViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         fetchFeedPosts()
     
-        //navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+        navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
+        //navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
         
         
         

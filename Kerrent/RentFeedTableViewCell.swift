@@ -10,12 +10,17 @@ import UIKit
 
 class RentFeedTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carImage: UIImageView!{
+        didSet{
+            carImage.round(corners: [.topLeft, .topRight], radius: 2)
+        }
+    }
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var carNameLabel: UILabel!
     @IBOutlet weak var rentView: UIView!{
         didSet{
-            rentView.addGradient(firstColor: UIColor.clear, secondColor: UIColor.clear)
+//            rentView.addGradient(firstColor: UIColor.clear, secondColor: UIColor.clear)
+            rentView.layer.cornerRadius = 2
         }
     }
     
