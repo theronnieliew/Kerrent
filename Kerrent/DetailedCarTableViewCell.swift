@@ -20,6 +20,16 @@ class DetailedCarTableViewCell: UITableViewCell {
             rentButton.round(corners: .allCorners, radius: 2)
         }
     }
+    @IBOutlet weak var bookingView: UIView!{
+        didSet{
+            bookingView.round(corners: .allCorners, radius: 2)
+        }
+    }
+    @IBOutlet weak var specsView: UIView!{
+        didSet{
+            specsView.round(corners: .allCorners, radius: 2)
+        }
+    }
     
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carLogo: UIImageView!
