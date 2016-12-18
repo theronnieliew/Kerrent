@@ -4,7 +4,13 @@ import FirebaseDatabase
 import FBSDKLoginKit
 import FirebaseStorage
 
+protocol ProfileViewControllerDelegate {
+    func dismissProfileView()
+}
+
 class ProfileViewController: UIViewController {
+    
+    var delegate : ProfileViewControllerDelegate?
 
     @IBOutlet weak var profilePicImgView: UIImageView!
     
@@ -121,6 +127,10 @@ class ProfileViewController: UIViewController {
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func dismissProfileViewController(_ sender: AnyObject) {
+        delegate?.dismissProfileView()
     }
 }
 

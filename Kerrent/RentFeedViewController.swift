@@ -168,6 +168,13 @@ class RentFeedViewController: UIViewController {
         alertController.addAction(cancelButton)
         self.present(alertController, animated : true, completion:nil)
     }
+    
+    @IBAction func homeButtonPressed(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        controller.delegate = self
+        present(controller, animated: true, completion: nil)
+    }
 }
 
 extension RentFeedViewController : UITableViewDelegate{
@@ -301,5 +308,11 @@ extension RentFeedViewController : FilterViewControllerDelegate{
             gotFiltered = false
             tableView.reloadData()
         }
+    }
+}
+
+extension RentFeedViewController : ProfileViewControllerDelegate{
+    func dismissProfileView() {
+        dismiss(animated: true, completion: nil)
     }
 }
