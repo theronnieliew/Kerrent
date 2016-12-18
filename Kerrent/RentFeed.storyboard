@@ -116,14 +116,22 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eef-E0-Ca3">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
-                                        <state key="normal" title="Filter"/>
+                                        <color key="backgroundColor" red="0.68708586692810059" green="0.68706530332565308" blue="0.68707698583602905" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" red="0.21053633093833923" green="0.2816862165927887" blue="0.31816202402114868" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="filterButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="Ivk-sg-g9Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt3-M1-61f">
                                         <rect key="frame" x="187" y="0.0" width="187" height="30"/>
-                                        <state key="normal" title="Sort"/>
+                                        <color key="backgroundColor" red="0.68708586692810059" green="0.68706530332565308" blue="0.68707698583602905" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Sort">
+                                            <color key="titleColor" red="0.21053633093833923" green="0.2816862165927887" blue="0.31816202402114868" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="sortButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="1Db-nH-6iF"/>
                                         </connections>
