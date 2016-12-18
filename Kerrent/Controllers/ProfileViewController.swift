@@ -22,10 +22,9 @@ class ProfileViewController: UIViewController {
     
     var user = User()
     let userUID = FIRAuth.auth()?.currentUser
+    var historyIDs : [String] = []
     
     var ref: FIRDatabaseReference!
-    
-    //var historyArray = [History]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +39,29 @@ class ProfileViewController: UIViewController {
             
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 self.user.name = (dictionary["full_name"] as! String?)!
-                self.user.email = (dictionary["email"] as! String?)!
-//                self.user.number = (dictionary["number"] as! String?)!
-//                self.user.ic = (dictionary["IC"] as! String?)!
+//                self.user.email = (dictionary["email"] as! String?)!
                 self.user.profilePic = (dictionary["profile-pic"] as? String)!
 //                self.user.facebookID = (dictionary["facebookID"] as! String?)!
                 
+                let histories = dictionary["histories"] as! [String]
+                for history in histories {
+                    self.ref.child("history").child(history).observeSingleEvent(of :.value, with: {(snapshot) in
+                        guard let historyDict = snapshot.value as? [String: AnyObject] else{
+                            return
+                        }
+                        
+                        let historyObj = History()
+                        historyObj.carName = historyDict["carName"] as! String
+                        historyObj.startDate = historyDict["rentStartDate"] as! String
+                        historyObj.endDate = historyDict["rentEndDate"] as! String
+                        
+                        self.user.histories.append(historyObj)
+                        self.historyTableView.reloadData()
+                    })
+                }
+                
                 self.nameLabel.text = self.user.name
-                self.emailLabel.text = self.user.email
-//                self.phoneNumberLabel.text = self.user.number
+//                self.emailLabel.text = self.user.email
                 
                 let url = URL(string: self.user.profilePic)
                 let data = try? Data(contentsOf: url!)
@@ -56,10 +69,6 @@ class ProfileViewController: UIViewController {
             }
         })
     }
-    
-//    func fetchHistory() {
-//        
-//        ref.child("history")
     
     @IBAction func logOutButton(_ sender: AnyObject) {
         let firebaseAuth = FIRAuth.auth()
@@ -81,13 +90,14 @@ extension ProfileViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         
-//        cell.
+        cell.rentCarNameLabel.text = self.user.histories[indexPath.row].carName
+        cell.startDateLabel.text = self.user.histories[indexPath.row].startDate
+        cell.endDateLabel.text = self.user.histories[indexPath.row].endDate
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-//        return historyArray.count
+        return self.user.histories.count
     }
 }

@@ -10,4 +10,6 @@ class User{
     var ID = ""
     
     var facebookID = ""
+    
+    var histories : [History] = []
 }
