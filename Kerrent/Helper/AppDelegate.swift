@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if user != nil {
-                self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
+                self.checkLoadPage(storyboard: "RentFeed", controllername: "RentFeedViewController")
             } else {
                 self.checkLoadPage(storyboard: "RegisterStoryboard", controllername: "StartingViewController")
             }
@@ -65,7 +65,7 @@ extension AppDelegate{
     
     func handleAuthNotification(_ notification : Notification){
         //this part will only be called if user successfuly logged in
-        self.checkLoadPage(storyboard: "TabBar", controllername: "TabBarController")
+        self.checkLoadPage(storyboard: "RentFeed", controllername: "RentFeedViewController")
     }
     
     func checkLoadPage(storyboard : String, controllername : String){

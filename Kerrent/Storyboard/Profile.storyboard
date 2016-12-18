@@ -32,6 +32,11 @@
                                         </constraints>
                                         <items>
                                             <navigationItem title="Profile" id="5Vc-9p-Oxk">
+                                                <barButtonItem key="leftBarButtonItem" title="&lt;" id="BAB-Sx-TPe">
+                                                    <connections>
+                                                        <action selector="dismissProfileViewController:" destination="awd-Ds-hmZ" id="lUd-vh-Vaq"/>
+                                                    </connections>
+                                                </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" style="plain" id="Fwo-pa-jd8">
                                                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pla-Sk-NjL">
                                                         <rect key="frame" x="287" y="4" width="72" height="36"/>
@@ -53,7 +58,6 @@
                                                 <rect key="frame" x="0.0" y="28" width="359" height="67"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTd-OW-jOA" id="ya1-7t-Hxu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="67"/>
                                                     <frame key="frameInset" width="359" height="66"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -128,7 +132,7 @@
                                     <constraint firstAttribute="trailing" secondItem="nVk-UH-wpp" secondAttribute="trailing" constant="8" id="9qj-mt-hKM"/>
                                     <constraint firstItem="nVk-UH-wpp" firstAttribute="leading" secondItem="GfW-m7-R34" secondAttribute="leading" constant="8" id="ACm-Bn-lfJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Lcj-8m-srk" secondAttribute="trailing" id="MgJ-b1-IRM"/>
-                                    <constraint firstAttribute="bottom" secondItem="nVk-UH-wpp" secondAttribute="bottom" constant="50" id="OIy-Iy-zt9"/>
+                                    <constraint firstAttribute="bottom" secondItem="nVk-UH-wpp" secondAttribute="bottom" id="QOI-Ts-lfa"/>
                                     <constraint firstItem="QiB-Ga-fJ5" firstAttribute="baseline" secondItem="Lcj-8m-srk" secondAttribute="baseline" id="XKW-gK-PpA"/>
                                     <constraint firstItem="QiB-Ga-fJ5" firstAttribute="centerX" secondItem="Lcj-8m-srk" secondAttribute="centerX" id="nal-5l-b54"/>
                                     <constraint firstItem="oBH-Ae-yyu" firstAttribute="top" secondItem="GfW-m7-R34" secondAttribute="top" id="qT9-Ke-KBC"/>
@@ -166,7 +170,6 @@
                             <constraint firstItem="nVk-UH-wpp" firstAttribute="top" secondItem="b7N-yM-lUB" secondAttribute="bottom" constant="4" id="zST-jx-sfi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="jjs-OD-cbL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailLabel" destination="b7N-yM-lUB" id="6dH-Nn-RKa"/>
