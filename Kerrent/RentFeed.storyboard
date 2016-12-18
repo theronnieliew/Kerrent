@@ -57,14 +57,12 @@
                                                         </imageView>
                                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-hq-EbL">
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-ep-Fh7">
-                                                                    <frame key="frameInset" width="61" height="75"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-ep-Fh7">
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-9k-Acs">
-                                                                    <frame key="frameInset" minY="70" width="61" height="12"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-9k-Acs">
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
@@ -147,8 +145,8 @@
                         <outlet property="noResultsView" destination="lLP-xW-69m" id="X8O-j2-fUG"/>
                         <outlet property="searchDisplayController" destination="olQ-nC-SXJ" id="agM-rL-ERN"/>
                         <outlet property="tableView" destination="rvU-Am-v4y" id="2VU-SN-WAs"/>
-                        <outletCollection property="filterSortButtons" destination="eef-E0-Ca3" id="8BD-DK-LG2"/>
-                        <outletCollection property="filterSortButtons" destination="pt3-M1-61f" id="3dp-5e-OhD"/>
+                        <outletCollection property="filterSortButtons" destination="eef-E0-Ca3" collectionClass="NSMutableArray" id="8BD-DK-LG2"/>
+                        <outletCollection property="filterSortButtons" destination="pt3-M1-61f" collectionClass="NSMutableArray" id="3dp-5e-OhD"/>
                         <segue destination="fla-AF-vOy" kind="show" identifier="detailViewController" id="ZCI-or-ybV"/>
                     </connections>
                 </viewController>
