@@ -53,11 +53,8 @@
                                                 <rect key="frame" x="0.0" y="28" width="359" height="67"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTd-OW-jOA" id="ya1-7t-Hxu">
-<<<<<<< HEAD
                                                     <rect key="frame" x="0.0" y="0.0" width="304" height="67"/>
-=======
                                                     <frame key="frameInset" width="359" height="66"/>
->>>>>>> master
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Dec 2012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-0m-3RK">
