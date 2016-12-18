@@ -27,6 +27,8 @@ class RentFeedViewController: UIViewController {
     var filteredColorResults = [Rent]()
     var gotFiltered : Bool = false
     var filter = Filter()
+
+    @IBOutlet var filterSortButtons: [UIButton]!
     
     // Firebase Varibales
     let userUID = FIRAuth.auth()?.currentUser
@@ -50,8 +52,6 @@ class RentFeedViewController: UIViewController {
         
         //navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
         
-        
-        
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
@@ -59,6 +59,11 @@ class RentFeedViewController: UIViewController {
         
 //        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
         searchController.searchBar.delegate = self
+        
+        for button in filterSortButtons{
+            button.layer.cornerRadius = 5
+            button.clipsToBounds = true
+        }
     }
     
     func fetchFeedPosts() {
