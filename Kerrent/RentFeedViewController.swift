@@ -46,7 +46,11 @@ class RentFeedViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         fetchFeedPosts()
     
-        navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+        //navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
+        
+        
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -203,8 +207,8 @@ extension RentFeedViewController : UITableViewDataSource{
             rent = rentArray[indexPath.row]
         }
         
-        cell.priceLabel.text = String(rent.price)
-        cell.carNameLabel.text = rent.car.name
+        cell.priceLabel.text = "RM\(rent.price)"
+        cell.carNameLabel.text = "\(rent.car.manufacturer) \(rent.car.name)"
         if(rent.imageURLArray[0] != ""){
             cell.carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[0])
         }
