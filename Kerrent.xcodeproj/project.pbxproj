@@ -20,6 +20,7 @@
 		163C8CDD1E04111400A058B5 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 163C8CDC1E04111400A058B5 /* Filter.storyboard */; };
 		163C8CDF1E04113B00A058B5 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CDE1E04113B00A058B5 /* FilterViewController.swift */; };
 		163C8CE11E0518A100A058B5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CE01E0518A100A058B5 /* Filter.swift */; };
+		163C8CE31E054C3500A058B5 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CE21E054C3500A058B5 /* History.swift */; };
 		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
@@ -70,6 +71,7 @@
 		163C8CDC1E04111400A058B5 /* Filter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Filter.storyboard; path = Storyboard/Filter.storyboard; sourceTree = "<group>"; };
 		163C8CDE1E04113B00A058B5 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = Controllers/FilterViewController.swift; sourceTree = "<group>"; };
 		163C8CE01E0518A100A058B5 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Models/Filter.swift; sourceTree = "<group>"; };
+		163C8CE21E054C3500A058B5 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = History.swift; path = Models/History.swift; sourceTree = "<group>"; };
 		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				AB2E93C51DF67F5100967524 /* Rent.swift */,
 				16F3B9F51DF86D790073C7D1 /* Car.swift */,
 				163C8CE01E0518A100A058B5 /* Filter.swift */,
+				163C8CE21E054C3500A058B5 /* History.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				ABA73AEE1E0294B6005326BD /* FirstViewController.swift in Sources */,
 				163C8CE11E0518A100A058B5 /* Filter.swift in Sources */,
 				163C8CDF1E04113B00A058B5 /* FilterViewController.swift in Sources */,
+				163C8CE31E054C3500A058B5 /* History.swift in Sources */,
 				163C8CDB1E01739F00A058B5 /* DatePickerViewController.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
