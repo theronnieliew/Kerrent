@@ -37,6 +37,20 @@ extension UIImageView {
     }
 }
 
+public extension UIImage {
+    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        color.setFill()
+        UIRectFill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        guard let cgImage = image?.cgImage else { return nil }
+        self.init(cgImage: cgImage)
+    }
+}
+
 extension UIButton {
     
     func roundcorners() {
@@ -79,6 +93,21 @@ extension UIColor {
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
+    
+    
+    // Custom Colors
+    static func primaryColor() -> UIColor{
+        return UIColor.init(netHex: 0x071216)
+    }
+    
+    static func secondaryColor() -> UIColor{
+        return UIColor.init(netHex: 0x171E28)
+    }
+    
+    static func tertiaryColor() -> UIColor{
+        return UIColor.init(netHex: 0xA61103)
+    }
+    
 }
 
 extension UIView {
