@@ -285,7 +285,7 @@
 				TargetAttributes = {
 					162772A91DEC307E00539E7C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9TG37Y45LM;
+						DevelopmentTeam = WZX37L952Q;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -546,10 +546,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9TG37Y45LM;
+				DEVELOPMENT_TEAM = WZX37L952Q;
 				INFOPLIST_FILE = Kerrent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent.clinton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -562,10 +563,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9TG37Y45LM;
+				DEVELOPMENT_TEAM = WZX37L952Q;
 				INFOPLIST_FILE = Kerrent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent.clinton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
