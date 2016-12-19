@@ -37,7 +37,7 @@
                                             <constraint firstAttribute="height" constant="44" id="rhu-C2-64u"/>
                                         </constraints>
                                         <items>
-                                            <navigationItem title="Profile" id="5Vc-9p-Oxk">
+                                            <navigationItem id="5Vc-9p-Oxk">
                                                 <barButtonItem key="leftBarButtonItem" title="&lt;" style="plain" id="BAB-Sx-TPe">
                                                     <connections>
                                                         <action selector="dismissProfileViewController:" destination="awd-Ds-hmZ" id="lUd-vh-Vaq"/>
@@ -60,6 +60,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-UH-wpp">
                                         <rect key="frame" x="8" y="301.5" width="359" height="345.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexBackgroundColor" red="0.027450980390000001" green="0.070588235289999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="67" id="RTd-OW-jOA" customClass="HistoryTableViewCell" customModule="Kerrent" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="359" height="67"/>
@@ -105,6 +106,7 @@
                                                         <constraint firstItem="j56-t7-cvL" firstAttribute="centerY" secondItem="oL8-BO-5wQ" secondAttribute="centerY" id="veq-8f-t6l"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="0.090196078430000007" green="0.1176470588" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <outlet property="directionImage" destination="oL8-BO-5wQ" id="bJx-pe-h41"/>
                                                     <outlet property="endDateLabel" destination="j56-t7-cvL" id="LlR-Uv-mZH"/>
@@ -137,7 +139,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9166492223739624" green="0.91662174463272095" blue="0.91663730144500732" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.070588235289999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Lcj-8m-srk" firstAttribute="leading" secondItem="GfW-m7-R34" secondAttribute="leading" id="7pm-eT-ZJe"/>
                                     <constraint firstItem="Lcj-8m-srk" firstAttribute="top" secondItem="oBH-Ae-yyu" secondAttribute="bottom" id="9N2-dD-YQl"/>
@@ -160,17 +162,17 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinton Otten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neq-lP-fEU">
                                 <rect key="frame" x="130" y="279" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clint@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7N-yM-lUB">
                                 <rect key="frame" x="141.5" y="303" width="92" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.027450980390000001" green="0.070588235289999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nVk-UH-wpp" firstAttribute="centerX" secondItem="b7N-yM-lUB" secondAttribute="centerX" id="Fct-qE-TyU"/>
                             <constraint firstItem="Neq-lP-fEU" firstAttribute="top" secondItem="QiB-Ga-fJ5" secondAttribute="bottom" constant="4" id="HT5-dU-hYU"/>
