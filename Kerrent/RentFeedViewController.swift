@@ -69,7 +69,7 @@ class RentFeedViewController: UIViewController {
         
         searchController.searchBar.setBackgroundImage(UIImage(color: .primaryColor()), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
         searchController.searchBar.backgroundColor = UIColor.primaryColor()
-        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.tertiaryColor()
         searchController.searchBar.barTintColor = UIColor.primaryColor()
         
 //        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
