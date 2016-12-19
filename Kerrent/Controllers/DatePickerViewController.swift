@@ -34,7 +34,6 @@ class DatePickerViewController: UIViewController {
             carImage.loadImageUsingCacheWithUrlString(rent.imageURLArray[0])
         }
         
-        self.view.addGradient(firstColor: UIColor.white, secondColor: UIColor.black)
     }
     
     @IBAction func buttonPressed(_ sender: AnyObject) {
