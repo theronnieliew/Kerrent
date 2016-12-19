@@ -40,6 +40,7 @@ class RentFeedViewController: UIViewController {
             tableView.delegate = self
             tableView.estimatedRowHeight = 375
             tableView.rowHeight = UITableViewAutomaticDimension
+            tableView.separatorStyle = .none
         }
     }
     
@@ -48,22 +49,35 @@ class RentFeedViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         fetchFeedPosts()
     
-        navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
+        //navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
         
         //navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
+        
+        navigationController?.navigationBar.barTintColor = UIColor.primaryColor()
+        navigationController?.navigationBar.isTranslucent = false
+        
+        UIApplication.shared.statusBarStyle = .lightContent
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor.primaryColor()
         
 //        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
         searchController.searchBar.delegate = self
         
         for button in filterSortButtons{
-            button.layer.cornerRadius = 4
-            button.clipsToBounds = true
+            button.fullyRound(diameter: 4, borderColor: UIColor.white, borderWidth: 0.5)
+            //button.clipsToBounds = true
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     func fetchFeedPosts() {

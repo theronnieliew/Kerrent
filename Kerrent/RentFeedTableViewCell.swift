@@ -20,7 +20,7 @@ class RentFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var rentView: UIView!{
         didSet{
 //            rentView.addGradient(firstColor: UIColor.clear, secondColor: UIColor.clear)
-            rentView.layer.cornerRadius = 2
+            rentView.fullyRound(diameter: 2, borderColor: UIColor.tertiaryColor(), borderWidth: 2)
         }
     }
     
