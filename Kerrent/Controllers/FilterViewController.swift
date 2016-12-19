@@ -10,7 +10,6 @@ class FilterViewController: UIViewController {
     var filter = Filter()
     var delegate : FilterViewControllerDelegate?
     
-//    var years : [Int] = []
 
     @IBOutlet var colorButtons: [UIButton]!{
         didSet{
@@ -52,9 +51,6 @@ class FilterViewController: UIViewController {
         }
         
         self.view.backgroundColor = UIColor.lightGray
-//        
-//        years = Array(1990...2016)
-//        print("Years : \(years)")
     }
     
     @IBAction func colorButtonPressed(_ sender: UIButton) {
