@@ -22,6 +22,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var nav: UINavigationBar!{
+        didSet{
+            nav.barTintColor = UIColor .primaryColor()
+            nav.tintColor = UIColor.tertiaryColor()
+            nav.isTranslucent = false
+        }
+    }
+    
     var user = User()
     let userUID = FIRAuth.auth()?.currentUser
     var historyIDs : [String] = []
@@ -36,7 +44,7 @@ class ProfileViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         storageRef = storage.reference(forURL: "gs://kerrent-67d3a.appspot.com")
         
-      fetchUser()
+        fetchUser()
     }
     
     func fetchUser() {
