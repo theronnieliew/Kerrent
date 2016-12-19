@@ -58,6 +58,7 @@ class ProfileViewController: UIViewController {
                         historyObj.carName = historyDict["carName"] as! String
                         historyObj.startDate = historyDict["rentStartDate"] as! String
                         historyObj.endDate = historyDict["rentEndDate"] as! String
+                        historyObj.price = historyDict["price"] as! String
                         
                         self.user.histories.append(historyObj)
                         self.historyTableView.reloadData()
@@ -142,6 +143,7 @@ extension ProfileViewController : UITableViewDataSource {
         cell.rentCarNameLabel.text = self.user.histories[indexPath.row].carName
         cell.startDateLabel.text = self.user.histories[indexPath.row].startDate
         cell.endDateLabel.text = self.user.histories[indexPath.row].endDate
+        //! Update cell's price here
         
         return cell
     }
