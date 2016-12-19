@@ -19,11 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRx-6I-S20">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zg-r8-SpS">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -31,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="46" id="ikK-Fd-sQE"/>
                                 </constraints>
                                 <state key="normal" title="Black">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="0ae-iJ-AfJ"/>
@@ -44,7 +39,7 @@
                                     <constraint firstAttribute="height" constant="30" id="egK-i2-0aS"/>
                                 </constraints>
                                 <state key="normal" title="White">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="Zgn-LX-yh4"/>
@@ -57,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="30" id="vmh-iC-vNv"/>
                                 </constraints>
                                 <state key="normal" title="Red">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="oHL-j3-8yG"/>
@@ -70,7 +65,7 @@
                                     <constraint firstAttribute="width" constant="46" id="t4K-C7-3ka"/>
                                 </constraints>
                                 <state key="normal" title="Green">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="7zB-Rn-7ZH"/>
@@ -83,7 +78,7 @@
                                     <constraint firstAttribute="width" constant="46" id="wUK-R7-drx"/>
                                 </constraints>
                                 <state key="normal" title="Blue">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="ZdY-9g-nhG"/>
@@ -96,7 +91,7 @@
                                     <constraint firstAttribute="width" constant="46" id="gZY-jU-DTy"/>
                                 </constraints>
                                 <state key="normal" title="Yellow">
-                                    <color key="titleColor" red="1" green="0.90539319630230031" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="alP-g6-e1z"/>
@@ -109,7 +104,7 @@
                                     <constraint firstAttribute="height" constant="30" id="IiO-gq-NSO"/>
                                 </constraints>
                                 <state key="normal" title="Grey">
-                                    <color key="titleColor" red="0.21571405440414504" green="0.21571405440414504" blue="0.21571405440414504" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.96343052920308514" green="1" blue="0.94688521340007514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="KCV-Cf-xSu"/>
@@ -122,7 +117,7 @@
                                     <constraint firstAttribute="width" constant="46" id="u64-KK-37r"/>
                                 </constraints>
                                 <state key="normal" title="Gold">
-                                    <color key="titleColor" red="0.83137254901960778" green="0.68627450980392157" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="kC5-W2-Ste"/>
@@ -135,7 +130,7 @@
                                     <constraint firstAttribute="width" constant="46" id="ya7-Rc-GGV"/>
                                 </constraints>
                                 <state key="normal" title="Silver">
-                                    <color key="titleColor" red="0.75294117647058822" green="0.75294117647058822" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="TNG-rD-YpS"/>
@@ -148,7 +143,7 @@
                                     <constraint firstAttribute="width" constant="46" id="cea-01-9wE"/>
                                 </constraints>
                                 <state key="normal" title="Other">
-                                    <color key="titleColor" red="0.73506766557693481" green="0.053301051175623733" blue="0.67420283074138443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorButtonPressed:" destination="KH7-hH-e4m" eventType="touchUpInside" id="kqE-SR-oR6"/>
@@ -259,6 +254,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3C-yc-dcn">
+                                <frame key="frameInset" minX="157" minY="68" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -283,8 +285,6 @@
                             <constraint firstItem="fTA-dd-snA" firstAttribute="centerY" secondItem="f0i-Rm-vq3" secondAttribute="centerY" id="OX3-ei-i4d"/>
                             <constraint firstItem="zZm-oR-vNv" firstAttribute="centerX" secondItem="Puz-jD-a2w" secondAttribute="centerX" constant="5" id="TlK-Ir-6cJ"/>
                             <constraint firstItem="c0W-tS-kQK" firstAttribute="centerY" secondItem="gRD-PJ-3yw" secondAttribute="centerY" id="V1d-dn-yBU"/>
-                            <constraint firstItem="f0i-Rm-vq3" firstAttribute="top" secondItem="YRx-6I-S20" secondAttribute="bottom" constant="22" id="VND-SC-B0h"/>
-                            <constraint firstItem="YRx-6I-S20" firstAttribute="centerX" secondItem="f0i-Rm-vq3" secondAttribute="centerX" id="Vhd-wi-A9o"/>
                             <constraint firstItem="Nol-jk-C2b" firstAttribute="centerY" secondItem="gRD-PJ-3yw" secondAttribute="centerY" id="WJ7-gF-1tA"/>
                             <constraint firstItem="ZCN-6T-xYg" firstAttribute="top" secondItem="gRD-PJ-3yw" secondAttribute="bottom" constant="51" id="WZ2-FJ-hyD"/>
                             <constraint firstItem="exR-6f-fFv" firstAttribute="centerY" secondItem="gRD-PJ-3yw" secondAttribute="centerY" id="WdT-Z4-6T9"/>
@@ -333,6 +333,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhC-wT-kA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-319.19999999999999" y="80.50974512743629"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Yfn-ej-G8n">
+            <objects>
+                <viewController id="c9X-Rw-XcZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7nY-KN-eX0"/>
+                        <viewControllerLayoutGuide type="bottom" id="uD6-b2-b4i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CnO-NV-3a5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pvg-Th-kJo">
+                                <frame key="frameInset" minY="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Filters" id="FD2-74-qvd"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOL-hN-Sc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="80.50974512743629"/>
         </scene>
     </scenes>
     <resources>
