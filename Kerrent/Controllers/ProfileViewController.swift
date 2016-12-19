@@ -14,19 +14,26 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profilePicImgView: UIImageView!
     
+    @IBOutlet weak var profileLandscape: UIImageView!{
+        didSet{
+            profileLandscape.round(corners: [.bottomLeft, .bottomRight], radius: 2)
+        }
+    }
     @IBOutlet weak var historyTableView: UITableView! {
         didSet{
             historyTableView.dataSource = self
+            historyTableView.round(corners: .allCorners, radius: 2)
         }
     }
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+   // @IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var nav: UINavigationBar!{
         didSet{
             nav.barTintColor = UIColor .primaryColor()
             nav.tintColor = UIColor.tertiaryColor()
             nav.isTranslucent = false
+            nav.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.tertiaryColor()]
         }
     }
     
@@ -73,14 +80,17 @@ class ProfileViewController: UIViewController {
                     })
                 }
                 
-                self.nameLabel.text = self.user.name
-                self.emailLabel.text = self.user.email
+                //self.nameLabel.text = self.user.name
+                //self.emailLabel.text = self.user.email
                 
                 let url = URL(string: self.user.profilePic)
                 let data = try? Data(contentsOf: url!)
                 self.profilePicImgView.image = UIImage(data: data!)
                 self.profilePicImgView.layer.cornerRadius = self.profilePicImgView.frame.size.width / 2
                 self.profilePicImgView.clipsToBounds = true
+                
+                self.nav.topItem?.title = self.user.name
+                
             }
         })
     }
