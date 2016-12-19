@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2680D57EB29B19FC1CE741A44C33FFE455F96D94",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2680D57EB29B19FC1CE741A44C33FFE455F96D94" : 9223372036854775807,
+    "65CC970727397268D93A2BFEB5EBA805C02E6225" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B12DB21-FC52-469B-9F85-D77967021DC0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2680D57EB29B19FC1CE741A44C33FFE455F96D94" : "Kerrent\/",
+    "65CC970727397268D93A2BFEB5EBA805C02E6225" : "CalendarPopUp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Kerrent",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Kerrent.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/theronnieliew\/Kerrent.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2680D57EB29B19FC1CE741A44C33FFE455F96D94"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/orazz\/CalendarPopUp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65CC970727397268D93A2BFEB5EBA805C02E6225"
+    }
+  ]
+}

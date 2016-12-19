@@ -144,9 +144,11 @@ class RentFeedViewController: UIViewController {
             let selectedIndexPath = tableView.indexPathForSelectedRow
             let controller : DetailedCarViewController = segue.destination as! DetailedCarViewController
             
-            if (searchController.isActive && searchController.searchBar.text != "") || (gotFiltered) {
+            if searchController.isActive && searchController.searchBar.text != "" {
                 controller.rent = filteredResults[(selectedIndexPath?.row)!]
-            }else {
+            }else if gotFiltered{
+                controller.rent = filteredColorResults[(selectedIndexPath?.row)!]
+            } else {
                 controller.rent = rentArray[(selectedIndexPath?.row)!]
             }
         }

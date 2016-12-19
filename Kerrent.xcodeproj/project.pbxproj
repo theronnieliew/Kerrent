@@ -22,6 +22,13 @@
 		163C8CE11E0518A100A058B5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CE01E0518A100A058B5 /* Filter.swift */; };
 		163C8CE31E054C3500A058B5 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C8CE21E054C3500A058B5 /* History.swift */; };
 		16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16578E001DFD62AD0031CFC8 /* Uploader.swift */; };
+		16A5C4CA1E081208006EBD22 /* PopupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C4C91E081208006EBD22 /* PopupContainer.swift */; };
+		16A5C4CC1E081256006EBD22 /* CalendarPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C4CB1E081256006EBD22 /* CalendarPopUp.swift */; };
+		16A5C4CE1E08127F006EBD22 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C4CD1E08127F006EBD22 /* CellView.swift */; };
+		16A5C4D01E0812A3006EBD22 /* AnimationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C4CF1E0812A3006EBD22 /* AnimationClass.swift */; };
+		16A5C4D21E0812CF006EBD22 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C4D11E0812CF006EBD22 /* CalendarExtension.swift */; };
+		16A5C4D41E08138B006EBD22 /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16A5C4D31E08138B006EBD22 /* CellView.xib */; };
+		16A5C4D61E081395006EBD22 /* CalendarPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16A5C4D51E081395006EBD22 /* CalendarPopUp.xib */; };
 		16F3B9A31DED35650073C7D1 /* RegisterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */; };
 		16F3B9E31DEE8FDC0073C7D1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */; };
 		16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */; };
@@ -73,6 +80,13 @@
 		163C8CE01E0518A100A058B5 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Models/Filter.swift; sourceTree = "<group>"; };
 		163C8CE21E054C3500A058B5 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = History.swift; path = Models/History.swift; sourceTree = "<group>"; };
 		16578E001DFD62AD0031CFC8 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Uploader.swift; path = Helper/Uploader.swift; sourceTree = "<group>"; };
+		16A5C4C91E081208006EBD22 /* PopupContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupContainer.swift; path = Calendar/PopupContainer.swift; sourceTree = "<group>"; };
+		16A5C4CB1E081256006EBD22 /* CalendarPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarPopUp.swift; path = Calendar/CalendarPopUp.swift; sourceTree = "<group>"; };
+		16A5C4CD1E08127F006EBD22 /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellView.swift; path = Calendar/CellView.swift; sourceTree = "<group>"; };
+		16A5C4CF1E0812A3006EBD22 /* AnimationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationClass.swift; path = Calendar/AnimationClass.swift; sourceTree = "<group>"; };
+		16A5C4D11E0812CF006EBD22 /* CalendarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarExtension.swift; path = Calendar/CalendarExtension.swift; sourceTree = "<group>"; };
+		16A5C4D31E08138B006EBD22 /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellView.xib; path = ../../CalendarPopUp/CalendarPopUp/CellView.xib; sourceTree = "<group>"; };
+		16A5C4D51E081395006EBD22 /* CalendarPopUp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarPopUp.xib; path = ../../CalendarPopUp/CalendarPopUp/CalendarPopUp.xib; sourceTree = "<group>"; };
 		16F3B9A21DED35650073C7D1 /* RegisterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterStoryboard.storyboard; path = Storyboard/RegisterStoryboard.storyboard; sourceTree = "<group>"; };
 		16F3B9E21DEE8FDC0073C7D1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboard/Profile.storyboard; sourceTree = "<group>"; };
 		16F3B9E41DEE8FFE0073C7D1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +156,7 @@
 		162772AC1DEC307E00539E7C /* Kerrent */ = {
 			isa = PBXGroup;
 			children = (
+				16A5C4C81E0811DF006EBD22 /* Calendar */,
 				16F3B9E61DEFC5470073C7D1 /* Kerrent.entitlements */,
 				16F3B9A11DED34E30073C7D1 /* Storyboard */,
 				162772C51DEC362A00539E7C /* Models */,
@@ -215,6 +230,20 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		16A5C4C81E0811DF006EBD22 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				16A5C4D31E08138B006EBD22 /* CellView.xib */,
+				16A5C4D51E081395006EBD22 /* CalendarPopUp.xib */,
+				16A5C4C91E081208006EBD22 /* PopupContainer.swift */,
+				16A5C4CB1E081256006EBD22 /* CalendarPopUp.swift */,
+				16A5C4CD1E08127F006EBD22 /* CellView.swift */,
+				16A5C4CF1E0812A3006EBD22 /* AnimationClass.swift */,
+				16A5C4D11E0812CF006EBD22 /* CalendarExtension.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		16F3B9A11DED34E30073C7D1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +314,7 @@
 				TargetAttributes = {
 					162772A91DEC307E00539E7C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WZX37L952Q;
+						DevelopmentTeam = 9TG37Y45LM;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -322,6 +351,8 @@
 				162772B81DEC307E00539E7C /* LaunchScreen.storyboard in Resources */,
 				16F3B9F21DF69D4B0073C7D1 /* ListCar.storyboard in Resources */,
 				ABD784981DED0A6300433C71 /* Frontpage.storyboard in Resources */,
+				16A5C4D41E08138B006EBD22 /* CellView.xib in Resources */,
+				16A5C4D61E081395006EBD22 /* CalendarPopUp.xib in Resources */,
 				AB2E93CA1DF67F5100967524 /* InstaPageTableViewCell.xib in Resources */,
 				ABFC2D641DF699660099721E /* DetailPageViewController.xib in Resources */,
 				ABD7849C1DED157A00433C71 /* GoogleService-Info.plist in Resources */,
@@ -401,8 +432,10 @@
 				162772B01DEC307E00539E7C /* ViewController.swift in Sources */,
 				16578E011DFD62AD0031CFC8 /* Uploader.swift in Sources */,
 				16F3B9F41DF69FF30073C7D1 /* ListCarViewController.swift in Sources */,
+				16A5C4D21E0812CF006EBD22 /* CalendarExtension.swift in Sources */,
 				ABB0AFE81DF9001500C04B24 /* DetailedCarViewController.swift in Sources */,
 				AB9527601DF91C4D005273C6 /* RentFeedTableViewCell.swift in Sources */,
+				16A5C4CE1E08127F006EBD22 /* CellView.swift in Sources */,
 				AB2E93C91DF67F5100967524 /* InstaPageTableViewCell.swift in Sources */,
 				ABD09B931DED35BF00932EBC /* FrontpageTableViewCell.swift in Sources */,
 				163C8CD31E0101EA00A058B5 /* Extension.swift in Sources */,
@@ -410,6 +443,7 @@
 				AB95275E1DF91C19005273C6 /* RentFeedViewController.swift in Sources */,
 				162772C71DED1DA700539E7C /* AlertController.swift in Sources */,
 				16F3B9F61DF86D790073C7D1 /* Car.swift in Sources */,
+				16A5C4D01E0812A3006EBD22 /* AnimationClass.swift in Sources */,
 				16F3B9EC1DF18ABD0073C7D1 /* User.swift in Sources */,
 				16F3B9E51DEE8FFE0073C7D1 /* ProfileViewController.swift in Sources */,
 				ABA73AEE1E0294B6005326BD /* FirstViewController.swift in Sources */,
@@ -417,7 +451,9 @@
 				163C8CDF1E04113B00A058B5 /* FilterViewController.swift in Sources */,
 				163C8CE31E054C3500A058B5 /* History.swift in Sources */,
 				163C8CDB1E01739F00A058B5 /* DatePickerViewController.swift in Sources */,
+				16A5C4CA1E081208006EBD22 /* PopupContainer.swift in Sources */,
 				162772AE1DEC307E00539E7C /* AppDelegate.swift in Sources */,
+				16A5C4CC1E081256006EBD22 /* CalendarPopUp.swift in Sources */,
 				162772CB1DED1FA000539E7C /* SignUpViewController.swift in Sources */,
 				ABC120181E024F7000951FCF /* HistoryTableViewCell.swift in Sources */,
 				ABA73AF41E029540005326BD /* LoginButton.swift in Sources */,
@@ -546,11 +582,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WZX37L952Q;
+				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kerrent.clinton;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -563,11 +599,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Kerrent/Kerrent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WZX37L952Q;
+				DEVELOPMENT_TEAM = 9TG37Y45LM;
 				INFOPLIST_FILE = Kerrent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kerrent.clinton;
+				PRODUCT_BUNDLE_IDENTIFIER = kerrent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

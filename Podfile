@@ -14,4 +14,5 @@ target 'Kerrent' do
     pod 'FBSDKLoginKit'
     pod ’SwiftyJSON’, ‘3.0.0’
     pod ‘Alamofire’, ‘~> 4.0’
+    pod 'JTAppleCalendar', '~> 6.0'
 end
