@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
         didSet{
             historyTableView.dataSource = self
             historyTableView.round(corners: .allCorners, radius: 2)
+            historyTableView.separatorStyle = .none
         }
     }
    // @IBOutlet weak var nameLabel: UILabel!
