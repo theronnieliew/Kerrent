@@ -10,7 +10,26 @@ import UIKit
 
 class DetailedCarTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var carImage: UIImageView!{
+        didSet{
+            carImage.fullyRound(diameter: 2, borderColor: UIColor.white, borderWidth: 1)
+        }
+    }
+    @IBOutlet weak var rentButton: UIButton!{
+        didSet{
+            rentButton.round(corners: .allCorners, radius: 2)
+        }
+    }
+    @IBOutlet weak var bookingView: UIView!{
+        didSet{
+            bookingView.round(corners: .allCorners, radius: 2)
+        }
+    }
+    @IBOutlet weak var specsView: UIView!{
+        didSet{
+            specsView.round(corners: .allCorners, radius: 2)
+        }
+    }
     
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var carLogo: UIImageView!

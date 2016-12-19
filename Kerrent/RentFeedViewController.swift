@@ -61,7 +61,7 @@ class RentFeedViewController: UIViewController {
         searchController.searchBar.delegate = self
         
         for button in filterSortButtons{
-            button.layer.cornerRadius = 5
+            button.layer.cornerRadius = 4
             button.clipsToBounds = true
         }
     }
