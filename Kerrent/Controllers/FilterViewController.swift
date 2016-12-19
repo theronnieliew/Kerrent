@@ -14,7 +14,7 @@ class FilterViewController: UIViewController {
     @IBOutlet var colorButtons: [UIButton]!{
         didSet{
             for button in colorButtons{
-                button.layer.cornerRadius = 10
+                button.layer.cornerRadius = 4
                 button.clipsToBounds = true
             }
         }
@@ -34,9 +34,9 @@ class FilterViewController: UIViewController {
         if filter.colors.count != 0 {
             for button in colorButtons{
                 if(filter.colors.contains((button.titleLabel?.text)!)){
-                    button.layer.borderWidth = 3
-                    if button.titleLabel?.text != "Black"{ button.layer.borderColor = UIColor.black.cgColor }
-                    else { button.layer.borderColor = UIColor.white.cgColor }
+                    button.layer.borderWidth = 4
+                    if button.titleLabel?.text != "Whie"{ button.layer.borderColor = UIColor.white.cgColor }
+                    else { button.layer.borderColor = UIColor.black.cgColor }
                 }
             }
         }
@@ -45,20 +45,20 @@ class FilterViewController: UIViewController {
             for button in typeButtons{
                 if(filter.types.contains((button.titleLabel?.text)!)){
                     button.layer.borderWidth = 2
-                    button.layer.borderColor = UIColor.black.cgColor
+                    button.layer.borderColor = UIColor.white.cgColor
                 }
             }
         }
         
-        self.view.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.secondaryColor()
     }
     
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         if !filter.colors.contains((sender.titleLabel?.text)!){
             filter.colors.append((sender.titleLabel?.text)!)
             sender.layer.borderWidth = 3
-            if sender.titleLabel?.text != "Black"{ sender.layer.borderColor = UIColor.black.cgColor }
-            else { sender.layer.borderColor = UIColor.white.cgColor }
+            if sender.titleLabel?.text != "White"{ sender.layer.borderColor = UIColor.white.cgColor }
+            else { sender.layer.borderColor = UIColor.black.cgColor }
         } else {
             filter.colors.remove(object: (sender.titleLabel?.text)!)
             sender.layer.borderWidth = 0
@@ -69,7 +69,7 @@ class FilterViewController: UIViewController {
         if !filter.types.contains((sender.titleLabel?.text)!){
             filter.types.append((sender.titleLabel?.text)!)
             sender.layer.borderWidth = 2
-            sender.layer.borderColor = UIColor.black.cgColor
+            sender.layer.borderColor = UIColor.white.cgColor
         } else {
             filter.types.remove(object: (sender.titleLabel?.text)!)
             sender.layer.borderWidth = 0
