@@ -151,7 +151,6 @@ class RentFeedViewController: UIViewController {
                 controller.rent = rentArray[(selectedIndexPath?.row)!]
             }
         }
-        
     }
     @IBAction func filterButtonPressed(_ sender: AnyObject) {
         let storyboard = UIStoryboard(name: "Filter", bundle: nil)
