@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rent Feed View Controller-->
+        <!--Kerrent-->
         <scene sceneID="BoV-0b-L1d">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="fF8-R8-vKp" customClass="RentFeedViewController" customModule="Kerrent" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,17 +59,17 @@
                                                                 <constraint firstAttribute="width" secondItem="d5Z-0X-ga7" secondAttribute="height" multiplier="16:9" id="lMv-D2-IY0"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-hq-EbL">
-                                                            <rect key="frame" x="333" y="228" width="63" height="41"/>
+                                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="rR9-hq-EbL">
+                                                            <rect key="frame" x="331" y="228" width="63" height="38"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-ep-Fh7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="33.666666666666657"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="31"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="textColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-9k-Acs">
-                                                                    <rect key="frame" x="0.0" y="28.666666666666657" width="63" height="12"/>
+                                                                    <rect key="frame" x="0.0" y="26" width="63" height="12"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -95,6 +95,7 @@
                                                         <constraint firstItem="d5Z-0X-ga7" firstAttribute="top" secondItem="Cqb-t9-gRh" secondAttribute="top" id="aSV-Ez-LsJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="rR9-hq-EbL" secondAttribute="trailing" constant="4" id="abR-lh-nLE"/>
                                                         <constraint firstAttribute="trailing" secondItem="d5Z-0X-ga7" secondAttribute="trailing" id="b9N-YW-a1g"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rR9-hq-EbL" secondAttribute="bottom" constant="4" id="jao-jZ-asQ"/>
                                                         <constraint firstItem="rR9-hq-EbL" firstAttribute="centerY" secondItem="QQj-Wr-YWe" secondAttribute="centerY" id="lqN-tB-tY3"/>
                                                         <constraint firstAttribute="bottom" secondItem="d5Z-0X-ga7" secondAttribute="bottom" constant="46" id="q05-c7-eMk"/>
                                                         <constraint firstItem="d5Z-0X-ga7" firstAttribute="leading" secondItem="Cqb-t9-gRh" secondAttribute="leading" id="q8P-8z-EpQ"/>
@@ -128,7 +129,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="196" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Filter">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="filterButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="Ivk-sg-g9Z"/>
@@ -138,7 +139,7 @@
                                         <rect key="frame" x="202" y="0.0" width="196" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Sort">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="sortButtonPressed:" destination="fF8-R8-vKp" eventType="touchUpInside" id="1Db-nH-6iF"/>
@@ -162,9 +163,9 @@
                             <constraint firstItem="YvW-9q-UIe" firstAttribute="top" secondItem="lLP-xW-69m" secondAttribute="bottom" id="zFJ-9d-QRi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="V16-b0-OxM">
+                    <navigationItem key="navigationItem" title="Kerrent" id="V16-b0-OxM">
                         <barButtonItem key="rightBarButtonItem" image="ic_home_black_24dp" id="f5X-fl-Rdd">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.65098039220000004" green="0.066666666669999999" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="homeButtonPressed:" destination="fF8-R8-vKp" id="KEw-uS-cnW"/>
                             </connections>

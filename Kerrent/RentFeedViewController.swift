@@ -48,12 +48,10 @@ class RentFeedViewController: UIViewController {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
         fetchFeedPosts()
-    
-        //navigationController?.navigationBar.setBackgroundImage( UIImage (named:"GreyGradient") , for: UIBarMetrics.default)
         
-        //navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
-        
-        navigationController?.navigationItem.title = "Kerrent"
+        navigationController?.navigationBar.topItem?.title = "Kerrent"
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.tertiaryColor()]
+//        navigationController?.navigationBar.tintColor = UIColor.tertiaryColor()
         navigationController?.navigationBar.barTintColor = UIColor.primaryColor()
         navigationController?.navigationBar.isTranslucent = false
         
@@ -71,7 +69,7 @@ class RentFeedViewController: UIViewController {
         
         searchController.searchBar.setBackgroundImage(UIImage(color: .primaryColor()), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
         searchController.searchBar.backgroundColor = UIColor.primaryColor()
-        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.tertiaryColor()
         searchController.searchBar.barTintColor = UIColor.primaryColor()
         
 //        searchController.searchBar.scopeButtonTitles = ["All", "Coupe", "Sedan", "Hatchback", "MPV", "SUV"]
