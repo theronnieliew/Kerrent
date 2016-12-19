@@ -14,13 +14,29 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profilePicImgView: UIImageView!
     
+    @IBOutlet weak var profileLandscape: UIImageView!{
+        didSet{
+            profileLandscape.round(corners: [.bottomLeft, .bottomRight], radius: 2)
+        }
+    }
     @IBOutlet weak var historyTableView: UITableView! {
         didSet{
             historyTableView.dataSource = self
+            historyTableView.round(corners: .allCorners, radius: 2)
+            historyTableView.separatorStyle = .none
         }
     }
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+   // @IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var nav: UINavigationBar!{
+        didSet{
+            nav.barTintColor = UIColor .primaryColor()
+            nav.tintColor = UIColor.tertiaryColor()
+            nav.isTranslucent = false
+            nav.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.tertiaryColor()]
+        }
+    }
     
     var user = User()
     let userUID = FIRAuth.auth()?.currentUser
@@ -36,7 +52,7 @@ class ProfileViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         storageRef = storage.reference(forURL: "gs://kerrent-67d3a.appspot.com")
         
-      fetchUser()
+        fetchUser()
     }
     
     func fetchUser() {
@@ -58,20 +74,24 @@ class ProfileViewController: UIViewController {
                         historyObj.carName = historyDict["carName"] as! String
                         historyObj.startDate = historyDict["rentStartDate"] as! String
                         historyObj.endDate = historyDict["rentEndDate"] as! String
+                        historyObj.price = historyDict["price"] as! String
                         
                         self.user.histories.append(historyObj)
                         self.historyTableView.reloadData()
                     })
                 }
                 
-                self.nameLabel.text = self.user.name
-                self.emailLabel.text = self.user.email
+                //self.nameLabel.text = self.user.name
+                //self.emailLabel.text = self.user.email
                 
                 let url = URL(string: self.user.profilePic)
                 let data = try? Data(contentsOf: url!)
                 self.profilePicImgView.image = UIImage(data: data!)
                 self.profilePicImgView.layer.cornerRadius = self.profilePicImgView.frame.size.width / 2
                 self.profilePicImgView.clipsToBounds = true
+                
+                self.nav.topItem?.title = self.user.name
+                
             }
         })
     }
@@ -142,6 +162,7 @@ extension ProfileViewController : UITableViewDataSource {
         cell.rentCarNameLabel.text = self.user.histories[indexPath.row].carName
         cell.startDateLabel.text = self.user.histories[indexPath.row].startDate
         cell.endDateLabel.text = self.user.histories[indexPath.row].endDate
+        //! Update cell's price here
         
         return cell
     }

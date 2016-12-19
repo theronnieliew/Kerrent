@@ -28,6 +28,9 @@ class DetailedCarViewController: UIViewController, UITableViewDelegate, DatePick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "\(rent.car.name)"
+        
     }
 
     @IBAction func rentButton(_ sender: AnyObject) {
@@ -62,14 +65,14 @@ extension DetailedCarViewController : UITableViewDataSource {
         }
         
         cell.carImage.image = rent.image
-        cell.carName.text = rent.car.name
+        cell.carName.text = "\(rent.car.manufacturer) \(rent.car.name)"
         //cell.carLogo.image = rent.image
         cell.locationLabel.text = rent.location
         //cell.dateStartLabel.text = rent.dateStart
         //cell.dateEndLabel.text = rent.dateEnd
-        cell.priceLabel.text = "\(rent.price)"
+        cell.priceLabel.text = "RM\(rent.price) per day"
         
-        cell.capacityLabel.text = "\(rent.car.capacity) PAX"
+        cell.capacityLabel.text = "\(rent.car.capacity) passengers"
         cell.yearLabel.text = "\(rent.car.year)"
         cell.transmissionLabel.text = rent.car.transmission
         cell.typeLabel.text = rent.car.type

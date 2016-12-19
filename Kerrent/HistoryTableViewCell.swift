@@ -14,6 +14,7 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var rentCarNameLabel: UILabel!
     
+    @IBOutlet weak var rentPriceLabel: UILabel!
     @IBOutlet weak var directionImage: UIImageView!
     
     override func awakeFromNib() {

@@ -51,7 +51,8 @@ class RentFeedViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "Kerrent"
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.tertiaryColor()]
-//        navigationController?.navigationBar.tintColor = UIColor.tertiaryColor()
+        
+        navigationController?.navigationBar.tintColor = UIColor.tertiaryColor()
         navigationController?.navigationBar.barTintColor = UIColor.primaryColor()
         navigationController?.navigationBar.isTranslucent = false
         
@@ -84,7 +85,7 @@ class RentFeedViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        //UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     func fetchFeedPosts() {
