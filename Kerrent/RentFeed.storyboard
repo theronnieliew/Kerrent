@@ -47,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="287"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z53-dI-1eh" id="Wqk-Ce-IJO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="286.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="287"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-t9-gRh">
@@ -63,13 +63,13 @@
                                                             <rect key="frame" x="333" y="228" width="63" height="41"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpB-ep-Fh7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="62.666666666666686" height="33.666666666666657"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="33.666666666666657"/>
+                                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvP-9k-Acs">
-                                                                    <rect key="frame" x="0.0" y="28.666666666666657" width="62.666666666666686" height="12"/>
+                                                                    <rect key="frame" x="0.0" y="28.666666666666657" width="63" height="12"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -77,11 +77,11 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQj-Wr-YWe">
-                                                            <rect key="frame" x="4" y="228" width="87" height="38"/>
+                                                            <rect key="frame" x="4" y="228" width="79.333333333333329" height="38"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="38" id="43W-gq-Yfx"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </label>

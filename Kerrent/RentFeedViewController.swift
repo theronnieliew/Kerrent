@@ -53,6 +53,7 @@ class RentFeedViewController: UIViewController {
         
         //navigationController?.navigationBar.setBackgroundImage(UIImage (named:"BlueGreyGradient"), for: UIBarMetrics.default)
         
+        navigationController?.navigationItem.title = "Kerrent"
         navigationController?.navigationBar.barTintColor = UIColor.primaryColor()
         navigationController?.navigationBar.isTranslucent = false
         
@@ -61,7 +62,15 @@ class RentFeedViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
+        
         tableView.tableHeaderView = searchController.searchBar
+        tableView.tableHeaderView?.backgroundColor = UIColor.primaryColor()
+        tableView.tableHeaderView?.tintColor = UIColor.primaryColor()
+        
+        searchController.searchBar.backgroundImage = UIImage(color: .primaryColor())
+        
+        searchController.searchBar.setBackgroundImage(UIImage(color: .primaryColor()), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        searchController.searchBar.backgroundColor = UIColor.primaryColor()
         searchController.searchBar.tintColor = UIColor.white
         searchController.searchBar.barTintColor = UIColor.primaryColor()
         
