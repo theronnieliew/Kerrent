@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="height" constant="80" id="NMh-BD-rDW"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-fM-7Sr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmn-fM-7Sr">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cmn-fM-7Sr" secondAttribute="height" multiplier="1:1" id="TxT-ix-AJQ"/>
                                     <constraint firstAttribute="height" constant="80" id="sym-i9-cPn"/>
@@ -105,6 +105,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.090196078431372548" green="0.11764705882352941" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="csQ-h0-hth" firstAttribute="top" secondItem="WNM-u9-PGu" secondAttribute="bottom" constant="12" id="7i5-el-0pE"/>
                                                 <constraint firstItem="csQ-h0-hth" firstAttribute="leading" secondItem="KoL-BE-UaJ" secondAttribute="trailing" constant="12" id="AMF-Ek-Goh"/>
