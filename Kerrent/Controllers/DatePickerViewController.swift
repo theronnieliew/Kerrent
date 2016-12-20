@@ -125,7 +125,7 @@ class DatePickerViewController: UIViewController {
             if tagInt == 0 { self.date1 = picker.date }
             if tagInt == 1 { self.date2 = picker.date }
             
-            if(self.dateButtons[0].titleLabel?.text != "Start Date :" && self.dateButtons[1].titleLabel?.text != "End Date :"){
+            if(self.dateButtons[0].titleLabel?.text != "Start Date" && self.dateButtons[1].titleLabel?.text != "Return Date"){
                 self.daysRentingLabel.text = "\(self.daysBetween(date1: self.date1, date2: self.date2))"
                 
 //                let str = self.rent.price
