@@ -133,8 +133,9 @@ class RentFeedViewController: UIViewController {
     
     func filterContentForSearchText(searchText : String, scope : String = "All"){
         filteredResults = rentArray.filter{ rent in
+            let manufacturer = rent.car.manufacturer.lowercased().contains(searchText.lowercased())
 //            let typeMatch = (scope == "All") || (rent.car.type == scope)
-            return rent.car.name.lowercased().contains(searchText.lowercased())
+            return manufacturer || rent.car.name.lowercased().contains(searchText.lowercased())
         }
         tableView.reloadData()
     }
