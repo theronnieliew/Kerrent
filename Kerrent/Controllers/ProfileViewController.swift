@@ -208,7 +208,6 @@ extension ProfileViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("USER HISTORY COUNT : \(userRentHistories.count)")
         return userRentHistories.count
     }
 }
