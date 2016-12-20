@@ -80,9 +80,15 @@ class DatePickerViewController: UIViewController {
     @IBAction func rentButton(_ sender: AnyObject) {
         ref.child("history").childByAutoId().setValue(["rentStartDate" : dateButtons[0].titleLabel!.text!, "rentEndDate" : dateButtons[1].titleLabel!.text!, "carName" : rent.car.name, "userID" : FIRAuth.auth()!.currentUser!.uid, "price" : priceLabel.text!, "rentID" : rent.ID], withCompletionBlock: {(error, result) -> Void in
             
-//            self.ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).child("histories").setValue(result.key)
-            self.delegate?.dismissDateView()
+            let alertController = UIAlertController(title: "Car Rented!", message: "You have successfully rented this car from \(self.dateButtons[0].titleLabel!.text!) until \(self.dateButtons[1].titleLabel!.text!)", preferredStyle: UIAlertControllerStyle.alert)
+
+            let okAction = UIAlertAction(title: "Done", style: .default, handler: {(alert: UIAlertAction!) -> Void in
+                self.delegate?.dismissDateView()
+            })
             
+            alertController.addAction(okAction)
+            self.present(alertController, animated : true, completion:nil)
+    
             
             //!CHECKIN
             self.ref.child("users").child(FIRAuth.auth()!.currentUser!.uid).observeSingleEvent(of: .value, with: {(snapshot) in
