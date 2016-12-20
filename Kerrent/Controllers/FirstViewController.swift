@@ -23,6 +23,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIApplication.shared.statusBarStyle = .default
+        
         // Do any additional setup after loading the view.
     }
 
