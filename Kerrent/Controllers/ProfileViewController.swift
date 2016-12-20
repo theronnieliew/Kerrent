@@ -162,7 +162,7 @@ extension ProfileViewController : UITableViewDataSource {
         cell.rentCarNameLabel.text = self.user.histories[indexPath.row].carName
         cell.startDateLabel.text = self.user.histories[indexPath.row].startDate
         cell.endDateLabel.text = self.user.histories[indexPath.row].endDate
-        //! Update cell's price here
+        cell.rentPriceLabel.text = self.user.histories[indexPath.row].price
         
         return cell
     }
