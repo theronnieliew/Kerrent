@@ -42,6 +42,7 @@ class ProfileViewController: UIViewController {
     let userUID = FIRAuth.auth()?.currentUser
     var historyIDs : [String] = []
     
+    var userRentHistories : [History] = []
     var ref: FIRDatabaseReference!
     let storage = FIRStorage.storage()
     var storageRef : FIRStorageReference!
@@ -53,33 +54,21 @@ class ProfileViewController: UIViewController {
         storageRef = storage.reference(forURL: "gs://kerrent-67d3a.appspot.com")
         
         fetchUser()
+        fetchUserHistory()
     }
     
     func fetchUser() {
-        ref.child("users").child((userUID?.uid)!).observeSingleEvent(of: .value, with: {(snapshot) in
+        
+        ref.child("users").child((userUID?.uid)!).observeSingleEvent(of: .value , with: {(snapshot) in
             
             if let dictionary = snapshot.value as? [String:AnyObject] {
                 self.user.name = (dictionary["full_name"] as! String?)!
                 self.user.email = (dictionary["email"] as! String?)!
                 self.user.profilePic = (dictionary["profile-pic"] as? String)!
                 
-                let histories = dictionary["histories"] as! [String]
-                for history in histories {
-                    self.ref.child("history").child(history).observeSingleEvent(of :.value, with: {(snapshot) in
-                        guard let historyDict = snapshot.value as? [String: AnyObject] else{
-                            return
-                        }
-                        
-                        let historyObj = History()
-                        historyObj.carName = historyDict["carName"] as! String
-                        historyObj.startDate = historyDict["rentStartDate"] as! String
-                        historyObj.endDate = historyDict["rentEndDate"] as! String
-                        historyObj.price = historyDict["price"] as! String
-                        
-                        self.user.histories.append(historyObj)
-                        self.historyTableView.reloadData()
-                    })
-                }
+//                let histories = dictionary["histories"] as! [String]
+//                
+//                self.fetchHistories(histories: histories)
                 
                 //self.nameLabel.text = self.user.name
                 //self.emailLabel.text = self.user.email
@@ -94,6 +83,54 @@ class ProfileViewController: UIViewController {
                 
             }
         })
+    }
+    
+    func fetchUserHistory(){
+        
+        ref.child("users").child((userUID?.uid)!).child("histories").observe(.childAdded , with: {(snapshot) in
+            if let historyID = snapshot.value as? String {
+                self.fetchHistoryDetail(historyID: historyID)
+            }
+        })
+        
+    }
+    
+    func fetchHistoryDetail(historyID: String) {
+        
+        self.ref.child("history").child(historyID).observeSingleEvent(of :.value, with: {(snapshot) in
+            
+            guard let historyDict = snapshot.value as? [String: AnyObject] else{
+                return
+            }
+            
+            let historyObj = History()
+            historyObj.carName = historyDict["carName"] as! String
+            historyObj.startDate = historyDict["rentStartDate"] as! String
+            historyObj.endDate = historyDict["rentEndDate"] as! String
+            historyObj.price = historyDict["price"] as! String
+            
+            self.userRentHistories.append(historyObj)
+            self.historyTableView.reloadData()
+        })
+    }
+    
+    func fetchHistories(histories: [String] ){
+        for history in histories {
+            self.ref.child("history").child(history).observeSingleEvent(of :.childAdded, with: {(snapshot) in
+                guard let historyDict = snapshot.value as? [String: AnyObject] else{
+                    return
+                }
+                
+                let historyObj = History()
+                historyObj.carName = historyDict["carName"] as! String
+                historyObj.startDate = historyDict["rentStartDate"] as! String
+                historyObj.endDate = historyDict["rentEndDate"] as! String
+                historyObj.price = historyDict["price"] as! String
+                
+                self.user.histories.append(historyObj)
+                self.historyTableView.reloadData()
+            })
+        }
     }
     
     @IBAction func logOutButton(_ sender: AnyObject) {
@@ -157,18 +194,22 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryTableViewCell
         
-        cell.rentCarNameLabel.text = self.user.histories[indexPath.row].carName
-        cell.startDateLabel.text = self.user.histories[indexPath.row].startDate
-        cell.endDateLabel.text = self.user.histories[indexPath.row].endDate
-        cell.rentPriceLabel.text = self.user.histories[indexPath.row].price
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HistoryTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        cell.rentCarNameLabel.text = userRentHistories[indexPath.row].carName
+        cell.startDateLabel.text = userRentHistories[indexPath.row].startDate
+        cell.endDateLabel.text = userRentHistories[indexPath.row].endDate
+        cell.rentPriceLabel.text = userRentHistories[indexPath.row].price
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.user.histories.count
+        print("USER HISTORY COUNT : \(userRentHistories.count)")
+        return userRentHistories.count
     }
 }
 
